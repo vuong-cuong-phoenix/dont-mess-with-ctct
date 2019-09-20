@@ -1,0 +1,9 @@
+@import url("../abstract/variables.css");
+
+iframe.width-changed {
+    width: 100%;
+    display: block;
+    border: 0;
+    height: 0;
+    margin: 0;
+}
