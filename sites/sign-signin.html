@@ -36,8 +36,19 @@
                         <span data-placeholder="Mật khẩu"></span>
                     </div>
 
+                    <div class="bypass-validation__message">
+                        <span>Email không chính xác!</span>
+                    </div>
+
                     <div class="main-body-btn-group">
-                        <button type="submit" class="btn-sign-submit" role="button" onclick="validateSignIn()">
+                        <button
+                            type="submit"
+                            class="btn-sign-submit"
+                            role="button"
+                            onclick="validateSignIn()"
+                            data-toggle="modal"
+                            data-target="#bypassValidation"
+                        >
                             Đăng nhập
                         </button>
                     </div>

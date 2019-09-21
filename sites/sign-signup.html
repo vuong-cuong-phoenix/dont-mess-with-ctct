@@ -144,9 +144,17 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="main-body-btn-group">
-                            <button type="submit" class="btn-sign-submit" role="button" onclick="signUpValidate()">
+                            <button
+                                type="submit"
+                                class="btn-sign-submit"
+                                role="button"
+                                onclick="signUpValidate()"
+                                data-toggle="modal"
+                                data-target="#bypassValidation"
+                            >
                                 Đăng ký
                             </button>
                         </div>
@@ -169,4 +177,47 @@
         <!-- Instant Scripts -->
         <script type="text/javascript"></script>
     </body>
+
+    <!--- Bypass Validation --->
+    <div
+        class="modal fade"
+        id="bypassValidation"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="bypassValidation_label"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseModal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <br />
+                        <h3 class="modal-title" id="bypassValidationHeader">Thông báo</h3>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="bypass-validation__message">
+                        Tài khoản của bạn đã được đăng ký thành công!<br />
+                        Hãy kiểm tra Email để xác nhận tài khoản!
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Quay lại
+                    </button>
+
+                    <button type="button" class="btn btn-success">
+                        <span>Xác nhận tài khoản</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- END Bypass Validation --->
 </html>
