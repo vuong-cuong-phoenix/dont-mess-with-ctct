@@ -1,17 +1,49 @@
-/*--- COLOR ---*/
-$color-white: #ffffff;
-$color-dark: #000000;
-$color-dark-bg: #343a40;
-$color-dark-bg-darker: #2d3238;
-$color-primary: #ffcc99;
-$color-primary-darker: #ffb366;
-$color-text-btn-primary: rgba($color-white, 0.25);
-$color-text-btn-primary-lighter: rgb($color-white, 0.3);
-$color-bg-body: #e9ebee;
+/// List of Headings
+$headings: h1, h2, h3, h4, h5, h6;
 
-/*--- MEASUREMENT ---*/
-$padding-content: 20px;
-$height-navbar: 65px;
-$width-sidebar: 225px;
-$width-sidebar-active: 100px;
-$padding-x-col: 15px;
+/// Gradient-colors
+$color-btn--grd_1st: #12c2e9;
+$color-btn--grd_2nd: #c471ed;
+
+/// For theming
+$color-nav-text: #d9d9d9;
+
+/// Sidebar
+$color-sidebar__text: #d9d9d9;
+$color-sidebar__bg: #2d3238;
+
+/// Failed's variants
+$color-failed: #ff6666;
+
+/// Primary's variants
+$color-primary: #ffcc99;
+$color-primary--onActive: #ffb366;
+$color-primary__text: #ff8000;
+$color-primary__text--onActive: #ffb366;
+
+/// Buttons's variants
+$color-btn-primary__text: #404040;
+$color-btn-primary__text--onActive: #4d4d4d;
+
+/// Main content
+$color-content__body__bg: #e9ebee;
+$color-content__footer__bg: #ffffff;
+$color-content__footer__divider: #bfbfbf;
+
+///
+$color-ultra-light: rgba(0, 0, 0, 0.35);
+$color-bg--light: #f6f6f6;
+$color-bg--light--darker: darken($color-bg--light, 5%);
+
+/// Measurement
+$meas-col-padding--x: 15px;
+$meas-spacing--large: 1.5rem;
+$meas-navbar__height: 4rem;
+$meas-sidebar__width: 14.25rem;
+$meas-sidebar__width--onActive: 6.25rem;
+$meas-border-radius--regular: 0.25rem;
+
+/// Font-sizes
+$font-size--regular: 16px;
+$font-size--medium: 15px;
+$font-size--small: 14px;

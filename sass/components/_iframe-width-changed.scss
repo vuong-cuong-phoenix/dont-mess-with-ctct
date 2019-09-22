@@ -1,0 +1,25 @@
+/*=============================================
+        IFRAME WITH "width-changed" EVENT
+=============================================*/
+iframe.width-changed {
+    width: 100%;
+    display: block;
+    border: 0;
+    height: 0;
+    margin: 0;
+}
+
+.frame-hack {
+    position: relative;
+    padding-bottom: 60%;
+    height: 0;
+
+    & iframe,
+    > img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

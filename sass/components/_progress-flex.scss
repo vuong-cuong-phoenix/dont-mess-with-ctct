@@ -1,0 +1,23 @@
+/*=============================================
+        PROGRESS WITH "flex: auto"
+=============================================*/
+
+.progress-flex {
+    flex: auto;
+    width: 100%;
+    margin-right: 1rem;
+
+    .progess-flex__bg {
+        height: 20px;
+        width: 100%;
+        background: #f2f3f5;
+        border-radius: 4px;
+    }
+
+    .progess-flex__fill {
+        background: #a1a7b3;
+        border-radius: 4px;
+        display: block;
+        height: 100%;
+    }
+}

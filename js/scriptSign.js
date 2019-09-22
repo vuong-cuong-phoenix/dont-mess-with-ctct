@@ -1,13 +1,13 @@
 $(document).ready(function() {
-    $(".form-area .textbox-area").val("");
+    $(".input--grd-running input").val("");
 
-    $(".form-area .textbox-area").on("focus", function() {
-        $(this).addClass("focusCustom");
+    $(".input--grd-running input").on("focus", function() {
+        $(this).addClass("focused");
     });
 
-    $(".form-area .textbox-area").on("blur", function() {
+    $(".input--grd-running input").on("blur", function() {
         if ($(this).val() == "") {
-            $(this).removeClass("focusCustom");
+            $(this).removeClass("focused");
         }
     });
 });

@@ -1,0 +1,18 @@
+/*=============================================
+            Navigation in a line
+=============================================*/
+
+.nav-line {
+    padding: 0.5rem 0.5rem 0;
+
+    $color-text: lighten(text-color-dynamic($color-bg--light), 25%);
+
+    a {
+        color: $color-text;
+        padding: 0 0.25rem;
+
+        &:hover {
+            color: darken($color-text, 20%);
+        }
+    }
+}

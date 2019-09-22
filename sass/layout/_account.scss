@@ -1,0 +1,123 @@
+/*=============================================
+            SIGN'S PAGES LAYOUT
+=============================================*/
+@import "https://fonts.googleapis.com/css?family=Baloo&display=swap";
+
+///				MIXINS				///
+@mixin account-main-area($color-bg, $width, $height-offset, $query-width-min, $query-width-max) {
+    background: $color-bg;
+    width: $width;
+    min-height: calc(100% - #{$height-offset});
+    margin: calc(#{$height-offset} / 2) auto;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translate(0); /* For z-index */
+
+    @media (max-width: 1200px) {
+        width: $query-width-min;
+    }
+
+    @media (max-width: 992px) {
+        width: calc(#{$query-width-max} - (#{$query-width-max} - #{$query-width-min}) / 2);
+    }
+
+    @media (max-width: 768px) {
+        width: calc(#{$query-width-max} - (#{$query-width-max} - #{$query-width-min}) / 3);
+    }
+
+    @media (max-width: 576px) {
+        width: $query-width-max;
+    }
+}
+
+@mixin account-main-area__header($m-bot: 0, $title-size: 0) {
+    text-align: center;
+
+    @if $m-bot == 0 {
+        margin-bottom: 2.25rem;
+    } @else {
+        margin-bottom: $m-bot;
+    }
+
+    @if $title-size == 0 {
+        > * {
+            font-size: 2.75rem;
+        }
+    } @else {
+        > * {
+            font-size: $title-size;
+        }
+    }
+}
+
+@mixin account-main-area__footer($m-top: 0, $title-size: 0) {
+    @if $m-top == 0 {
+        margin-top: 3.5rem;
+    } @else {
+        margin-top: $m-top;
+    }
+
+    @if $title-size == 0 {
+        font-size: 1.25rem;
+    } @else {
+        font-size: $title-size;
+    }
+}
+
+/// Themeing
+$color-text--normal: lighten(#000000, 25%);
+$color-text--lighter: lighten($color-text--normal, 20%);
+$color-text--light: lighten($color-text--lighter, 20%);
+
+/// Account's layout Global Styles
+html,
+body {
+    font-family: "Baloo", cursive;
+    color: $color-text--normal;
+    height: 100%;
+    font-size: 17px;
+
+    @media (max-width: 1200px) {
+        font-size: 17px;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 12px;
+    }
+}
+
+#{$all-buttons-focus} {
+    box-shadow: none !important;
+}
+
+.no-outline {
+    outline: none !important;
+}
+
+/// Main styles
+.background-area {
+    @include bg-fullpage;
+}
+
+.main-area {
+    &__body {
+        &__btn-group {
+            padding: 0.5rem 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

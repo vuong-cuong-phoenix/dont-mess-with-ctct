@@ -1,0 +1,88 @@
+/*=============================================
+        STYLES FOR ONLY SIGN-UP PAGE
+=============================================*/
+.main-area {
+    @include account-main-area($color-bg--light, 900px, 2.5rem, 70%, 90%);
+    padding: 2.5rem 3rem 1rem;
+
+    &__header {
+        @include account-main-area__header(2rem, 2.5rem);
+    }
+
+    &__body {
+        .selectpicker-area {
+            position: relative;
+        }
+
+        .selectpicker-container {
+            font-size: 1.25rem;
+            color: $color-text--light;
+            margin-bottom: 1rem;
+
+            .dropdown-toggle {
+                background: $color-bg--light;
+                transition: 0.5s;
+
+                &:hover {
+                    background: #dae0e5;
+                }
+
+                &:focus {
+                    outline: none !important;
+                }
+            }
+
+            .running-indicator {
+                bottom: 1rem;
+            }
+        }
+
+        .form-swap-area {
+            position: relative;
+
+            .form-swap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+
+                &--form-1 {
+                    display: block;
+                }
+
+                &--form-2 {
+                    display: none;
+                }
+            }
+        }
+
+        #addSchool-container,
+        #schoolYear-container {
+            margin-top: calc(2rem - 2.5px);
+        }
+
+        #emailFormPre {
+            padding-right: 0;
+        }
+
+        #emailFormPost_Container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            #domainSymbol {
+                position: absolute;
+                left: calc(0px - 1rem * 2 + 0.4rem);
+            }
+        }
+
+        .btn--grd {
+            width: 60%;
+            height: 3rem;
+        }
+    }
+
+    &__footer {
+        @include account-main-area__footer(1rem);
+    }
+}

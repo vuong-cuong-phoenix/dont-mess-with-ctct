@@ -1,0 +1,93 @@
+/*=============================================
+        MAIN-CONTENT'S HEADER LAYOUT
+=============================================*/
+.content-main__title {
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    .title-container {
+        padding-top: calc(#{$meas-navbar__height} + 10px);
+    }
+}
+
+.navbar {
+    width: calc(100% - #{$meas-sidebar__width});
+    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    min-height: $meas-navbar__height;
+
+    &.active {
+        width: calc(100% - #{$meas-sidebar__width--onActive});
+    }
+
+    .navbar-nav li {
+        padding-left: 20px;
+
+        a {
+            color: $color-nav-text !important;
+
+            .fa-search {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    .dropdown {
+        .dropdown-header,
+        .dropdown-item {
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown-header {
+            &__user-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                color: $color-sidebar__text;
+            }
+        }
+
+        .dropdown-item {
+            padding: 0.65rem 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            &:hover {
+                background-color: lighten(#000000, 10%);
+            }
+
+            .icon-container {
+                min-width: 2rem;
+                text-align: center;
+                margin-right: 1rem;
+            }
+        }
+
+        .dropdown-toggle::after {
+            border: none !important;
+            font: normal normal normal 20px/1 "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f107" !important;
+            vertical-align: -7.5%;
+        }
+
+        .dropdown-divider {
+            border-color: #666666;
+        }
+    }
+}
+
+.navbar-expand > .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}

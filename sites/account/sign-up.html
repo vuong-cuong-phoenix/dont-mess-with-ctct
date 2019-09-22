@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Đăng ký</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet" />
+        <!-- Framework CSS -->
+        <link rel="stylesheet" href="../../css/plugins/normalize.css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+        <link rel="stylesheet" href="../../css/plugins/jquery.mCustomScrollbar.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/css/bootstrap-select.min.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../../css/main/style-sign-up.css" />
+    </head>
+    <body id="BodySign">
+        <div class="background-area bg-grd-KyeMeh">
+            <div class="main-area">
+                <div class="main-area__header">
+                    <h2>Đăng ký tài khoản mới</h2>
+                </div>
+
+                <form class="form main-area__body">
+                    <div class="row">
+                        <div class="col-xl-5">
+                            <div class="selectpicker-container" id="selectSchool-container">
+                                <span class="d-block">Trường học của bạn:</span>
+
+                                <select
+                                    id="selectSchool"
+                                    class="selectpicker show-tick selecpicker-custom"
+                                    title="Chọn..."
+                                    data-width="100%"
+                                    data-size="5"
+                                >
+                                    <option id="hcmut-school" data-tokens="hcmut">Đại học Bách Khoa TP.HCM</option>
+                                    <option id="other-school" data-tokens="other">Trường khác...</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-7">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="form-swap-area">
+                                        <div class="form-swap form-swap--form-1">
+                                            <div class="selectpicker-container" id="selectFaculty-container">
+                                                <span class="d-block">Khoa/ngành:</span>
+
+                                                <select
+                                                    id="selectFaculty"
+                                                    class="selectpicker show-tick selecpicker-custom"
+                                                    title="Chọn..."
+                                                    data-width="100%"
+                                                    data-size="5"
+                                                    data-live-search="true"
+                                                >
+                                                    <option id="CK-faculty" data-tokens="hcmut">Cơ khí</option>
+
+                                                    <option id="DC-faculty" data-tokens="hcmut"
+                                                        >Kỹ thuật Địa chất & Dầu khí</option
+                                                    >
+                                                    <option id="DD-faculty" data-tokens="hcmut">Điện - Điện tử</option>
+                                                    <option id="MTKH-faculty" data-tokens="hcmut"
+                                                        >Khoa học máy tính</option
+                                                    >
+                                                    <option id="MTKT-faculty" data-tokens="hcmut"
+                                                        >Kỹ thuật máy tính</option
+                                                    >
+                                                    <option id="HC-faculty" data-tokens="hcmut"
+                                                        >Kỹ thuật Hóa học</option
+                                                    >
+                                                    <option id="LG-faculty" data-tokens="hcmut"
+                                                        >Kỹ thuật Hệ thống Công nghiệp Logistic</option
+                                                    >
+                                                    <option id="QL-faculty" data-tokens="hcmut"
+                                                        >Quản lý Công nghiệp</option
+                                                    >
+                                                    <option id="XD-faculty" data-tokens="hcmut"
+                                                        >Kỹ thuật Xây dựng</option
+                                                    >
+                                                    <option id="NH-faculty" data-tokens="hcmut">Kỹ thuật Nhiệt</option>
+                                                    <option id="MO-faculty" data-tokens="hcmut"
+                                                        >Quản lý Tài nguyen và Môi trường</option
+                                                    >
+                                                    <option id="GT-faculty" data-tokens="hcmut"
+                                                        >Kỹ thuật Giao thông</option
+                                                    >
+                                                    <option id="KT-faculty" data-tokens="hcmut">Ngành kiến trúc</option>
+                                                    <option id="UD-faculty" data-tokens="hcmut"
+                                                        >Khoa học Ứng dụng</option
+                                                    >
+                                                    <option id="BD-faculty" data-tokens="hcmut"
+                                                        >Bảo dưỡng công nghiệp</option
+                                                    >
+                                                    <option id="VP-faculty" data-tokens="hcmut"
+                                                        >Chương trình Việt Pháp</option
+                                                    >
+                                                </select>
+
+                                                <span class="running-indicator"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-swap form-swap--form-2">
+                                            <div id="addSchool-container" class="input--grd-running">
+                                                <input id="addSchoolForm" type="text" class="shadow-none" />
+                                                <span data-placeholder="Nhập trường..."></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-5">
+                                    <div id="schoolYear-container" class="input--grd-running">
+                                        <input id="schoolYear" type="text" class="shadow-none" required />
+                                        <span data-placeholder="Niên Khóa"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                            <div id="emailFormPre_Contaier" class="input--grd-running">
+                                <input id="emailFormPre" type="text" class="shadow-none" required />
+                                <span data-placeholder="Tên Email"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div id="emailFormPost_Container" class="input--grd-running">
+                                <span id="domainSymbol">@</span>
+                                <div>
+                                    <input id="emailFormPost" type="text" class="shadow-none" required />
+                                    <span data-placeholder="Tên miền"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div id="passwdForm_Contaier" class="input--grd-running">
+                                <input id="passwdForm" type="password" class="shadow-none" required />
+                                <span data-placeholder="Mật khẩu"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                            <div id="passRetypeFormContaier" class="input--grd-running">
+                                <input id="passRetypeForm" type="password" class="shadow-none" required />
+                                <span data-placeholder="Nhập lại Mật khẩu"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="input--grd-running">
+                                <input id="LastNameForm" type="text" class="shadow-none" required />
+                                <span data-placeholder="Họ"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="input--grd-running">
+                                <input id="FirstNameForm" type="text" class="shadow-none" required />
+                                <span data-placeholder="Tên"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                            <div class="input--grd-running">
+                                <input id="phoneNum" type="text" class="shadow-none" />
+                                <span data-placeholder="Số điện thoại"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="main-area__body__btn-group">
+                            <button
+                                type="submit"
+                                class="btn--grd"
+                                role="button"
+                                onclick="signUpValidate()"
+                                data-toggle="modal"
+                                data-target="#signUp-validation-modal"
+                            >
+                                Đăng ký
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="main-area__footer">
+                    <div class="text-center">
+                        <h5>Đã có tài khoản? <a href="./sign-in.html">Đăng nhập ngay!</a></h5>
+                    </div>
+
+                    <div class="nav-line text-center">
+                        <span class="h6">
+                            <a href="../../index.html">Trang chủ</a> | <a href="../etc/contact.html">Liên hệ</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/js/i18n/defaults-vi_VN.min.js"></script>
+        <!-- Custom Script -->
+        <script src="../../js/plugins.js"></script>
+        <script src="../../js/scriptSign.js"></script>
+        <script src="../../js/scriptSign-signUp.js"></script>
+        <script src="../../js/script-validation.js"></script>
+        <!-- Instant Scripts -->
+        <script type="text/javascript"></script>
+    </body>
+
+    <div
+        class="modal fade"
+        id="signUp-validation-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="signUp-validation-modal-label"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseModal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <br />
+                        <h4>Thông báo</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <span
+                        >Đăng ký tài khoản thành công!<br />
+                        Hãy kiểm tra Email của bạn để xác nhận tài khoản!
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Quay lại
+                    </button>
+                    <a href="./verify.html" class="btn btn-primary">
+                        Xác nhận tài khoản <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

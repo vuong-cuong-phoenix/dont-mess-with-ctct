@@ -1,91 +1,35 @@
-$(document).ready(function() {
-    /*** Custom select-picker ***/
-    $selectPickerContainer = $(".main-body .selectpickerContainer");
-    $selectPickerDD_toggle = $(".main-body .selectpickerContainer .dropdown-toggle");
-    $selectPickerDD_toggle.append("<span class='running-indicator'></span>");
-
-    $("#selectSchool").on("show.bs.select", function() {
-        $selectPickerContainer.css("color", "rgba(0, 0, 0, 0.75)");
-        $selectPickerDD_toggle.removeClass("focusCustom");
-    });
-
-    $("#selectSchool").on("hidden.bs.select", function() {
-        if ($selectPickerDD_toggle.attr("title").indexOf("Chọn") !== 0) {
-            $selectPickerDD_toggle.addClass("focusCustom");
-        } else {
-            $selectPickerContainer.css("color", "rgba(0, 0, 0, 0.35)");
-            $selectPickerDD_toggle.removeClass("focusCustom");
-        }
-    });
-
-    $emailDomain = $("#emailFormPost");
-    $("#selectSchool").on("changed.bs.select", function(e, clickedIndex, isSelected, previousValue) {
-        if (clickedIndex === 1) {
-            setTimeout(function() {
-                $emailDomain.val("hcmut.edu.vn");
-            }, 150);
-            $emailDomain.addClass("focusCustom");
-            $emailDomain.prop("disabled", true);
-        } else {
-            $emailDomain.val("");
-            $emailDomain.removeClass("focusCustom");
-            $emailDomain.prop("disabled", false);
-        }
-
-        if (isSelected == true) {
-            $selectPickerContainer.css("color", "rgba(0, 0, 0, 0.75)");
-        }
-
-        if (clickedIndex === 7) {
-            $selectPickerDD_toggle.css("width", "auto");
-            $(".form-invisible").fadeIn();
-            document.getElementById("addUniForm").required = true;
-        } else {
-            $selectPickerDD_toggle.css("width", "100%");
-            $(".form-invisible").hide();
-            document.getElementById("addUniForm").required = false;
-        }
-    });
-    /*** RULES ***/
-    $("#schoolYear").inputFilter(function(value) {
-        return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 2019);
-    });
-
-    $("#phoneNum").inputFilter(function(value) {
-        return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 1000000000);
-    });
-});
+var school = document.getElementById("addSchoolForm");
+var schoolYear = document.getElementById("schoolYear");
+var emailPre = document.getElementById("emailFormPre");
+var emailPost = document.getElementById("emailFormPost");
+var passwd = document.getElementById("passwdForm");
+var passRetype = document.getElementById("passRetypeForm");
+var firstName = document.getElementById("FirstNameForm");
+var lastName = document.getElementById("LastNameForm");
+var phoneNum = document.getElementById("phoneNum");
 
 /*** School Validation */
-var school_Regex_tooShort = new RegExp(/^.{0,4}$/, "i");
-var school_Regex_checkAbbre = new RegExp(/\(\w{0,9}\)/, "i");
+var school_Regex_tooShort = new RegExp(/^.{0,3}$/, "i");
 
-function schoolValidation(elm) {
-    if (elm.value == "") {
-        elm.setCustomValidity("Hãy nhập Tên Trường của bạn.");
-    } else if (school_Regex_tooShort.test(elm.value)) {
-        elm.setCustomValidity("Tên Trường ngắn quá! Bạn có thể cho mình biết tên đầy đủ được không ^^!");
-    } else if (!school_Regex_checkAbbre.test(elm.value)) {
-        elm.setCustomValidity(
-            "Bạn có thể cho biết tên viết tắt của Trường bạn được không? Hãy viết bên trong dấu ngoặc đơn:'(' và ')'!"
-        );
-    } else {
+function schoolValidation(elm, isRequired) {
+    if (isRequired === false) {
         elm.setCustomValidity("");
-    }
-}
-/*** Faculty Validation */
-function facultyValidate(elm) {
-    if (elm.value == "") {
-        elm.setCustomValidity("Hãy nhập Khoa/ngành của bạn.");
+        return;
     } else {
-        elm.setCustomValidity("");
+        if (elm.value == "") {
+            elm.setCustomValidity("Hãy nhập Tên Trường của bạn.");
+        } else if (school_Regex_tooShort.test(elm.value)) {
+            elm.setCustomValidity("Tên Trường ngắn quá! Bạn có thể cho mình biết tên đầy đủ được không ^^!");
+        } else {
+            elm.setCustomValidity("");
+        }
     }
 }
 /*** School Year Validation */
 function schoolYearValidate(elm) {
     if (elm.value == "") {
         elm.setCustomValidity("Hãy nhập Niên khóa của bạn.");
-    } else if (parseInt(elm.value) <= 1800) {
+    } else if (parseInt(elm.value) <= 1900) {
         elm.setCustomValidity("Bạn có phải là người thuộc Hội Thiên Cổ?");
     } else {
         elm.setCustomValidity("");
@@ -154,27 +98,20 @@ function nameValidate(first, last) {
 /*** Phone Number Validation */
 var phoneNum_Regex = new RegExp(/^[0][0-9]{9}$/);
 function phoneNumValidate(elm) {
-    if (!phoneNum_Regex.test(elm.value)) {
+    if (elm.value == "") {
+        elm.setCustomValidity("");
+    } else if (!phoneNum_Regex.test(elm.value)) {
         elm.setCustomValidity("Hãy nhập đúng 10 chữ số của Số điện thoại (bắt đầu bằng số '0').");
     } else {
         elm.setCustomValidity("");
     }
 }
 
-// var school = document.getElementById("addUniForm");
-var faculty = document.getElementById("falcuty");
-var schoolYear = document.getElementById("schoolYear");
-var emailPre = document.getElementById("emailFormPre");
-var emailPost = document.getElementById("emailFormPost");
-var passwd = document.getElementById("passwdForm");
-var passRetype = document.getElementById("passRetypeForm");
-var firstName = document.getElementById("FirstNameForm");
-var lastName = document.getElementById("LastNameForm");
-var phoneNum = document.getElementById("phoneNum");
-
 function signUpValidate() {
-    // schoolValidation(school);
-    facultyValidate(faculty);
+    if (school.required == true) {
+        schoolValidation(school, true);
+    }
+
     schoolYearValidate(schoolYear);
     emailPreValidate(emailPre);
     emailPostValidate(emailPost);
@@ -183,9 +120,6 @@ function signUpValidate() {
     phoneNumValidate(phoneNum);
 }
 // Real-time setting
-faculty.onkeyup = function() {
-    facultyValidate(faculty);
-};
 emailPre.onkeyup = function() {
     emailPreValidate(emailPre);
 };
@@ -208,3 +142,74 @@ passwd.onchange = function() {
 passRetype.onkeyup = function() {
     validateInputMatching(passwd, passRetype);
 };
+
+$(document).ready(function() {
+    $selectPickerContainer = $(".main-area__body .selectpicker-container");
+    $selectSchoolContainer = $("#selectSchool-container");
+    $selectFacultyContainer = $("#selectFaculty-container");
+    $formSwap_1 = $(".form-swap--form-1");
+    $formSwap_2 = $(".form-swap--form-2");
+    $emailDomain = $("#emailFormPost");
+
+    /*** Custom select-picker ***/
+    $("#selectSchool").on("changed.bs.select", function(e, clickedIndex, isSelected, previousValue) {
+        if (clickedIndex === 1) {
+            setTimeout(function() {
+                $emailDomain.val("hcmut.edu.vn");
+            }, 250);
+            $emailDomain.addClass("focused");
+            $emailDomain.attr("readonly", true);
+
+            $formSwap_1.fadeIn();
+            $formSwap_2.fadeOut();
+
+            school.required = false;
+            schoolValidation(school, false);
+        } else {
+            $emailDomain.val("");
+            $emailDomain.removeClass("focused");
+            $emailDomain.attr("readonly", false);
+
+            $formSwap_2.fadeIn();
+            $formSwap_1.fadeOut();
+
+            school.required = true;
+            schoolValidation(school, true);
+        }
+
+        if (isSelected == true) {
+            $selectSchoolContainer.css("color", "rgba(0, 0, 0, 0.75)");
+
+            $("#selectSchool").on("hidden.bs.select", function() {
+                $selectSchoolContainer.addClass("focused");
+            });
+        }
+    });
+
+    $("#selectFaculty").on("changed.bs.select", function(e, clickedIndex, isSelected, previousValue) {
+        if (isSelected == true) {
+            $selectFacultyContainer.css("color", "rgba(0, 0, 0, 0.75)");
+
+            $("#selectFaculty").on("hidden.bs.select", function() {
+                $selectFacultyContainer.addClass("focused");
+            });
+        }
+    });
+
+    $("#selectSchool").on("show.bs.select", function() {
+        $selectSchoolContainer.removeClass("focused");
+    });
+
+    $("#selectFaculty").on("show.bs.select", function() {
+        $selectFacultyContainer.removeClass("focused");
+    });
+
+    /*** RULES ***/
+    $("#schoolYear").inputFilter(function(value) {
+        return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 2019);
+    });
+
+    $("#phoneNum").inputFilter(function(value) {
+        return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 1000000000);
+    });
+});

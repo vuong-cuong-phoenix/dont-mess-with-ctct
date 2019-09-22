@@ -1,0 +1,543 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+/***			THEMES FOR USE			***/
+/*=============================================
+                ALL THEMES
+=============================================*/
+/*				Text's Themes				*/
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600";
+@import "https://fonts.googleapis.com/css?family=Poppins:400,500,700";
+@import "https://fonts.googleapis.com/css?family=Baloo&display=swap";
+.text-white-90p {
+  color: #e6e6e6 !important;
+}
+
+.text-white-85p {
+  color: #d9d9d9 !important;
+}
+
+.text-white-80p {
+  color: #cccccc !important;
+}
+
+.text-orange {
+  color: #ffcc99;
+}
+
+.font-w400 {
+  font-weight: 400 !important;
+}
+
+/*				Gradient Ultily for Font Awesome's Icon				*/
+.icon-grd {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-grd::before {
+  display: initial;
+}
+
+/*				Background's Themes				*/
+.background-dark {
+  background-color: #343a40;
+}
+
+.bg-op {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.bg-secondary-custom {
+  background-color: #ffe6cc;
+}
+
+/*				Gradient Background				*/
+.bg-grd-jShine {
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+}
+
+.bg-grd-EveningSunshine {
+  background: linear-gradient(135deg, #b92b27, #1565c0);
+}
+
+.bg-grd-MegaTron {
+  background: linear-gradient(135deg, #c6ffdd, #f64f59);
+}
+
+.bg-grd-Memariani {
+  background: linear-gradient(135deg, #aa4b6b, #f64f59);
+}
+
+.bg-grd-KyeMeh {
+  background: linear-gradient(135deg, #8360c3, #2ebf91);
+}
+
+.bg-grd-PunYeta {
+  background: linear-gradient(135deg, #108dc7, #ef8e38);
+}
+
+.bg-grd-Vivid {
+  background: linear-gradient(135deg, #fc466b, #3f5efb);
+}
+
+.bg-grd-Metapolis {
+  background: linear-gradient(135deg, #f4791f, #659999);
+}
+
+.bg-grd-eXpresso {
+  background: linear-gradient(135deg, #ad5389, #3c1053);
+}
+
+.bg-grd-Radar {
+  background: linear-gradient(135deg, #a770ef, #fdb99b);
+}
+
+.bg-grd-Alihossein {
+  background: linear-gradient(135deg, #f7ff00, #db36a4);
+}
+
+.bg-grd-GrapefruitSunset {
+  background: linear-gradient(135deg, #e96443, #904e95);
+}
+
+.bg-grd-Atlas {
+  background: linear-gradient(135deg, #feac5e, #4bc0c8);
+}
+
+.bg-grd-Cherryblossom {
+  background: linear-gradient(135deg, #fbd3e9, #bb377d);
+}
+
+.bg-grd-CalmDarya {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+}
+
+.bg-grd-MonteCarlo {
+  background: linear-gradient(135deg, #cc95c0, #7aa1d2);
+}
+
+.bg-grd-Venice {
+  background: linear-gradient(135deg, #6190e8, #a7bfe8);
+}
+
+.bg-grd-Jodhpur {
+  background: linear-gradient(135deg, #9cecfb, #0052d4);
+}
+
+.bg-grd-EndlessRiver {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.bg-grd-CocoaaIce {
+  background: linear-gradient(135deg, #1cefff, #c0c0aa);
+}
+
+.bg-grd-Earthly {
+  background: linear-gradient(135deg, #649173, #dbd5a4);
+}
+
+.bg-grd-ForeverLost {
+  background: linear-gradient(135deg, #5d4157, #a8caba);
+}
+
+.bg-grd-WhatLiesBeyond {
+  background: linear-gradient(135deg, #f0f2f0, #000c40);
+}
+
+.bg-grd-Jupiter {
+  background: linear-gradient(135deg, #ffd89b, #19547b);
+}
+
+.bg-grd-WeddingDay {
+  background: linear-gradient(135deg, #40e0d0, #ff8c00);
+}
+
+.bg-grd-AzurePop {
+  background: linear-gradient(135deg, #ef32d9, #89fffd);
+}
+
+.bg-grd-LoveCouple {
+  background: linear-gradient(135deg, #3a6186, #89253e);
+}
+
+.bg-grd-Hazel {
+  background: linear-gradient(135deg, #77a1d3, #e684ae);
+}
+
+.bg-grd-Instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d);
+}
+
+.bg-grd-VirginAmerica {
+  background: linear-gradient(135deg, #7b4397, #dc2430);
+}
+
+/***			BASE STYLES			***/
+/*=============================================
+                BASE INITIATION
+=============================================*/
+html,
+body {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/*=============================================
+                TYPOGRAPHYS
+=============================================*/
+.highlight-num {
+  margin-right: 0.25rem;
+}
+
+/***			COMPONENTS STYLES			***/
+/*=============================================
+                AVATAR STYLES
+=============================================*/
+/*  Medium variant  */
+.avatar--md {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.avatar--md--fx-shadow {
+  box-shadow: 0 0 0 3px #ffcc99;
+}
+
+/*  Small variant   */
+.avatar--sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.avatar--sm--fx-shadow {
+  box-shadow: 0 0 0 2px #ffcc99;
+}
+
+/*  Extra Small variant */
+.avatar--xs {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar--xs--fx-shadow {
+  box-shadow: 0 0 0 1.5px #ffcc99;
+}
+
+/*=============================================
+                BUTTON STYLES
+=============================================*/
+/*  Primary Button's variant    */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #ffcc99;
+  border-color: #ffcc99;
+  color: #404040;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #ffb366;
+  border-color: #ffb366;
+  color: #4d4d4d;
+}
+
+.btn-border--lightWhite {
+  border-color: #d9d9d9;
+}
+.btn-border--lightWhite:hover {
+  border-color: #ffffff !important;
+}
+
+.btn--circle {
+  border-radius: 50% !important;
+}
+
+.btn--rounded {
+  border-radius: 3.125rem !important;
+}
+
+.btn--grd {
+  display: block;
+  width: 50%;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  color: #e9e9e9;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #12c2e9);
+  background-size: 200%;
+  transition: all 0.5s;
+}
+.btn--grd:hover {
+  background-position: right;
+}
+
+/*=============================================
+    CUSTOM FORM INPUT WITH GRADIENT RUNNING INDICATOR
+=============================================*/
+.input--grd-running {
+  position: relative;
+  border-bottom: solid 0.125rem rgba(0, 0, 0, 0.35);
+  margin-bottom: 3.5rem;
+}
+.input--grd-running input {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0 1rem;
+  outline: none !important;
+  background: none !important;
+  border: none !important;
+}
+.input--grd-running span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 1.25rem;
+  transition: all 0.5s;
+}
+.input--grd-running span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  transition: all 0.5s;
+}
+.input--grd-running input.focused + span::before {
+  top: -0.65rem;
+  color: #404040;
+}
+.input--grd-running input.focused + span::after {
+  width: 100%;
+}
+
+.running-indicator {
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  transition: all 0.5s;
+}
+
+.focused .running-indicator {
+  width: 100%;
+}
+
+/*=============================================
+            Navigation in a line
+=============================================*/
+.nav-line {
+  padding: 0.5rem 0.5rem 0;
+}
+.nav-line a {
+  color: #737373;
+  padding: 0 0.25rem;
+}
+.nav-line a:hover {
+  color: #404040;
+}
+
+/***			LAYOUT STYLES			***/
+/*=============================================
+            SIGN'S PAGES LAYOUT
+=============================================*/
+html,
+body {
+  font-family: "Baloo", cursive;
+  color: #404040;
+  height: 100%;
+  font-size: 17px;
+}
+@media (max-width: 1200px) {
+  html,
+body {
+    font-size: 17px;
+  }
+}
+@media (max-width: 992px) {
+  html,
+body {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  html,
+body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  html,
+body {
+    font-size: 12px;
+  }
+}
+
+button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus {
+  box-shadow: none !important;
+}
+
+.no-outline {
+  outline: none !important;
+}
+
+.background-area {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.main-area__body__btn-group {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/***			PAGES STYLES			***/
+/*=============================================
+        STYLES FOR ONLY SIGN-UP PAGE
+=============================================*/
+.main-area {
+  background: #f6f6f6;
+  width: 900px;
+  min-height: calc(100% - 2.5rem);
+  margin: calc(2.5rem / 2) auto;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translate(0);
+  /* For z-index */
+  padding: 2.5rem 3rem 1rem;
+}
+@media (max-width: 1200px) {
+  .main-area {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .main-area {
+    width: calc(90% - (90% - 70%) / 2);
+  }
+}
+@media (max-width: 768px) {
+  .main-area {
+    width: calc(90% - (90% - 70%) / 3);
+  }
+}
+@media (max-width: 576px) {
+  .main-area {
+    width: 90%;
+  }
+}
+.main-area__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.main-area__header > * {
+  font-size: 2.5rem;
+}
+.main-area__body .selectpicker-area {
+  position: relative;
+}
+.main-area__body .selectpicker-container {
+  font-size: 1.25rem;
+  color: #a6a6a6;
+  margin-bottom: 1rem;
+}
+.main-area__body .selectpicker-container .dropdown-toggle {
+  background: #f6f6f6;
+  transition: 0.5s;
+}
+.main-area__body .selectpicker-container .dropdown-toggle:hover {
+  background: #dae0e5;
+}
+.main-area__body .selectpicker-container .dropdown-toggle:focus {
+  outline: none !important;
+}
+.main-area__body .selectpicker-container .running-indicator {
+  bottom: 1rem;
+}
+.main-area__body .form-swap-area {
+  position: relative;
+}
+.main-area__body .form-swap-area .form-swap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.main-area__body .form-swap-area .form-swap--form-1 {
+  display: block;
+}
+.main-area__body .form-swap-area .form-swap--form-2 {
+  display: none;
+}
+.main-area__body #addSchool-container,
+.main-area__body #schoolYear-container {
+  margin-top: calc(2rem - 2.5px);
+}
+.main-area__body #emailFormPre {
+  padding-right: 0;
+}
+.main-area__body #emailFormPost_Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-area__body #emailFormPost_Container #domainSymbol {
+  position: absolute;
+  left: calc(0px - 1rem * 2 + 0.4rem);
+}
+.main-area__body .btn--grd {
+  width: 60%;
+  height: 3rem;
+}
+.main-area__footer {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+/*# sourceMappingURL=style-sign-up.css.map */

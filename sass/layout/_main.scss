@@ -1,0 +1,40 @@
+/*=============================================
+        MAIN-CONTENT's COMMON STYLES
+=============================================*/
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.content-main {
+    width: calc(100% - #{$meas-sidebar__width});
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-content__body__bg;
+
+    &.active {
+        width: calc(100% - #{$meas-sidebar__width--onActive});
+    }
+
+    .col-items {
+        > div {
+            margin-bottom: 36px;
+        }
+    }
+
+    .user-name {
+        color: #cc7a00;
+        font-weight: 500;
+        font-size: 1.1rem;
+
+        &:hover {
+            color: $color-primary__text--onActive;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+/*=============================================
+                CONTAINER STYLES
+=============================================*/
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+/*  Content's width center  */
+.content-w {
+    margin: 0 auto;
+    padding: 0 $meas-spacing--large;
+    max-width: 92.5%;
+
+    &--top {
+        padding-top: $meas-spacing--large;
+    }
+}
+
+.min-w--300 {
+    min-width: 300px !important;
+}
+
+.min-w--400 {
+    min-width: 400px !important;
+}
+
+.max-w--300 {
+    max-width: 300px !important;
+}
+
+/*  BLOCKs  */
+.block--rounded {
+    min-width: 100%;
+    border-radius: $meas-border-radius--regular;
+    margin-bottom: $meas-spacing--large;
+}
+
+.block--fx-shadow {
+    box-shadow: 0 0 36px #dee2e5;
+    opacity: 1;
+}
+
+.block__header {
+    border-bottom: solid 1px $color-content__body__bg;
+    border-top-left-radius: $meas-border-radius--regular;
+    border-top-right-radius: $meas-border-radius--regular;
+    padding: 1rem;
+
+    @each $h in $headings {
+        #{$h} {
+            margin: 0;
+        }
+    }
+}
+
+.block__body {
+    padding: 1rem;
+
+    &__title {
+        padding: 0 1rem 0 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.divider--100 {
+    width: 100%;
+    border-bottom: 1px solid $color-content__footer__divider;
+    margin: 10px auto;
+}

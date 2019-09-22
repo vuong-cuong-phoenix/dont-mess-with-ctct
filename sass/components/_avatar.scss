@@ -1,0 +1,33 @@
+/*=============================================
+                AVATAR STYLES
+=============================================*/
+/*  Medium variant  */
+.avatar--md {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.avatar--md--fx-shadow {
+    box-shadow: 0 0 0 3px $color-primary;
+}
+/*  Small variant   */
+.avatar--sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar--sm--fx-shadow {
+    box-shadow: 0 0 0 2px $color-primary;
+}
+/*  Extra Small variant */
+.avatar--xs {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.avatar--xs--fx-shadow {
+    box-shadow: 0 0 0 1.5px $color-primary;
+}

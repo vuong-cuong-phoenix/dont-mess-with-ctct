@@ -1,0 +1,83 @@
+/*=============================================
+    CUSTOM FORM INPUT WITH GRADIENT RUNNING INDICATOR
+=============================================*/
+
+$color-text--normal: lighten(#000000, 25%);
+$color-text--lighter: lighten($color-text--normal, 20%);
+$color-text--lighter2: lighten($color-text--lighter, 20%);
+
+$color-run-ind--grd_1st: #12c2e9;
+$color-run-ind--grd_2nd: #c471ed;
+$color-run-ind--gtd_3rd: #f64f59;
+
+.input--grd-running {
+    position: relative;
+    border-bottom: solid 0.125rem $color-ultra-light;
+    margin-bottom: 3.5rem;
+
+    input {
+        width: 100%;
+        height: 2.25rem;
+        padding: 0 1rem;
+        outline: none !important;
+        background: none !important;
+        border: none !important;
+    }
+
+    span {
+        &::before {
+            content: attr(data-placeholder);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            transform: translateY(-50%);
+            color: $color-ultra-light;
+            font-size: 1.25rem;
+            transition: all 0.5s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0.125rem;
+            background: linear-gradient(
+                135deg,
+                $color-run-ind--grd_1st,
+                $color-run-ind--grd_2nd,
+                $color-run-ind--gtd_3rd
+            );
+            transition: all 0.5s;
+        }
+    }
+
+    input.focused {
+        + span {
+            &::before {
+                top: -0.65rem;
+                color: $color-text--normal;
+            }
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.running-indicator {
+    background: linear-gradient(135deg, $color-run-ind--grd_1st, $color-run-ind--grd_2nd, $color-run-ind--gtd_3rd);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    transition: all 0.5s;
+}
+
+.focused .running-indicator {
+    width: 100%;
+}

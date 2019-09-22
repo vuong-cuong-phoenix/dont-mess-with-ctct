@@ -1,0 +1,215 @@
+/*=============================================
+        STYLES FOR ONLY COURSEs PAGE
+=============================================*/
+/***            Lecture's Tabs           ***/
+.lecture-deck__tabs {
+    &__meta {
+        > li:not(:last-child) {
+            border-right: solid 1px #e6e6e6;
+        }
+
+        > li:first-child a:hover,
+        > li:first-child .active {
+            border-top-left-radius: $meas-border-radius--regular;
+        }
+
+        > li:last-child a:hover,
+        > li:last-child .active {
+            border-top-right-radius: $meas-border-radius--regular;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            text-align: center;
+
+            a {
+                border-bottom: solid 1px #e6e6e6;
+
+                &.active {
+                    background-color: $color-primary;
+                    border-bottom: solid 1px $color-primary;
+                }
+
+                &:hover {
+                    background-color: $color-primary;
+                    border-bottom: solid 1px $color-primary;
+                }
+            }
+        }
+    }
+
+    &__content {
+        border-bottom-left-radius: $meas-border-radius--regular;
+        border-bottom-right-radius: $meas-border-radius--regular;
+        margin: 0 auto;
+
+        #listLectures-content,
+        #listRefs-content,
+        #lectureNote-content {
+            width: auto;
+            height: 100%;
+            overflow: auto;
+        }
+
+        #listRefs-content a span i {
+            margin-right: 0.5rem;
+        }
+
+        .scrollbar-track {
+            background: transparent !important;
+        }
+
+        .list-group-item,
+        .list-group-item:first-child,
+        .list-group-item:last-child {
+            border: none;
+            border-radius: 0.25rem;
+
+            &.active {
+                color: $color-btn-primary__text;
+                background-color: $color-primary;
+            }
+        }
+
+        .edit-lecture {
+            border-left: 2px solid $color-primary;
+            padding: 1rem 1rem;
+            margin-left: 1.75rem;
+
+            .form-group {
+                > label {
+                    font-size: 1rem;
+                    font-style: italic;
+                }
+            }
+
+            &__btn-group {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__btn {
+                width: 75px;
+                border: none;
+            }
+        }
+    }
+}
+
+/***			Lecture's Content			***/
+.lecture-content {
+    .related-courses {
+        .related-courses__img-container {
+            > img {
+                max-height: 75px;
+            }
+        }
+    }
+
+    &__description {
+        .block__body h3 {
+            color: #cc2900;
+        }
+    }
+
+    &__instructor {
+        &__body {
+            &__img-and-stats {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            &__stats > div {
+                padding-top: 0.3rem;
+            }
+
+            &__title a {
+                color: $color-primary__text;
+
+                &:hover {
+                    color: $color-primary__text--onActive;
+                }
+            }
+        }
+    }
+
+    &__review {
+        &__rating {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: solid 1px $color-content__body__bg;
+
+            .rating-summary-container {
+                flex-direction: column;
+                align-items: center;
+
+                > div:last-child {
+                    font-size: 1.25rem;
+                    flex-wrap: wrap;
+                }
+
+                .rating-summary__number {
+                    font-size: 72px;
+                    line-height: 1;
+                }
+
+                .rating-summary__stars {
+                    color: $color-primary__text;
+                    font-size: 1.4rem;
+                    white-space: nowrap;
+                }
+            }
+
+            .rating-stats-container {
+                display: flex;
+                flex-direction: column;
+                flex: 1 0 auto;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                .rating-stats {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:hover .progess-flex-fill {
+                        background: $color-primary__text !important;
+                    }
+
+                    &__rate {
+                        margin-left: 0.75rem;
+                        text-align: center;
+                        min-width: 1px;
+                        width: 50px;
+                        white-space: nowrap;
+                    }
+
+                    &__stars {
+                        color: $color-primary__text;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        &__user-review {
+            padding-bottom: 0rem;
+        }
+    }
+}

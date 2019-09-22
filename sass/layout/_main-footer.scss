@@ -1,0 +1,55 @@
+/*=============================================
+            MAIN BODY'S FOOTER LAYOUT
+=============================================*/
+
+.content-main__footer {
+    background-color: $color-content__footer__bg;
+    min-height: 250px;
+    padding-bottom: 10px;
+    padding-top: $meas-spacing--large;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__divider {
+        width: 90%;
+        border-bottom: 1.5px solid $color-content__footer__divider;
+        margin: 20px auto;
+    }
+
+    &__body {
+        padding-top: 0;
+
+        ul li {
+            padding-bottom: 10px;
+
+            i {
+                font-size: 1.4em;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .news__body ul {
+        list-style-position: inside;
+
+        li::before {
+            font: normal normal normal 1rem/1 "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0f4" !important;
+            display: inline-block;
+            margin-right: 7.5px;
+        }
+    }
+
+    .certificate > img {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .col-xl-4 {
+        padding-left: $meas-col-padding--x;
+        padding-right: $meas-col-padding--x;
+    }
+}

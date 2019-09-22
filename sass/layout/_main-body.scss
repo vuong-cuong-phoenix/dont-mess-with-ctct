@@ -1,0 +1,30 @@
+/*=============================================
+            MAIN CONTENT'S BODY LAYOUT
+=============================================*/
+.content-main__body {
+    padding-bottom: 20px;
+}
+
+.content-main__body .breadcrumb {
+    padding: 7px 14px;
+    margin-bottom: $meas-spacing--large;
+}
+
+.content-main__body .breadcrumb-item {
+    color: #e67300;
+}
+
+.content-main__body .breadcrumb-item:hover {
+    color: $color-primary__text--onActive;
+}
+
+.content-main__body .breadcrumb-item + .breadcrumb-item::before {
+    font: normal normal normal 1em/1 "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105" !important;
+    display: inline-block;
+}
+
+.content-main__body .breadcrumb-item.active {
+    color: black;
+}

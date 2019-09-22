@@ -1,0 +1,19 @@
+/*=============================================
+        STYLES ONLY FOR SIGN-IN PAGE
+=============================================*/
+.main-area {
+    @include account-main-area($color-bg--light, 475px, 3rem, 45%, 90%);
+    padding: 3rem 2.25rem 1rem;
+
+    &__header {
+        @include account-main-area__header(3rem, 3rem);
+    }
+
+    &__footer {
+        @include account-main-area__footer();
+    }
+
+    .btn--grd {
+        width: 100%;
+    }
+}

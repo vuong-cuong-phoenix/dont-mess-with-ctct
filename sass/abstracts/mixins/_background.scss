@@ -1,0 +1,29 @@
+///      MIXINS FOR BACKGROUND
+@mixin bg-fullpage {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin bg-grd($direction, $first, $second, $third: 0) {
+    @if ($third != 0) {
+        background: -webkit-linear-gradient($direction, $first, $second);
+        background: -moz-linear-gradient($direction, $first, $second);
+        background: -ms-linear-gradient($direction, $first, $second);
+        background: -o-linear-gradient($direction, $first, $second);
+        background: linear-gradient($direction, $first, $second);
+    } @else {
+        background: -webkit-linear-gradient($direction, $first, $second, $third);
+        background: -moz-linear-gradient($direction, $first, $second, $third);
+        background: -ms-linear-gradient($direction, $first, $second, $third);
+        background: -o-linear-gradient($direction, $first, $second, $third);
+        background: linear-gradient($direction, $first, $second, $third);
+    }
+}

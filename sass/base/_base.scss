@@ -1,4 +1,20 @@
-html {
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600";
+@import "https://fonts.googleapis.com/css?family=Poppins:400,500,700";
+/*=============================================
+                BASE INITIATION
+=============================================*/
+html,
+body {
+    font-size: 16px;
     height: 100%;
     width: 100%;
 }
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+///         MEDIA-QUERIES

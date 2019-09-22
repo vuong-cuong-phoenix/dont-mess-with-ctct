@@ -1,0 +1,118 @@
+/*=============================================
+                COMMENT SECTION
+=============================================*/
+
+.comment-section {
+    padding-bottom: 0rem;
+
+    .add-comment {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border-bottom: solid 1px $color-content__body__bg;
+
+        .form-group {
+            margin-bottom: 0.5rem;
+        }
+
+        &__btn-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            > button {
+                width: 6rem;
+                height: 2rem;
+                line-height: 1;
+            }
+        }
+    }
+
+    .comment-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1.15rem;
+        padding-top: 1rem;
+        border-top: solid 1px $color-content__body__bg;
+
+        &__body {
+            .comment-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.75rem;
+
+                &__time {
+                    font-size: 0.85rem;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+
+                &__rating {
+                    color: $color-primary__text;
+                    white-space: nowrap;
+                }
+            }
+
+            .comment-detail {
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            .comment-meta {
+                padding-top: 1rem;
+                padding-bottom: 0.5rem;
+
+                > span {
+                    margin-right: 2rem;
+                    color: #cc7a00;
+
+                    &:hover {
+                        color: $color-primary__text--onActive;
+                    }
+                }
+
+                &__comment-reply {
+                    padding-top: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &--nested {
+        ul {
+            list-style: none;
+            padding-inline-start: 0;
+
+            &.nested-comment {
+                margin-left: calc(3rem + 1.5rem);
+            }
+
+            &.nested-comment--level-1 {
+                margin-left: 0;
+            }
+
+            li {
+                &.comment-item {
+                    padding-top: 1rem;
+                    margin-bottom: 1.15rem;
+                    border-top: solid 1px $color-content__body__bg;
+                }
+            }
+        }
+    }
+
+    &__more-comment {
+        padding: 1rem;
+        border-top: solid 1px $color-content__body__bg;
+
+        &:hover {
+            background-color: #f8f9fa;
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+    }
+}

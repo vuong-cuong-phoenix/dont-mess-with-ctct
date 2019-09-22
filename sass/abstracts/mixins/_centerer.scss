@@ -1,0 +1,37 @@
+///             MIXINS FOR CENTERER
+
+@mixin centerer--col($margin: 0, $padding: 0) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @if ($margin == 0 and $padding == 0) {
+        margin: 0;
+        padding: 15px;
+    } @else if ($margin == 0) {
+        margin: 0;
+        padding: $padding;
+    } @else {
+        margin: $margin;
+        padding: $padding;
+    }
+}
+
+@mixin centerer--row($margin: 0, $padding: 0) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @if ($margin == 0 and $padding == 0) {
+        margin: 0;
+        padding: 15px;
+    } @else if ($margin == 0) {
+        margin: 0;
+        padding: $padding;
+    } @else {
+        margin: $margin;
+        padding: $padding;
+    }
+}

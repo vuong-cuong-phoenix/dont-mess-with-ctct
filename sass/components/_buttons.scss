@@ -1,0 +1,58 @@
+/*=============================================
+                BUTTON STYLES
+=============================================*/
+
+/*  Primary Button's variant    */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-btn-primary__text;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary:hover {
+    background-color: $color-primary--onActive;
+    border-color: $color-primary--onActive;
+    color: $color-btn-primary__text--onActive;
+}
+
+.btn-border--lightWhite {
+    border-color: darken(#ffffff, 15%);
+
+    &:hover {
+        border-color: #ffffff !important;
+    }
+}
+
+.btn--circle {
+    border-radius: 50% !important;
+}
+
+.btn--rounded {
+    border-radius: 3.125rem !important;
+}
+
+.btn--grd {
+    display: block;
+    width: 50%;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: $color-bg--light--darker;
+    background: linear-gradient(135deg, $color-btn--grd_1st, $color-btn--grd_2nd, $color-btn--grd_1st);
+    background-size: 200%;
+    transition: all 0.5s;
+
+    &:hover {
+        background-position: right;
+    }
+}

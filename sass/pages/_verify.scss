@@ -1,0 +1,29 @@
+/*=============================================
+            STYLES FOR ONLY VERIFY PAGE
+=============================================*/
+.main-area {
+    @include account-main-area($color-bg--light, 550px, 7.5rem, 50%, 90%);
+    padding: 4.5rem 2.25rem 1rem;
+
+    &__header {
+        @include account-main-area__header(3rem, 2.75rem);
+    }
+
+    &__body {
+        .code-resending {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__footer {
+        @include account-main-area__footer();
+    }
+
+    .btn--grd {
+        width: 100%;
+    }
+}
+
+.input--grd-running {
+    margin-bottom: 1.25rem;
+}

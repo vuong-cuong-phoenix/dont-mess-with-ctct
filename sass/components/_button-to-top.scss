@@ -1,0 +1,15 @@
+/*=============================================
+                BUTTON-TO-TOP
+=============================================*/
+#btnToTop {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    z-index: 999;
+    font-size: 1rem;
+    color: $color-sidebar__text;
+    border-radius: 50%;
+}
