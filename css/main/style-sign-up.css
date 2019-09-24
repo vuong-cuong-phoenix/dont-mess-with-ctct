@@ -5,9 +5,7 @@
                 ALL THEMES
 =============================================*/
 /*				Text's Themes				*/
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600";
-@import "https://fonts.googleapis.com/css?family=Poppins:400,500,700";
-@import "https://fonts.googleapis.com/css?family=Baloo&display=swap";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto:400,400i,700&display=swap");
 .text-white-90p {
   color: #e6e6e6 !important;
 }
@@ -20,12 +18,28 @@
   color: #cccccc !important;
 }
 
-.text-orange {
-  color: #ffcc99;
+.text--primary {
+  color: #ffcc99 !important;
+}
+
+.text--primary:hover {
+  color: #ffb366 !important;
+}
+
+.text--fx-shadow {
+  text-shadow: 1px 1px 4px #000000;
 }
 
 .font-w400 {
   font-weight: 400 !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
 }
 
 /*				Gradient Ultily for Font Awesome's Icon				*/
@@ -59,30 +73,58 @@
 
 /*				Gradient Background				*/
 .bg-grd-jShine {
+  background: -webkit-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -moz-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -ms-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -o-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
   background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
 }
 
 .bg-grd-EveningSunshine {
+  background: -webkit-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -moz-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -ms-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -o-linear-gradient(135deg, #b92b27, #1565c0);
   background: linear-gradient(135deg, #b92b27, #1565c0);
 }
 
 .bg-grd-MegaTron {
+  background: -webkit-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -moz-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -ms-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -o-linear-gradient(135deg, #c6ffdd, #f64f59);
   background: linear-gradient(135deg, #c6ffdd, #f64f59);
 }
 
 .bg-grd-Memariani {
+  background: -webkit-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -moz-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -ms-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -o-linear-gradient(135deg, #aa4b6b, #f64f59);
   background: linear-gradient(135deg, #aa4b6b, #f64f59);
 }
 
 .bg-grd-KyeMeh {
+  background: -webkit-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -moz-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -ms-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -o-linear-gradient(135deg, #8360c3, #2ebf91);
   background: linear-gradient(135deg, #8360c3, #2ebf91);
 }
 
 .bg-grd-PunYeta {
+  background: -webkit-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -moz-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -ms-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -o-linear-gradient(135deg, #108dc7, #ef8e38);
   background: linear-gradient(135deg, #108dc7, #ef8e38);
 }
 
 .bg-grd-Vivid {
+  background: -webkit-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -moz-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -ms-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -o-linear-gradient(135deg, #fc466b, #3f5efb);
   background: linear-gradient(135deg, #fc466b, #3f5efb);
 }
 
@@ -185,6 +227,7 @@
 html,
 body {
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -199,6 +242,22 @@ a:focus {
 /*=============================================
                 TYPOGRAPHYS
 =============================================*/
+.text-overflow--2-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.text-overflow--1-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .highlight-num {
   margin-right: 0.25rem;
 }
@@ -261,6 +320,23 @@ a:focus {
   background-color: #ffb366;
   border-color: #ffb366;
   color: #4d4d4d;
+}
+
+.btn-outline-primary {
+  border: 1px solid #ffcc99;
+  color: #ffcc99;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffb366;
+  border: 1px solid #ffb366;
+  color: #4d4d4d;
+}
+
+/*					CUSTOM BUTTONS					*/
+.btn-account--outline-dark {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
 }
 
 .btn-border--lightWhite {
@@ -375,21 +451,20 @@ a:focus {
 =============================================*/
 html,
 body {
-  font-family: "Baloo", cursive;
   color: #404040;
   height: 100%;
-  font-size: 17px;
+  font-size: 16px;
 }
 @media (max-width: 1200px) {
   html,
 body {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media (max-width: 992px) {
   html,
 body {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -401,7 +476,7 @@ body {
 @media (max-width: 576px) {
   html,
 body {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -423,7 +498,13 @@ button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus {
   background-position: center;
   overflow: auto;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
 }
 
 .main-area__body__btn-group {
@@ -459,17 +540,17 @@ button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus {
 }
 @media (max-width: 992px) {
   .main-area {
-    width: calc(90% - (90% - 70%) / 2);
+    width: calc(100% - (100% - 70%) / 2);
   }
 }
 @media (max-width: 768px) {
   .main-area {
-    width: calc(90% - (90% - 70%) / 3);
+    width: calc(100% - (100% - 70%) / 3);
   }
 }
 @media (max-width: 576px) {
   .main-area {
-    width: 90%;
+    width: 100%;
   }
 }
 .main-area__header {

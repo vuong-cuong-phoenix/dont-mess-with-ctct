@@ -1,0 +1,59 @@
+///				ANIMATION's MIXINS				///
+@mixin animation-short($animation, $duration, $timing-function) {
+    -webkit-animation-name: $animation;
+    -moz-animation-name: $animation;
+    -o-animation-name: $animation;
+    animation-name: $animation;
+
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+
+    @if ($timing-function != 0) {
+        -webkit-animation-timing-function: $timing-function;
+        -moz-animation-timing-function: $timing-function;
+        -o-animation-timing-function: $timing-function;
+        animation-timing-function: $timing-function;
+    }
+
+    -webkit-animation-fill-mode: none;
+    -moz-animation-fill-mode: none;
+    -o-animation-fill-mode: none;
+    animation-fill-mode: none;
+}
+
+@mixin animation($animation, $delay, $duration, $timing-function) {
+    -webkit-animation-name: $animation;
+    -moz-animation-name: $animation;
+    -o-animation-name: $animation;
+    animation-name: $animation;
+}
+
+@mixin animation-delay($delay...) {
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    animation-delay: $delay;
+}
+
+@mixin animation-duration($duration...) {
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+}
+
+@mixin animation($timing-function...) {
+    -webkit-animation-timing-function: $timing-function;
+    -moz-animation-timing-function: $timing-function;
+    -o-animation-timing-function: $timing-function;
+    animation-timing-function: $timing-function;
+}
+
+@mixin animation-fill-mode($fill-mode...) {
+    -webkit-animation-fill-mode: $fill-mode;
+    -moz-animation-fill-mode: $fill-mode;
+    -o-animation-fill-mode: $fill-mode;
+    animation-fill-mode: $fill-mode;
+}

@@ -2,7 +2,7 @@
         STYLES ONLY FOR SIGN-IN PAGE
 =============================================*/
 .main-area {
-    @include account-main-area($color-bg--light, 475px, 3rem, 45%, 90%);
+    @include account-main-area($color-bg--light, 475px, 3rem, 45%, 100%);
     padding: 3rem 2.25rem 1rem;
 
     &__header {

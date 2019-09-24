@@ -11,109 +11,112 @@
         <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/styleIndex.css" />
-        <link rel="stylesheet" href="css/styleCommon.css" />
         <link rel="stylesheet" href="css/carousel.css" />
+        <link rel="stylesheet" href="css/styleCommon.css" />
+        <!-- <link rel="stylesheet" href="css/styleIndex.css" /> -->
+        <link rel="stylesheet" href="css/main/style-index.css" />
     </head>
-    <body id="bodyIndex">
-        <!-- Header -->
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 0, 0, 0)">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid" alt="CTCT_Logo" /> </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerIndex">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <body>
+        <div class="bg-img">
+            <!-- Header -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-fluid" alt="CTCT_Logo" /> </a>
+                    <button
+                        class="navbar-toggler navbar-toggler--dark"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarTogglerIndex"
+                    >
+                        <i class="fas fa-bars"></i>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerIndex">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Trang chủ</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="sites/course.html">Khóa học</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Lớp Học</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Hỏi đáp</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="sites/contact.html">Liên hệ</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mr-4 my-auto">
-                            <a href="#"><i class="fas fa-search"></i></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <button
-                                type="button"
-                                class="btn btn-outline-dark dropdown-toggle text-white-90p btn-border-lightWhiteIndex"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                            >
-                                <i class="fas fa-user mr-2"></i> Tài khoản
-                            </button>
-                            <div class="dropdown-menu w-100 dropdown-menu-right bg-dark">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LoginModal"
-                                    ><i class="fas fa-user-check mr-2"></i> Đăng nhập</a
+                    <div class="collapse navbar-collapse" id="navbarTogglerIndex">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./sites/etc/info.html">Giới thiệu</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./sites/course/courseList.html">Khóa học</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./sites/class/classInfo.html">Lớp học</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="./sites/etc/contact.html">Liên hệ</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <!-- <li class="nav-item mr-4 my-auto">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </li> -->
+                            <li class="nav-item dropdown">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark dropdown-toggle btn-account--outline-dark"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
                                 >
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#SignUpModal"
-                                    ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
-                                >
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- 2 Column Section for Maps & Card -->
-        <div class="container-fluid padding two-col-section">
-            <div class="row padding">
-                <!-- Section 1-->
-                <div class="col-xl-6"></div>
-                <!-- Section 2-->
-                <div class="col-xl-6 my-auto">
-                    <div class="row padding text-white text-shadow-slight" style="height: 4.5rem">
-                        <div class="col-2 my-auto">
-                            <p class="h1">
-                                Bài 1
-                            </p>
-                        </div>
-                        <div class="col-10 my-auto">
-                            <p class="h4">
-                                Học làm gì tầm này? Game là trên hết!
-                            </p>
-                        </div>
+                                    <i class="fas fa-user mr-2"></i> Tài khoản
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right bg-dark">
+                                    <a class="dropdown-item" href="./sites/account/sign-in.html"
+                                        ><i class="fas fa-user-check mr-2"></i> Đăng nhập</a
+                                    >
+
+                                    <a class="dropdown-item" href="./sites/account/sign-up.html"
+                                        ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="row text-shadow-slight">
-                        <div class="col-2 text-orange" role="group">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                </div>
+            </nav>
+            <!-- 2 Column Section for Maps & Card -->
+            <div class="container-fluid p-4 two-col-section">
+                <div class="row h-100">
+                    <!-- Section 1-->
+                    <div class="col-xl-6 p-4"></div>
+                    <!-- Section 2-->
+                    <div class="col-xl-6 p-2 my-auto">
+                        <div
+                            class="d-flex justify-content-start align-items-center text-white font-weight-bold text--fx-shadow"
+                            style="height: 4.5rem"
+                        >
+                            <span class="text-nowrap lecture-num mr-4">Bài 1</span>
+                            <span class="lecture-title text-overflow--2-line">
+                                Học làm gì tầm này? Game là trên hết!
+                            </span>
                         </div>
-                        <div class="col-10 my-auto">
-                            <a class="h6 my-auto lesson-category text-orange" href="#">
+
+                        <div class="d-flex justify-content-start align-items-center text--fx-shadow">
+                            <span class="text-nowrap text--primary mr-5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <a class="font-weight-500 text--primary text-overflow--1-line" href="#">
                                 Cách Học Ở Bách Khoa - 1
                             </a>
                         </div>
-                    </div>
-                    <div class="row-fluid mt-1 ml-auto">
-                        <button type="button" class="btn btn-lg btn-primary rounded-0">
-                            Học ngay
-                        </button>
-                        <button type="button" class="btn btn-outline-primary btn-lg ml-4 rounded-0">
-                            Tìm hiểu thêm
-                        </button>
-                    </div>
 
-                    <div class="row mt-4">
-                        <div class="container-fluid">
+                        <div class="mt-4 ml-auto">
+                            <button type="button" class="btn btn-lg btn-primary rounded-0 mr-3 mb-3">
+                                Học ngay
+                            </button>
+                            <button type="button" class="btn btn-outline-primary btn-lg rounded-0 mr-3 mb-3">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+
+                        <div class="row mt-4">
                             <div id="carouselMulti" class="carousel slide ml-0" data-ride="carousel">
                                 <div class="carousel-inner row w-100 mx-auto" role="listbox">
                                     <div class="carousel-item col-12 col-sm-6 col-md-4 active">
@@ -251,7 +254,7 @@
         <script src="js/scripts.js"></script>
     </body>
     <!-- Login Modal-->
-    <div
+    <!-- <div
         class="modal fade"
         id="LoginModal"
         tabindex="-1"
@@ -321,9 +324,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Sign-up Modal-->
-    <div
+    <!-- <div
         class="modal fade"
         id="SignUpModal"
         tabindex="-1"
@@ -429,5 +432,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </html>

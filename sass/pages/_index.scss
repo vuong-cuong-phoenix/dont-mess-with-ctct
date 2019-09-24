@@ -1,0 +1,131 @@
+/*=============================================
+            STYLES FOR INDEX PAGE
+=============================================*/
+///				Variables				///
+$color-text--normal: darken(#ffffff, 10%);
+$color-text--onHover: lighten($color-text--normal, 10%);
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    color: $color-text--normal;
+    font-size: 16px;
+}
+
+.bg-img {
+    @include bg-grd(
+        to bottom,
+        rgba(170, 75, 107, 0.4),
+        rgba(107, 107, 131, 0.4),
+        rgba(59, 141, 153, 0.4),
+        url(../../img/background.jpg)
+    );
+    @include bg-fullpage;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.navbar-brand img {
+    max-height: 4rem;
+    width: auto;
+}
+
+.navbar-nav li {
+    padding-left: 1.25rem;
+}
+
+.navbar-nav li a {
+    color: $color-text--normal;
+}
+
+.navbar-nav li a:hover {
+    color: $color-text--onHover;
+}
+
+.nav-link,
+.navbar-nav li a .fa-search {
+    font-size: 1.2rem;
+}
+
+.navbar .dropdown-toggle::after {
+    border: none !important;
+    font: normal normal normal 20px/1 "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107" !important;
+    vertical-align: -7.5%;
+}
+
+.fa-star {
+    font-size: 0.8rem;
+}
+
+.course {
+    font-size: 0.95rem;
+}
+
+.course:hover {
+    color: $color-primary__text--onActive !important;
+    text-decoration: none;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.25rem;
+}
+
+.dropdown-item:hover {
+    background-color: #1a1a1a;
+}
+
+.dropdown-divider {
+    border-color: #666666;
+}
+
+.dropdown-menu {
+    max-width: 10rem;
+}
+
+.lecture-num {
+    font-size: 3rem;
+}
+
+.lecture-title {
+    font-size: 1.5rem;
+}
+
+.carousel .card:hover {
+    transform: scale(0.965);
+}
+
+.carousel-inner .active .card {
+    border: solid 1.1px $color-primary--onActive;
+}
+
+@media (max-width: 1200px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    html,
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}

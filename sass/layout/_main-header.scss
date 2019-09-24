@@ -41,8 +41,7 @@
     }
 
     .dropdown {
-        .dropdown-header,
-        .dropdown-item {
+        .dropdown-header {
             padding: 0.5rem 1rem;
         }
 
@@ -56,7 +55,7 @@
         }
 
         .dropdown-item {
-            padding: 0.65rem 1rem;
+            padding: 0.5rem 1rem;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;

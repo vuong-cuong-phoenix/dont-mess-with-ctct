@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* stylelint-disable order/properties-alphabetical-order */
 /* stylelint-enable */
 /***			THEMES FOR USE			***/
@@ -337,97 +338,218 @@ a:focus {
 }
 
 /*=============================================
-    CUSTOM FORM INPUT WITH GRADIENT RUNNING INDICATOR
+                CONTAINER STYLES
 =============================================*/
-.input--grd-running {
-  position: relative;
-  border-bottom: solid 0.125rem rgba(0, 0, 0, 0.35);
-  margin-bottom: 3.5rem;
+.wrapper {
+  display: flex;
+  align-items: stretch;
 }
-.input--grd-running input {
+
+/*  Content's width center  */
+.content-w {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 92.5%;
+}
+.content-w--top {
+  padding-top: 1.5rem;
+}
+
+.min-w--300 {
+  min-width: 300px !important;
+}
+
+.min-w--400 {
+  min-width: 400px !important;
+}
+
+.max-w--300 {
+  max-width: 300px !important;
+}
+
+/*  BLOCKs  */
+.block--rounded {
+  min-width: 100%;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.block--fx-shadow {
+  box-shadow: 0 0 36px #dee2e5;
+  opacity: 1;
+}
+
+.block__header {
+  border-bottom: solid 1px #e9ebee;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  padding: 1rem;
+}
+.block__header h1 {
+  margin: 0;
+}
+.block__header h2 {
+  margin: 0;
+}
+.block__header h3 {
+  margin: 0;
+}
+.block__header h4 {
+  margin: 0;
+}
+.block__header h5 {
+  margin: 0;
+}
+.block__header h6 {
+  margin: 0;
+}
+
+.block__body {
+  padding: 1rem;
+}
+.block__body__title {
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.divider--100 {
   width: 100%;
-  height: 2.25rem;
-  padding: 0 1rem;
-  outline: none !important;
-  background: none !important;
-  border: none !important;
-}
-.input--grd-running span::before {
-  content: attr(data-placeholder);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: -1;
-  transform: translateY(-50%);
-  color: rgba(0, 0, 0, 0.35);
-  font-size: 1.25rem;
-  transition: all 0.5s;
-}
-.input--grd-running span::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 0.125rem;
-  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
-  transition: all 0.5s;
-}
-.input--grd-running input.focused + span::before {
-  top: -0.65rem;
-  color: #404040;
-}
-.input--grd-running input.focused + span::after {
-  width: 100%;
+  border-bottom: 1px solid #bfbfbf;
+  margin: 10px auto;
 }
 
-.running-indicator {
-  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0.125rem;
-  transition: all 0.5s;
+/*					CENTERER					*/
+.centerer--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.focused .running-indicator {
-  width: 100%;
+.centerer--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-/*=============================================
-                Bypass Validation
-=============================================*/
-.bypass-validation__message {
-  text-align: center;
-  color: #ff6666;
-  font-size: 1.15rem;
-}
-
-/*=============================================
-            Navigation in a line
-=============================================*/
-.nav-line {
-  padding: 0.5rem 0.5rem 0;
-}
-.nav-line a {
-  color: #737373;
-  padding: 0 0.25rem;
-}
-.nav-line a:hover {
-  color: #404040;
+.navbar-toggler--dark {
+  color: #cccccc;
+  border-color: #cccccc;
+  height: 2.5rem;
 }
 
 /***			LAYOUT STYLES			***/
+/***			PAGES STYLES			***/
 /*=============================================
-            SIGN'S PAGES LAYOUT
+            STYLES FOR INDEX PAGE
 =============================================*/
 html,
 body {
-  color: #404040;
-  height: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #e6e6e6;
   font-size: 16px;
 }
+
+.bg-img {
+  background: -webkit-linear-gradient(to bottom, rgba(170, 75, 107, 0.4), rgba(107, 107, 131, 0.4), rgba(59, 141, 153, 0.4)), url(../../img/background.jpg);
+  background: -moz-linear-gradient(to bottom, rgba(170, 75, 107, 0.4), rgba(107, 107, 131, 0.4), rgba(59, 141, 153, 0.4)), url(../../img/background.jpg);
+  background: -ms-linear-gradient(to bottom, rgba(170, 75, 107, 0.4), rgba(107, 107, 131, 0.4), rgba(59, 141, 153, 0.4)), url(../../img/background.jpg);
+  background: -o-linear-gradient(to bottom, rgba(170, 75, 107, 0.4), rgba(107, 107, 131, 0.4), rgba(59, 141, 153, 0.4)), url(../../img/background.jpg);
+  background: linear-gradient(to bottom, rgba(170, 75, 107, 0.4), rgba(107, 107, 131, 0.4), rgba(59, 141, 153, 0.4)), url(../../img/background.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+.navbar {
+  background: transparent;
+}
+
+.navbar-brand img {
+  max-height: 4rem;
+  width: auto;
+}
+
+.navbar-nav li {
+  padding-left: 1.25rem;
+}
+
+.navbar-nav li a {
+  color: #e6e6e6;
+}
+
+.navbar-nav li a:hover {
+  color: white;
+}
+
+.nav-link,
+.navbar-nav li a .fa-search {
+  font-size: 1.2rem;
+}
+
+.navbar .dropdown-toggle::after {
+  border: none !important;
+  font: normal normal normal 20px/1 "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "" !important;
+  vertical-align: -7.5%;
+}
+
+.fa-star {
+  font-size: 0.8rem;
+}
+
+.course {
+  font-size: 0.95rem;
+}
+
+.course:hover {
+  color: #ffb366 !important;
+  text-decoration: none;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.25rem;
+}
+
+.dropdown-item:hover {
+  background-color: #1a1a1a;
+}
+
+.dropdown-divider {
+  border-color: #666666;
+}
+
+.dropdown-menu {
+  max-width: 10rem;
+}
+
+.lecture-num {
+  font-size: 3rem;
+}
+
+.lecture-title {
+  font-size: 1.5rem;
+}
+
+.carousel .card:hover {
+  transform: scale(0.965);
+}
+
+.carousel-inner .active .card {
+  border: solid 1.1px #ffb366;
+}
+
 @media (max-width: 1200px) {
   html,
 body {
@@ -449,96 +571,8 @@ body {
 @media (max-width: 576px) {
   html,
 body {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
-button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus {
-  box-shadow: none !important;
-}
-
-.no-outline {
-  outline: none !important;
-}
-
-.background-area {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: auto;
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 15px;
-}
-
-.main-area__body__btn-group {
-  padding: 0.5rem 1rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-/***			PAGES STYLES			***/
-/*=============================================
-        STYLES ONLY FOR SIGN-IN PAGE
-=============================================*/
-.main-area {
-  background: #f6f6f6;
-  width: 475px;
-  min-height: calc(100% - 3rem);
-  margin: calc(3rem / 2) auto;
-  border-radius: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transform: translate(0);
-  /* For z-index */
-  padding: 3rem 2.25rem 1rem;
-}
-@media (max-width: 1200px) {
-  .main-area {
-    width: 45%;
-  }
-}
-@media (max-width: 992px) {
-  .main-area {
-    width: calc(100% - (100% - 45%) / 2);
-  }
-}
-@media (max-width: 768px) {
-  .main-area {
-    width: calc(100% - (100% - 45%) / 3);
-  }
-}
-@media (max-width: 576px) {
-  .main-area {
-    width: 100%;
-  }
-}
-.main-area__header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.main-area__header > * {
-  font-size: 3rem;
-}
-.main-area__footer {
-  margin-top: 3.5rem;
-  font-size: 1.25rem;
-}
-.main-area .btn--grd {
-  width: 100%;
-}
-
-/*# sourceMappingURL=style-sign-in.css.map */
+/*# sourceMappingURL=style-index.css.map */

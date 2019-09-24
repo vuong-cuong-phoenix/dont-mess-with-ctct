@@ -2,7 +2,7 @@
             STYLES FOR ONLY VERIFY PAGE
 =============================================*/
 .main-area {
-    @include account-main-area($color-bg--light, 550px, 7.5rem, 50%, 90%);
+    @include account-main-area($color-bg--light, 550px, 7.5rem, 50%, 100%);
     padding: 4.5rem 2.25rem 1rem;
 
     &__header {

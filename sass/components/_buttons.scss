@@ -22,6 +22,24 @@
     color: $color-btn-primary__text--onActive;
 }
 
+.btn-outline-primary {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+}
+
+.btn-outline-primary:hover {
+    background-color: $color-primary--onActive;
+    border: 1px solid $color-primary--onActive;
+    color: $color-btn-primary__text--onActive;
+}
+
+/*					CUSTOM BUTTONS					*/
+.btn-account--outline-dark {
+    $color: darken(#ffffff, 10%);
+    color: $color;
+    border-color: $color;
+}
+
 .btn-border--lightWhite {
     border-color: darken(#ffffff, 15%);
 

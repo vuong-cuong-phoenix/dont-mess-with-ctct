@@ -1,6 +1,21 @@
 /*=============================================
                 TYPOGRAPHYS
 =============================================*/
+.text-overflow--2-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.text-overflow--1-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
 
 .highlight-num {
     margin-right: 0.25rem;

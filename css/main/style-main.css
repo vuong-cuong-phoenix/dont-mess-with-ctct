@@ -1,13 +1,234 @@
 @charset "UTF-8";
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+/* THEMES */
+/*=============================================
+                ALL THEMES
+=============================================*/
+/*				Text's Themes				*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto:400,400i,700&display=swap");
+.text-white-90p {
+  color: #e6e6e6 !important;
+}
+
+.text-white-85p {
+  color: #d9d9d9 !important;
+}
+
+.text-white-80p {
+  color: #cccccc !important;
+}
+
+.text--primary {
+  color: #ffcc99 !important;
+}
+
+.text--primary:hover {
+  color: #ffb366 !important;
+}
+
+.text--fx-shadow {
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.font-w400 {
+  font-weight: 400 !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+/*				Gradient Ultily for Font Awesome's Icon				*/
+.icon-grd {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-grd::before {
+  display: initial;
+}
+
+/*				Background's Themes				*/
+.background-dark {
+  background-color: #343a40;
+}
+
+.bg-op {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.bg-secondary-custom {
+  background-color: #ffe6cc;
+}
+
+/*				Gradient Background				*/
+.bg-grd-jShine {
+  background: -webkit-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -moz-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -ms-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -o-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+}
+
+.bg-grd-EveningSunshine {
+  background: -webkit-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -moz-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -ms-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -o-linear-gradient(135deg, #b92b27, #1565c0);
+  background: linear-gradient(135deg, #b92b27, #1565c0);
+}
+
+.bg-grd-MegaTron {
+  background: -webkit-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -moz-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -ms-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -o-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: linear-gradient(135deg, #c6ffdd, #f64f59);
+}
+
+.bg-grd-Memariani {
+  background: -webkit-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -moz-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -ms-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -o-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: linear-gradient(135deg, #aa4b6b, #f64f59);
+}
+
+.bg-grd-KyeMeh {
+  background: -webkit-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -moz-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -ms-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -o-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: linear-gradient(135deg, #8360c3, #2ebf91);
+}
+
+.bg-grd-PunYeta {
+  background: -webkit-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -moz-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -ms-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -o-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: linear-gradient(135deg, #108dc7, #ef8e38);
+}
+
+.bg-grd-Vivid {
+  background: -webkit-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -moz-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -ms-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -o-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: linear-gradient(135deg, #fc466b, #3f5efb);
+}
+
+.bg-grd-Metapolis {
+  background: linear-gradient(135deg, #f4791f, #659999);
+}
+
+.bg-grd-eXpresso {
+  background: linear-gradient(135deg, #ad5389, #3c1053);
+}
+
+.bg-grd-Radar {
+  background: linear-gradient(135deg, #a770ef, #fdb99b);
+}
+
+.bg-grd-Alihossein {
+  background: linear-gradient(135deg, #f7ff00, #db36a4);
+}
+
+.bg-grd-GrapefruitSunset {
+  background: linear-gradient(135deg, #e96443, #904e95);
+}
+
+.bg-grd-Atlas {
+  background: linear-gradient(135deg, #feac5e, #4bc0c8);
+}
+
+.bg-grd-Cherryblossom {
+  background: linear-gradient(135deg, #fbd3e9, #bb377d);
+}
+
+.bg-grd-CalmDarya {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+}
+
+.bg-grd-MonteCarlo {
+  background: linear-gradient(135deg, #cc95c0, #7aa1d2);
+}
+
+.bg-grd-Venice {
+  background: linear-gradient(135deg, #6190e8, #a7bfe8);
+}
+
+.bg-grd-Jodhpur {
+  background: linear-gradient(135deg, #9cecfb, #0052d4);
+}
+
+.bg-grd-EndlessRiver {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.bg-grd-CocoaaIce {
+  background: linear-gradient(135deg, #1cefff, #c0c0aa);
+}
+
+.bg-grd-Earthly {
+  background: linear-gradient(135deg, #649173, #dbd5a4);
+}
+
+.bg-grd-ForeverLost {
+  background: linear-gradient(135deg, #5d4157, #a8caba);
+}
+
+.bg-grd-WhatLiesBeyond {
+  background: linear-gradient(135deg, #f0f2f0, #000c40);
+}
+
+.bg-grd-Jupiter {
+  background: linear-gradient(135deg, #ffd89b, #19547b);
+}
+
+.bg-grd-WeddingDay {
+  background: linear-gradient(135deg, #40e0d0, #ff8c00);
+}
+
+.bg-grd-AzurePop {
+  background: linear-gradient(135deg, #ef32d9, #89fffd);
+}
+
+.bg-grd-LoveCouple {
+  background: linear-gradient(135deg, #3a6186, #89253e);
+}
+
+.bg-grd-Hazel {
+  background: linear-gradient(135deg, #77a1d3, #e684ae);
+}
+
+.bg-grd-Instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d);
+}
+
+.bg-grd-VirginAmerica {
+  background: linear-gradient(135deg, #7b4397, #dc2430);
+}
+
 /* BASE */
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600";
-@import "https://fonts.googleapis.com/css?family=Poppins:400,500,700";
 /*=============================================
                 BASE INITIATION
 =============================================*/
 html,
 body {
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -22,6 +243,22 @@ a:focus {
 /*=============================================
                 TYPOGRAPHYS
 =============================================*/
+.text-overflow--2-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.text-overflow--1-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .highlight-num {
   margin-right: 0.25rem;
 }
@@ -110,6 +347,21 @@ a:focus {
   margin: 10px auto;
 }
 
+/*					CENTERER					*/
+.centerer--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerer--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 /*=============================================
                 AVATAR STYLES
 =============================================*/
@@ -167,6 +419,23 @@ a:focus {
   background-color: #ffb366;
   border-color: #ffb366;
   color: #4d4d4d;
+}
+
+.btn-outline-primary {
+  border: 1px solid #ffcc99;
+  color: #ffcc99;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffb366;
+  border: 1px solid #ffb366;
+  color: #4d4d4d;
+}
+
+/*					CUSTOM BUTTONS					*/
+.btn-account--outline-dark {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
 }
 
 .btn-border--lightWhite {
@@ -429,13 +698,12 @@ a:focus {
   padding-left: 20px;
 }
 .navbar .navbar-nav li a {
-  color: #d9d9d9 !important;
+  color: #e6e6e6 !important;
 }
 .navbar .navbar-nav li a .fa-search {
   font-size: 1.2em;
 }
-.navbar .dropdown .dropdown-header,
-.navbar .dropdown .dropdown-item {
+.navbar .dropdown .dropdown-header {
   padding: 0.5rem 1rem;
 }
 .navbar .dropdown .dropdown-header__user-header {
@@ -445,7 +713,7 @@ a:focus {
   color: #d9d9d9;
 }
 .navbar .dropdown .dropdown-item {
-  padding: 0.65rem 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -716,181 +984,6 @@ a:focus {
 }
 .lecture-content__review__user-review {
   padding-bottom: 0rem;
-}
-
-/* THEMES */
-/*=============================================
-                ALL THEMES
-=============================================*/
-/*				Text's Themes				*/
-.text-white-90p {
-  color: #e6e6e6 !important;
-}
-
-.text-white-85p {
-  color: #d9d9d9 !important;
-}
-
-.text-white-80p {
-  color: #cccccc !important;
-}
-
-.text-orange {
-  color: #ffcc99;
-}
-
-.font-w400 {
-  font-weight: 400 !important;
-}
-
-/*				Gradient Ultily for Font Awesome's Icon				*/
-.icon-grd {
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.icon-grd::before {
-  display: initial;
-}
-
-/*				Background's Themes				*/
-.background-dark {
-  background-color: #343a40;
-}
-
-.bg-op {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.bg-transparent {
-  background: transparent;
-}
-
-.bg-secondary-custom {
-  background-color: #ffe6cc;
-}
-
-/*				Gradient Background				*/
-.bg-grd-jShine {
-  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
-}
-
-.bg-grd-EveningSunshine {
-  background: linear-gradient(135deg, #b92b27, #1565c0);
-}
-
-.bg-grd-MegaTron {
-  background: linear-gradient(135deg, #c6ffdd, #f64f59);
-}
-
-.bg-grd-Memariani {
-  background: linear-gradient(135deg, #aa4b6b, #f64f59);
-}
-
-.bg-grd-KyeMeh {
-  background: linear-gradient(135deg, #8360c3, #2ebf91);
-}
-
-.bg-grd-PunYeta {
-  background: linear-gradient(135deg, #108dc7, #ef8e38);
-}
-
-.bg-grd-Vivid {
-  background: linear-gradient(135deg, #fc466b, #3f5efb);
-}
-
-.bg-grd-Metapolis {
-  background: linear-gradient(135deg, #f4791f, #659999);
-}
-
-.bg-grd-eXpresso {
-  background: linear-gradient(135deg, #ad5389, #3c1053);
-}
-
-.bg-grd-Radar {
-  background: linear-gradient(135deg, #a770ef, #fdb99b);
-}
-
-.bg-grd-Alihossein {
-  background: linear-gradient(135deg, #f7ff00, #db36a4);
-}
-
-.bg-grd-GrapefruitSunset {
-  background: linear-gradient(135deg, #e96443, #904e95);
-}
-
-.bg-grd-Atlas {
-  background: linear-gradient(135deg, #feac5e, #4bc0c8);
-}
-
-.bg-grd-Cherryblossom {
-  background: linear-gradient(135deg, #fbd3e9, #bb377d);
-}
-
-.bg-grd-CalmDarya {
-  background: linear-gradient(135deg, #5f2c82, #49a09d);
-}
-
-.bg-grd-MonteCarlo {
-  background: linear-gradient(135deg, #cc95c0, #7aa1d2);
-}
-
-.bg-grd-Venice {
-  background: linear-gradient(135deg, #6190e8, #a7bfe8);
-}
-
-.bg-grd-Jodhpur {
-  background: linear-gradient(135deg, #9cecfb, #0052d4);
-}
-
-.bg-grd-EndlessRiver {
-  background: linear-gradient(135deg, #43cea2, #185a9d);
-}
-
-.bg-grd-CocoaaIce {
-  background: linear-gradient(135deg, #1cefff, #c0c0aa);
-}
-
-.bg-grd-Earthly {
-  background: linear-gradient(135deg, #649173, #dbd5a4);
-}
-
-.bg-grd-ForeverLost {
-  background: linear-gradient(135deg, #5d4157, #a8caba);
-}
-
-.bg-grd-WhatLiesBeyond {
-  background: linear-gradient(135deg, #f0f2f0, #000c40);
-}
-
-.bg-grd-Jupiter {
-  background: linear-gradient(135deg, #ffd89b, #19547b);
-}
-
-.bg-grd-WeddingDay {
-  background: linear-gradient(135deg, #40e0d0, #ff8c00);
-}
-
-.bg-grd-AzurePop {
-  background: linear-gradient(135deg, #ef32d9, #89fffd);
-}
-
-.bg-grd-LoveCouple {
-  background: linear-gradient(135deg, #3a6186, #89253e);
-}
-
-.bg-grd-Hazel {
-  background: linear-gradient(135deg, #77a1d3, #e684ae);
-}
-
-.bg-grd-Instagram {
-  background: linear-gradient(135deg, #833ab4, #fd1d1d);
-}
-
-.bg-grd-VirginAmerica {
-  background: linear-gradient(135deg, #7b4397, #dc2430);
 }
 
 /*# sourceMappingURL=style-main.css.map */

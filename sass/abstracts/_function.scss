@@ -2,6 +2,6 @@
     @if (lightness($bg-color) > 50%) {
         @return lighten(#000000, 20%);
     } @else {
-        @return darken(#ffffff, 15%);
+        @return darken(#ffffff, 10%);
     }
 }

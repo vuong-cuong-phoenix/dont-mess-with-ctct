@@ -1,0 +1,6 @@
+.navbar-toggler--dark {
+    $color: darken($color-light, 10%);
+    color: $color;
+    border-color: $color;
+    height: 2.5rem;
+}

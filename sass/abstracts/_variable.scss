@@ -6,7 +6,11 @@ $color-btn--grd_1st: #12c2e9;
 $color-btn--grd_2nd: #c471ed;
 
 /// For theming
-$color-nav-text: #d9d9d9;
+$color-light: darken(#ffffff, 10%);
+$color-light--onHover: lighten($color-light, 10%);
+
+$color-nav-text: #e6e6e6;
+$color-nav-text--onHover: #ffffff;
 
 /// Sidebar
 $color-sidebar__text: #d9d9d9;

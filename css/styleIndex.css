@@ -119,14 +119,7 @@ body {
 .carousel-inner .active .card {
     border-color: var(--primary-color-active);
 }
-/*--- Firefox Bug Fix ---*/
-.carousel-item {
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
-}
+
 /*--- Keyframes animation ---*/
 
 /*--- Media Queries ---*/

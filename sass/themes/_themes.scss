@@ -14,12 +14,28 @@
     color: darken(#ffffff, 20%) !important;
 }
 
-.text-orange {
-    color: #ffcc99;
+.text--primary {
+    color: $color-primary !important;
+}
+
+.text--primary:hover {
+    color: $color-primary--onActive !important;
+}
+
+.text--fx-shadow {
+    text-shadow: 1px 1px 4px #000000;
 }
 
 .font-w400 {
     font-weight: 400 !important;
+}
+
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+
+.font-weight-600 {
+    font-weight: 600 !important;
 }
 
 /*				Gradient Ultily for Font Awesome's Icon				*/
@@ -52,31 +68,31 @@
 }
 /*				Gradient Background				*/
 .bg-grd-jShine {
-    background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+    @include bg-grd(135deg, #12c2e9, #c471ed, #f64f59);
 }
 
 .bg-grd-EveningSunshine {
-    background: linear-gradient(135deg, #b92b27, #1565c0);
+    @include bg-grd(135deg, #b92b27, #1565c0);
 }
 
 .bg-grd-MegaTron {
-    background: linear-gradient(135deg, #c6ffdd, #f64f59);
+    @include bg-grd(135deg, #c6ffdd, #f64f59);
 }
 
 .bg-grd-Memariani {
-    background: linear-gradient(135deg, #aa4b6b, #f64f59);
+    @include bg-grd(135deg, #aa4b6b, #f64f59);
 }
 
 .bg-grd-KyeMeh {
-    background: linear-gradient(135deg, #8360c3, #2ebf91);
+    @include bg-grd(135deg, #8360c3, #2ebf91);
 }
 
 .bg-grd-PunYeta {
-    background: linear-gradient(135deg, #108dc7, #ef8e38);
+    @include bg-grd(135deg, #108dc7, #ef8e38);
 }
 
 .bg-grd-Vivid {
-    background: linear-gradient(135deg, #fc466b, #3f5efb);
+    @include bg-grd(135deg, #fc466b, #3f5efb);
 }
 
 .bg-grd-Metapolis {

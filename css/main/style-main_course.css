@@ -2,14 +2,14 @@
 /* stylelint-disable order/properties-alphabetical-order */
 /* stylelint-enable */
 /***			BASE STYLES			***/
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600";
-@import "https://fonts.googleapis.com/css?family=Poppins:400,500,700";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto:400,400i,700&display=swap");
 /*=============================================
                 BASE INITIATION
 =============================================*/
 html,
 body {
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -24,6 +24,22 @@ a:focus {
 /*=============================================
                 TYPOGRAPHYS
 =============================================*/
+.text-overflow--2-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.text-overflow--1-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .highlight-num {
   margin-right: 0.25rem;
 }
@@ -112,6 +128,21 @@ a:focus {
   margin: 10px auto;
 }
 
+/*					CENTERER					*/
+.centerer--col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerer--row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 /*=============================================
                 AVATAR STYLES
 =============================================*/
@@ -169,6 +200,23 @@ a:focus {
   background-color: #ffb366;
   border-color: #ffb366;
   color: #4d4d4d;
+}
+
+.btn-outline-primary {
+  border: 1px solid #ffcc99;
+  color: #ffcc99;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffb366;
+  border: 1px solid #ffb366;
+  color: #4d4d4d;
+}
+
+/*					CUSTOM BUTTONS					*/
+.btn-account--outline-dark {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
 }
 
 .btn-border--lightWhite {
@@ -452,13 +500,12 @@ a:focus {
   padding-left: 20px;
 }
 .navbar .navbar-nav li a {
-  color: #d9d9d9 !important;
+  color: #e6e6e6 !important;
 }
 .navbar .navbar-nav li a .fa-search {
   font-size: 1.2em;
 }
-.navbar .dropdown .dropdown-header,
-.navbar .dropdown .dropdown-item {
+.navbar .dropdown .dropdown-header {
   padding: 0.5rem 1rem;
 }
 .navbar .dropdown .dropdown-header__user-header {
@@ -468,7 +515,7 @@ a:focus {
   color: #d9d9d9;
 }
 .navbar .dropdown .dropdown-item {
-  padding: 0.65rem 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -758,12 +805,28 @@ a:focus {
   color: #cccccc !important;
 }
 
-.text-orange {
-  color: #ffcc99;
+.text--primary {
+  color: #ffcc99 !important;
+}
+
+.text--primary:hover {
+  color: #ffb366 !important;
+}
+
+.text--fx-shadow {
+  text-shadow: 1px 1px 4px #000000;
 }
 
 .font-w400 {
   font-weight: 400 !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
 }
 
 /*				Gradient Ultily for Font Awesome's Icon				*/
@@ -797,30 +860,58 @@ a:focus {
 
 /*				Gradient Background				*/
 .bg-grd-jShine {
+  background: -webkit-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -moz-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -ms-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -o-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
   background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
 }
 
 .bg-grd-EveningSunshine {
+  background: -webkit-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -moz-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -ms-linear-gradient(135deg, #b92b27, #1565c0);
+  background: -o-linear-gradient(135deg, #b92b27, #1565c0);
   background: linear-gradient(135deg, #b92b27, #1565c0);
 }
 
 .bg-grd-MegaTron {
+  background: -webkit-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -moz-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -ms-linear-gradient(135deg, #c6ffdd, #f64f59);
+  background: -o-linear-gradient(135deg, #c6ffdd, #f64f59);
   background: linear-gradient(135deg, #c6ffdd, #f64f59);
 }
 
 .bg-grd-Memariani {
+  background: -webkit-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -moz-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -ms-linear-gradient(135deg, #aa4b6b, #f64f59);
+  background: -o-linear-gradient(135deg, #aa4b6b, #f64f59);
   background: linear-gradient(135deg, #aa4b6b, #f64f59);
 }
 
 .bg-grd-KyeMeh {
+  background: -webkit-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -moz-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -ms-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -o-linear-gradient(135deg, #8360c3, #2ebf91);
   background: linear-gradient(135deg, #8360c3, #2ebf91);
 }
 
 .bg-grd-PunYeta {
+  background: -webkit-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -moz-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -ms-linear-gradient(135deg, #108dc7, #ef8e38);
+  background: -o-linear-gradient(135deg, #108dc7, #ef8e38);
   background: linear-gradient(135deg, #108dc7, #ef8e38);
 }
 
 .bg-grd-Vivid {
+  background: -webkit-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -moz-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -ms-linear-gradient(135deg, #fc466b, #3f5efb);
+  background: -o-linear-gradient(135deg, #fc466b, #3f5efb);
   background: linear-gradient(135deg, #fc466b, #3f5efb);
 }
 

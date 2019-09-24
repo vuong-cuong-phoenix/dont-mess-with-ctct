@@ -69,3 +69,18 @@
     border-bottom: 1px solid $color-content__footer__divider;
     margin: 10px auto;
 }
+
+/*					CENTERER					*/
+.centerer--col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerer--row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

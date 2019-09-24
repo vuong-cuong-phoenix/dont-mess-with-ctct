@@ -1,5 +1,10 @@
 /// Abstract
+@import "./vendors/bourbon/bourbon";
 @import "./abstracts/variable";
+@import "./abstracts/function";
+@import "./abstracts/mixin";
+/* THEMES */
+@import "./themes/themes";
 /* BASE */
 @import "./base/base";
 @import "./base/typography";
@@ -17,5 +22,3 @@
 @import "./layout/main-footer";
 /* PAGES */
 @import "./pages/course.scss";
-/* THEMES */
-@import "./themes/themes";
