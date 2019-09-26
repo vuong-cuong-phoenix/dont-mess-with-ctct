@@ -1,11 +1,11 @@
 /* stylelint-disable order/properties-alphabetical-order */
 /* stylelint-enable */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500,700&display=swap");
 /***			THEMES FOR USE			***/
 /*=============================================
                 ALL THEMES
 =============================================*/
 /*				Text's Themes				*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500,700&display=swap");
 .text-white-90p {
   color: #e6e6e6 !important;
 }
@@ -149,11 +149,10 @@ h6,
 }
 
 .text-overflow--1-line {
+  display: block;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
 }
 
 .highlight-num {

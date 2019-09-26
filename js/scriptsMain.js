@@ -31,8 +31,22 @@ $(document).ready(function() {
         theme: "minimal"
     });
 
+    // var fakeAnimation = 0;
     $("#sidebar-custom_collapse").on("click", function() {
-        $(".sidebar-custom, .content-main, .navbar").toggleClass("active");
+        $(".sidebar-custom, .content-main, .navbar, .content-w").toggleClass("active");
+        // $degrees_rotate = 180;
+        // fakeAnimation = fakeAnimation + $degrees_rotate;
+        // $({ degrees: fakeAnimation - $degrees_rotate }).animate(
+        //     { degrees: fakeAnimation },
+        //     {
+        //         duration: 500,
+        //         step: function(now) {
+        //             $("#sidebar-custom_collapse i").css({
+        //                 transform: "rotate(" + now + "deg)"
+        //             });
+        //         }
+        //     }
+        // );
     });
 
     $(".cCard-header").photoZoom();

@@ -15,26 +15,39 @@
         padding-top: $meas-spacing--large;
     }
 
-    @media (max-width: 992px) {
-        padding: 0 $meas-spacing--small;
-        max-width: 100%;
+    &.active {
+        padding-left: $meas-spacing--small;
+        padding-right: $meas-spacing--small;
+        max-width: 97.5%;
+    }
 
-        &--top {
-            padding-top: $meas-spacing--small;
-        }
+    @media (max-width: 1200px) {
+        padding-left: $meas-spacing--small;
+        padding-right: $meas-spacing--small;
+    }
+
+    @media (max-width: 992px) {
+        max-width: 97.5%;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
+
+    @media (max-width: 576px) {
     }
 }
 
-.min-w--300 {
-    min-width: 300px !important;
-}
+$width-variants: 200, 250, 300, 350, 400, 450, 500;
 
-.min-w--400 {
-    min-width: 400px !important;
-}
+@each $w in $width-variants {
+    .min-w--#{$w} {
+        min-width: #{$w}px !important;
+    }
 
-.max-w--300 {
-    max-width: 300px !important;
+    .max-w--#{$w} {
+        max-width: #{$w}px !important;
+    }
 }
 
 /*  BLOCKs  */

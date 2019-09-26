@@ -1,0 +1,37 @@
+/*=============================================
+STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
+=============================================*/
+.card-custom--grd {
+    min-width: 100%;
+    margin-bottom: $meas-spacing--large;
+
+    &--rounded {
+        border-radius: $meas-border-radius--regular;
+    }
+
+    &--header {
+        padding: 1rem 0.5rem;
+        border-bottom: solid 1px $color-content__body__bg;
+        border-top-left-radius: $meas-border-radius--regular;
+        border-top-right-radius: $meas-border-radius--regular;
+    }
+
+    &--body {
+        padding: 0.5rem;
+
+        h4 {
+            font-size: 1.25rem;
+        }
+    }
+
+    &--footer {
+        padding: 0.5rem;
+        border-bottom-left-radius: $meas-border-radius--regular;
+        border-bottom-right-radius: $meas-border-radius--regular;
+        border-top: solid 1px $color-content__body__bg;
+
+        a {
+            font-size: 2rem;
+        }
+    }
+}

@@ -6,9 +6,38 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     &__title {
-        font-size: 1.5em;
+        font-size: 1.5rem;
+        margin-left: 0.15rem;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 1200px) {
+    }
+
+    @media (max-width: 992px) {
+    }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 576px) {
+        &__title {
+            margin-bottom: 1rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        ul,
+        ul button {
+            width: 100%;
+        }
     }
 }
 

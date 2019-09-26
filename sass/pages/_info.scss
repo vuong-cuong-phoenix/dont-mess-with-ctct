@@ -1,0 +1,148 @@
+/*=============================================
+            STYLES FOR ONLY INFO PAGE
+=============================================*/
+$club-mem-card__width: 225px;
+$num-mem: 6;
+$spin-radius: 350px;
+$spin-angel: 360deg / $num-mem;
+$spin-duration: 4s;
+
+#body_info {
+    .content-main {
+        &__body {
+            padding-bottom: 0;
+
+            #slider_club-image {
+                width: 90%;
+                margin: 1rem auto;
+            }
+
+            #slider_club-image .carousel-inner {
+                max-height: 550px;
+            }
+
+            #slider_club-image .carousel-inner .carousel-item > img {
+                max-height: 550px !important;
+            }
+
+            .club-mem-container {
+                position: relative;
+                min-height: 800px;
+                margin-top: 2rem;
+
+                .club-mem-card {
+                    position: absolute;
+                    width: $club-mem-card__width;
+
+                    .block-header {
+                        padding: 1.25rem;
+                    }
+
+                    &#clubMem_1 {
+                        z-index: 106;
+                        top: $spin-radius;
+                        left: calc(50% - #{$club-mem-card__width} / 2);
+                    }
+
+                    &#clubMem_2 {
+                        z-index: 105;
+                        top: $spin-radius;
+                        left: calc(50% - #{$club-mem-card__width} / 2);
+                        animation: rotate-init $spin-duration ease-out 1;
+                        transform: rotate(calc(0deg + #{$spin-angel} * 0)) translateY(calc(0px - #{$spin-radius}))
+                            rotate(calc(0deg - #{$spin-angel} * 0));
+                    }
+
+                    &#clubMem_3 {
+                        z-index: 104;
+                        top: $spin-radius;
+                        left: calc(50% - #{$club-mem-card__width} / 2);
+                        animation: rotate-init $spin-duration ease-out 1;
+                        transform: rotate(calc(0deg - #{$spin-angel} * 1)) translateY(calc(0px - #{$spin-radius}))
+                            rotate(calc(0deg + #{$spin-angel} * 1));
+                    }
+
+                    &#clubMem_4 {
+                        z-index: 103;
+                        top: $spin-radius;
+                        left: calc(50% - #{$club-mem-card__width} / 2);
+                        animation: rotate-init $spin-duration ease-out 1;
+                        transform: rotate(calc(0deg + #{$spin-angel} * 1)) translateY(calc(0px - #{$spin-radius}))
+                            rotate(calc(0deg - #{$spin-angel} * 1));
+                    }
+
+                    &#clubMem_5 {
+                        z-index: 102;
+                        top: $spin-radius;
+                        left: calc(50% - #{$club-mem-card__width} / 2);
+                        animation: rotate-init $spin-duration ease-out 1;
+                        transform: rotate(calc(0deg - #{$spin-angel} * 2)) translateY(calc(0px - #{$spin-radius}))
+                            rotate(calc(0deg + #{$spin-angel} * 2));
+                    }
+
+                    &#clubMem_6 {
+                        z-index: 101;
+                        top: $spin-radius;
+                        left: calc(50% - #{$club-mem-card__width} / 2);
+                        animation: rotate-init $spin-duration ease-out 1;
+                        transform: rotate(calc(0deg + #{$spin-angel} * 2)) translateY(calc(0px - #{$spin-radius}))
+                            rotate(calc(0deg - #{$spin-angel} * 2));
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax($club-mem-card__width, 1fr));
+                    grid-auto-rows: 300px;
+                    column-gap: 2.5rem;
+                    min-height: 500px;
+
+                    .club-mem-card {
+                        position: static;
+                        // display: flex;
+                        justify-self: center;
+                        align-self: center;
+
+                        @for $i from 1 to ($num-mem + 1) {
+                            &#clubMem_#{$i} {
+                                animation: none;
+                                transform: none;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 992px) {
+                }
+
+                @media (max-width: 768px) {
+                }
+
+                @media (max-width: 576px) {
+                }
+            }
+
+            .club-arch__item {
+                font-size: 1.1rem;
+                text-align: center;
+                margin-bottom: 2rem;
+
+                i {
+                    font-size: 4rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            #section-4 {
+                color: darken(#ffffff, 5%);
+            }
+        }
+    }
+}
+
+@keyframes rotate-init {
+    0%,
+    50% {
+        transform: rotate(0) translateY(0) rotate(0);
+    }
+}
