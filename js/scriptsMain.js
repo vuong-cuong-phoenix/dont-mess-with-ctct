@@ -27,12 +27,12 @@ $(document).ready(function() {
     });
 
     /*-- Side Bar --*/
-    $("#sidebar").mCustomScrollbar({
+    $(".sidebar-custom").mCustomScrollbar({
         theme: "minimal"
     });
 
-    $("#sidebarCollapse").on("click", function() {
-        $("#sidebar, #content, .navbar").toggleClass("active");
+    $("#sidebar-custom_collapse").on("click", function() {
+        $(".sidebar-custom, .content-main, .navbar").toggleClass("active");
     });
 
     $(".cCard-header").photoZoom();

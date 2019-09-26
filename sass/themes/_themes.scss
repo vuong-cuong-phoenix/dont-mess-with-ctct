@@ -26,7 +26,7 @@
     text-shadow: 1px 1px 4px #000000;
 }
 
-.font-w400 {
+.font-weight-400 {
     font-weight: 400 !important;
 }
 
@@ -51,138 +51,26 @@
 }
 
 /*				Background's Themes				*/
+.background-transparent {
+    background: transparent;
+}
+
 .background-dark {
     background-color: #343a40;
 }
 
-.bg-op {
+.background-black-op {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.bg-transparent {
-    background: transparent;
-}
-
-.bg-secondary-custom {
+.background-secondary-custom {
     background-color: #ffe6cc;
 }
 /*				Gradient Background				*/
-.bg-grd-jShine {
+.background-grd-jShine {
     @include bg-grd(135deg, #12c2e9, #c471ed, #f64f59);
 }
 
-.bg-grd-EveningSunshine {
-    @include bg-grd(135deg, #b92b27, #1565c0);
-}
-
-.bg-grd-MegaTron {
-    @include bg-grd(135deg, #c6ffdd, #f64f59);
-}
-
-.bg-grd-Memariani {
-    @include bg-grd(135deg, #aa4b6b, #f64f59);
-}
-
-.bg-grd-KyeMeh {
+.background-grd-KyeMeh {
     @include bg-grd(135deg, #8360c3, #2ebf91);
-}
-
-.bg-grd-PunYeta {
-    @include bg-grd(135deg, #108dc7, #ef8e38);
-}
-
-.bg-grd-Vivid {
-    @include bg-grd(135deg, #fc466b, #3f5efb);
-}
-
-.bg-grd-Metapolis {
-    background: linear-gradient(135deg, #f4791f, #659999);
-}
-
-.bg-grd-eXpresso {
-    background: linear-gradient(135deg, #ad5389, #3c1053);
-}
-
-.bg-grd-Radar {
-    background: linear-gradient(135deg, #a770ef, #fdb99b);
-}
-
-.bg-grd-Alihossein {
-    background: linear-gradient(135deg, #f7ff00, #db36a4);
-}
-
-.bg-grd-GrapefruitSunset {
-    background: linear-gradient(135deg, #e96443, #904e95);
-}
-
-.bg-grd-Atlas {
-    background: linear-gradient(135deg, #feac5e, #4bc0c8);
-}
-
-.bg-grd-Cherryblossom {
-    background: linear-gradient(135deg, #fbd3e9, #bb377d);
-}
-
-.bg-grd-CalmDarya {
-    background: linear-gradient(135deg, #5f2c82, #49a09d);
-}
-
-.bg-grd-MonteCarlo {
-    background: linear-gradient(135deg, #cc95c0, #7aa1d2);
-}
-
-.bg-grd-Venice {
-    background: linear-gradient(135deg, #6190e8, #a7bfe8);
-}
-
-.bg-grd-Jodhpur {
-    background: linear-gradient(135deg, #9cecfb, #0052d4);
-}
-
-.bg-grd-EndlessRiver {
-    background: linear-gradient(135deg, #43cea2, #185a9d);
-}
-
-.bg-grd-CocoaaIce {
-    background: linear-gradient(135deg, #1cefff, #c0c0aa);
-}
-
-.bg-grd-Earthly {
-    background: linear-gradient(135deg, #649173, #dbd5a4);
-}
-
-.bg-grd-ForeverLost {
-    background: linear-gradient(135deg, #5d4157, #a8caba);
-}
-
-.bg-grd-WhatLiesBeyond {
-    background: linear-gradient(135deg, #f0f2f0, #000c40);
-}
-
-.bg-grd-Jupiter {
-    background: linear-gradient(135deg, #ffd89b, #19547b);
-}
-
-.bg-grd-WeddingDay {
-    background: linear-gradient(135deg, #40e0d0, #ff8c00);
-}
-
-.bg-grd-AzurePop {
-    background: linear-gradient(135deg, #ef32d9, #89fffd);
-}
-
-.bg-grd-LoveCouple {
-    background: linear-gradient(135deg, #3a6186, #89253e);
-}
-
-.bg-grd-Hazel {
-    background: linear-gradient(135deg, #77a1d3, #e684ae);
-}
-
-.bg-grd-Instagram {
-    background: linear-gradient(135deg, #833ab4, #fd1d1d);
-}
-
-.bg-grd-VirginAmerica {
-    background: linear-gradient(135deg, #7b4397, #dc2430);
 }

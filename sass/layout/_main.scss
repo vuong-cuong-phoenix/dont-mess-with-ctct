@@ -6,7 +6,6 @@ a,
 a:hover,
 a:focus {
     color: inherit;
-    transition: all 0.3s;
 }
 
 .content-main {
@@ -29,12 +28,18 @@ a:focus {
     }
 
     .user-name {
-        color: #cc7a00;
-        font-weight: 500;
+        color: darken($color-primary__text, 5%);
+        @if ($font-family-name == "Open Sans") {
+            font-weight: 600;
+        }
         font-size: 1.1rem;
 
         &:hover {
             color: $color-primary__text--onActive;
         }
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
     }
 }

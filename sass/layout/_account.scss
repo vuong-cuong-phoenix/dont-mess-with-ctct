@@ -106,7 +106,7 @@ body {
 }
 
 /// Main styles
-.background-area {
+.background {
     @include bg-fullpage;
 
     @include centerer--col;

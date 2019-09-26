@@ -1,7 +1,7 @@
 /*=============================================
         STYLES FOR ONLY SIGN-UP PAGE
 =============================================*/
-.main-area {
+#body_sign-up .main-area {
     @include account-main-area($color-bg--light, 900px, 2.5rem, 70%, 100%);
     padding: 2.5rem 3rem 1rem;
 

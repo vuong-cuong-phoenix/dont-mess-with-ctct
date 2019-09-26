@@ -9,10 +9,19 @@
 .content-w {
     margin: 0 auto;
     padding: 0 $meas-spacing--large;
-    max-width: 92.5%;
+    max-width: 96.5%;
 
     &--top {
         padding-top: $meas-spacing--large;
+    }
+
+    @media (max-width: 992px) {
+        padding: 0 $meas-spacing--small;
+        max-width: 100%;
+
+        &--top {
+            padding-top: $meas-spacing--small;
+        }
     }
 }
 
@@ -29,6 +38,11 @@
 }
 
 /*  BLOCKs  */
+.block {
+    min-width: 100%;
+    margin-bottom: $meas-spacing--large;
+}
+
 .block--rounded {
     min-width: 100%;
     border-radius: $meas-border-radius--regular;

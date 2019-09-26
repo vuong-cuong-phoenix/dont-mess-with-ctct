@@ -3,22 +3,24 @@
 @import "./abstracts/variable";
 @import "./abstracts/function";
 @import "./abstracts/mixin";
-/* THEMES */
+/***			THEMES FOR USE			***/
 @import "./themes/themes";
-/* BASE */
+/***			BASE STYLES			***/
 @import "./base/base";
 @import "./base/typography";
-/* COMPONENTS */
+/***			COMPONENTS STYLES			***/
 @import "./components/containers";
 @import "./components/avatar";
 @import "./components/buttons";
 @import "./components/button-to-top";
 @import "./components/iframe-width-changed";
-/* LAYOUT */
+@import "./components/progress-flex";
+@import "./components/comment-section";
+/***			LAYOUT STYLES			***/
 @import "./layout/sidebar";
 @import "./layout/main";
 @import "./layout/main-header";
 @import "./layout/main-body";
 @import "./layout/main-footer";
-/* PAGES */
+/***			PAGES STYLES			***/
 @import "./pages/course.scss";

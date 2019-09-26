@@ -7,16 +7,14 @@
 
         <!-- Framework CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
         <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-        <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+        <link rel="stylesheet" href="../../css/plugins/jquery.mCustomScrollbar.min.css" />
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="../css/styleMain.css" />
-        <link rel="stylesheet" href="../css/styleCommon.css" />
-        <link rel="stylesheet" href="../css/carousel.css" />
+        <link rel="stylesheet" href="../../css/main/style-main.css" />
     </head>
-    <body id="BodyCourse">
+    <body id="body_course-list">
         <!-- Back-to-top button-->
         <button type="button" class="btn btn-dark" onclick="toTopFunc()" id="btnToTop" title="Trở về đầu trang">
             <i class="fas fa-chevron-up"></i>
@@ -24,15 +22,15 @@
         <!-- END Back-to-top button-->
         <!-- Main -->
         <div class="wrapper">
-            <!-- Sidebar -->
-            <nav id="sidebar" class="bg-dark">
-                <div class="sidebar-header">
-                    <img src="../img/logo.png" class="img-fluid" alt="CTCT_Logo" />
+            <!-- sidebar-custom -->
+            <nav class="bg-dark sidebar-custom">
+                <div class="sidebar-custom__header">
+                    <img src="../../img/logo.png" class="img-fluid" alt="CTCT_Logo" />
                 </div>
 
-                <ul class="list-unstyled components">
+                <ul class="list-unstyled sidebar-custom__components">
                     <li>
-                        <a href="../index.html">
+                        <a href="../../index.html">
                             <i class="fas fa-home"></i>
                             Trang chủ
                         </a>
@@ -65,56 +63,56 @@
                     </li>
 
                     <li>
-                        <a href="../sites/info.html">
+                        <a href="../etc/info.html">
                             <i class="fas fa-info-circle fa"></i>
                             Giới thiệu
                         </a>
                     </li>
 
                     <li>
-                        <a href="../sites/contact.html">
+                        <a href="../etc/contact.html">
                             <i class="fas fa-envelope-open"></i>
                             Liên hệ
                         </a>
                     </li>
                 </ul>
             </nav>
-            <!-- END Sidebar-->
+            <!-- END sidebar-custom-->
             <!-- Page Content -->
-            <div id="content">
+            <div class="content-main">
                 <!-- Content Header -->
                 <nav class="navbar navbar-expand navbar-dark">
                     <div class="container-fluid">
-                        <!-- Sidebar Toggler -->
+                        <!-- sidebar-custom Toggler -->
                         <button
                             type="button"
-                            id="sidebarCollapse"
-                            class="btn btn-outline-dark btn-border-lightWhite text-white-90p"
+                            id="sidebar-custom_collapse"
+                            class="btn btn-outline-dark btn-custom--outline-dark text-white-90p"
                         >
                             <i class="fas fa-align-left"></i>
                         </button>
-                        <!-- END Sidebar Toggler -->
+                        <!-- END sidebar-custom Toggler -->
                         <!-- Navigation Links -->
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item mr-4 my-auto">
+                            <!-- <li class="nav-item mr-4 my-auto">
                                 <a class="" href="#"><i class="fas fa-search"></i></a>
-                            </li>
+                            </li> -->
                             <li class="nav-item dropdown">
                                 <button
                                     type="button"
-                                    class="btn btn-outline-dark dropdown-toggle text-white-90p btn-border-lightWhite"
+                                    class="btn btn-outline-dark btn-custom--outline-dark dropdown-toggle text-white-90p"
                                     data-toggle="dropdown"
                                     aria-haspopup="true"
                                     aria-expanded="false"
                                 >
-                                    <i class="fas fa-user mr-2"></i> Tài khoản
+                                    <i class="fas fa-user mr-2"></i>Tài khoản
                                 </button>
                                 <div class="dropdown-menu w-100 dropdown-menu-right bg-dark">
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LoginModal"
-                                        ><i class="fas fa-user-check mr-2"></i> Đăng nhập</a
+                                    <a class="dropdown-item" href="../account/sign-in.html"
+                                        ><i class="fas fa-user-check mr-2"></i>Đăng nhập</a
                                     >
 
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#SignUpModal"
+                                    <a class="dropdown-item" href="../account/sign-up.html"
                                         ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
                                     >
                                 </div>
@@ -126,18 +124,18 @@
                 <!-- END Content Header -->
                 <!-- Content Title-->
                 <div
-                    id="contentBodyTitle"
-                    style="background-image: url(../img/computer-bg.png); background-position: 50% 30%"
+                    class="content-main__title"
+                    style="background-image: url(../../img/computer-bg.png); background-position: 50% 30%"
                 >
-                    <div class="bg-op">
+                    <div class="background-black-op">
                         <div class="content-w">
                             <div class="container-fluid title-container">
                                 <div class="py-5">
                                     <span class="text-center">
-                                        <h1 class="text-white mb-3">
+                                        <h1 class="text-white font-weight-600 mb-3">
                                             Khóa học
                                         </h1>
-                                        <h2 class="h5 font-w500 text-white-80p">
+                                        <h2 class="h5 font-weight-500 text-white-80p">
                                             Toàn bộ được chọn lọc và thực hiện bởi Chúng ta cùng tiến!
                                         </h2>
                                     </span>
@@ -148,8 +146,8 @@
                 </div>
                 <!-- END Content Title-->
                 <!-- Content Body-->
-                <div id="contentBody">
-                    <div class="content-w content-w-top">
+                <div class="content-main__body">
+                    <div class="content-w content-w--top">
                         <!-- Breadcrumb -->
                         <nav class="breadcrumb bg-white">
                             <a class="breadcrumb-item first-item" href="#"><i class="fas fa-home"></i> </a>
@@ -159,7 +157,7 @@
                         </nav>
                         <!-- END Breadcrumb-->
                         <!-- Search Course -->
-                        <div id="searchBar" class="input-group">
+                        <div id="searchBar" class="block input-group">
                             <input
                                 class="form-control my-0 py-1"
                                 type="text"
@@ -174,57 +172,55 @@
                         </div>
                         <!-- END Search Course -->
                         <!-- Course Filter -->
-                        <div class="container-fluid" id="filterOptions">
-                            <div class="row">
-                                <div class="mr-auto filterTitle">
-                                    <i class="fas fa-book mr-2"></i>
-                                    Tất cả Khóa học
-                                </div>
-                                <div class="ml-auto">
-                                    <ul class="list-unstyled">
-                                        <li class="dropdown">
-                                            <button
-                                                type="button"
-                                                class="btn btn-light dropdown-toggle"
-                                                data-toggle="dropdown"
-                                                aria-haspopup="true"
-                                                aria-expanded="false"
-                                            >
-                                                Khoa, ngành học
-                                            </button>
+                        <div class="block course-filter">
+                            <div class="mr-auto course-filter__title">
+                                <i class="fas fa-book mr-2"></i>
+                                Tất cả Khóa học
+                            </div>
+                            <div class="ml-auto">
+                                <ul class="list-unstyled">
+                                    <li class="dropdown">
+                                        <button
+                                            type="button"
+                                            class="btn btn-light dropdown-toggle"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            Khoa, ngành học
+                                        </button>
 
-                                            <div class="dropdown-menu w-100 dropdown-menu-right bg-light">
-                                                <a class="dropdown-item active" href="#">
-                                                    Tất cả
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    Khoa học cà khịa
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    Kỹ thuật cà khịa
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    Youtuber
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    Streamer
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    5-năm-er
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                        <div class="dropdown-menu w-100 dropdown-menu-right bg-light">
+                                            <a class="dropdown-item active" href="#">
+                                                Tất cả
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                Khoa học cà khịa
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                Kỹ thuật cà khịa
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                Youtuber
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                Streamer
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                5-năm-er
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <!-- END Course Filter -->
                         <!-- Course List -->
-                        <div class="mt-4" id="courseList">
+                        <div class="mt-4 course-list">
                             <div class="row col-items">
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/1.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/1.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 1
@@ -240,7 +236,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/2.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/2.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 2
@@ -256,7 +252,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/3.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/3.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 3
@@ -272,7 +268,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/4.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/4.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 4
@@ -288,7 +284,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/5.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/5.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 5
@@ -304,7 +300,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/6.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/6.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 6
@@ -320,7 +316,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/7.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/7.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 7
@@ -336,7 +332,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/1.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/1.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 1
@@ -352,7 +348,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/2.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/2.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 2
@@ -368,7 +364,7 @@
 
                                 <div class="col-md-6 col-xl-3">
                                     <div class="card bg-dark text-white-85p">
-                                        <img src="../img/backgrounds/3.jpg" class="card-img-top" alt="card1" />
+                                        <img src="../../img/backgrounds/3.jpg" class="card-img-top" alt="card1" />
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 Khóa học 3
@@ -388,15 +384,16 @@
                 </div>
                 <!-- END Content Body-->
                 <!-- Content Footer -->
-                <div id="contentFooter">
+                <!-- Content Footer -->
+                <div class="content-main__footer">
                     <div class="container-fluid content-w">
                         <div class="row">
                             <div class="col-xl-4">
-                                <h4 class="footer-title">
+                                <h4 class="content-main__footer__title">
                                     Về Chúng Ta Cùng Tiến
                                 </h4>
-                                <div class="footer-divider"></div>
-                                <div class="footer-body" id="footer-about-body">
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body" id="footer-about-body">
                                     <p>
                                         Tự hào là câu lạc bộ cà khịa mạnh nhất ĐH.Bách Khoa TP.HCM, chúng tôi mang đến
                                         cho bạn những trải nghiệm cà khịa/bị cà khịa một cách vui/đau nhất có thể. Không
@@ -408,9 +405,9 @@
                             </div>
 
                             <div class="col-xl-4">
-                                <h4 class="footer-title">Tin tức mới nhất</h4>
-                                <div class="footer-divider"></div>
-                                <div class="footer-body" id="footer-news-body">
+                                <h4 class="content-main__footer__title">Tin tức mới nhất</h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body news__body">
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="#"
@@ -436,9 +433,9 @@
                             </div>
 
                             <div class="col-xl-4">
-                                <h4 class=" footer-title">Liên hệ</h4>
-                                <div class="footer-divider"></div>
-                                <div class="footer-body" id="footer-contact-body">
+                                <h4 class="content-main__footer__title">Liên hệ</h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body" id="footer-contact-body">
                                     <ul class="list-unstyled">
                                         <li>
                                             <i class="fas fa-map-marker-alt"></i>
@@ -461,9 +458,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="divider-100"></div>
-                        <div class="row" id="footer-certificate">
-                            <img src="../img/logo.png" class="img-fluid d-inline-block" style="max-height: 35px" />
+                        <div class="divider--100"></div>
+                        <div class="row certificate">
+                            <img src="../../img/logo.png" class="img-fluid d-inline-block" style="max-height: 35px" />
                             <p class="d-inline-block my-auto">
                                 Chúng ta cùng tiến &copy 2019
                             </p>
@@ -476,194 +473,12 @@
         </div>
         <!-- END Main-->
         <!-- Javascript -->
-        <script src="../js/jquery-3.4.1.min.js"></script>
-        <script src="../js/popper.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
         <!-- Custom Script -->
-        <script src="../js/scripts.js"></script>
-        <script src="../js/scriptsMain.js"></script>
+        <script src="../../js/scripts.js"></script>
+        <script src="../../js/scriptsMain.js"></script>
     </body>
-    <!-- Login Modal-->
-    <div
-        class="modal fade"
-        id="LoginModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="LoginModalLabel"
-        aria-hidden="true"
-    >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="container-fluid text-center">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseModal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <br />
-                        <img class="mx-auto d-block" src="../img/logo.png" width="auto" height="45px" alt="CTCT_Logo" />
-                        <h5 class="mx-auto d-block mt-2">Đăng nhập</h5>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="InputAccount">Email hoặc Tên tài khoản</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text" id="InputAccountPrepend">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                </div>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="InputAccount"
-                                    placeholder="Nhập Email hoặc Tên tài khoản của bạn"
-                                    aria-describedby="InputAccountPrepend"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputPassword">Mật khẩu</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text" id="InputPasswordPrepend">
-                                        <i class="fas fa-lock"></i>
-                                    </div>
-                                </div>
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="InputPassword"
-                                    placeholder="Nhập Mật khẩu của bạn"
-                                    aria-describedby="InputPasswordPrepend"
-                                    required
-                                />
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Quay lại
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        Đăng nhập
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Login Modal-->
-    <!-- Sign-up Modal-->
-    <div
-        class="modal fade"
-        id="SignUpModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="SignUpModalLabel"
-        aria-hidden="true"
-    >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="container-fluid text-center">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseModal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <br />
-                        <img class="mx-auto d-block" src="../img/logo.png" width="auto" height="45px" alt="CTCT_Logo" />
-                        <h5 class="mx-auto d-block mt-2">Đăng ký tài khoản</h5>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="SignUpEmail">Email</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text" id="SignUpEmailPrepend">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                </div>
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    id="SignUpEmail"
-                                    placeholder="Nhập Email hoặc Tên tài khoản"
-                                    aria-describedby="SignUpEmailPrepend"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SignUpUsername">Tên tài khoản</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text" id="SignUpUsernamePrepend">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                </div>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="SignUpUsername"
-                                    placeholder="Nhập Tên tài khoản từ 8-32 ký tự"
-                                    aria-describedby="SignUpUsernamePrepend"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SignUpPassword">Mật khẩu</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text" id="SignUpPasswordPrepend">
-                                        <i class="fas fa-lock"></i>
-                                    </div>
-                                </div>
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="SignUpPassword"
-                                    placeholder="Nhập Mật khẩu"
-                                    aria-describedby="SignUpPasswordPrepend"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SignUpRetypePass">Nhập lại mật khẩu</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text" id="SignUpRetypePassPrepend">
-                                        <i class="fas fa-lock"></i>
-                                    </div>
-                                </div>
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="SignUpRetypePass"
-                                    placeholder="Nhập lại Mật khẩu"
-                                    aria-describedby="SignUpRetypePassPrepend"
-                                    required
-                                />
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Quay lại
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        Đăng ký
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Sign-up Modal-->
 </html>

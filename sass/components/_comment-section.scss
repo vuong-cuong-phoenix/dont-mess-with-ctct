@@ -2,31 +2,31 @@
                 COMMENT SECTION
 =============================================*/
 
-.comment-section {
-    padding-bottom: 0rem;
+.add-comment {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: solid 1px $color-content__body__bg;
 
-    .add-comment {
+    .form-group {
+        margin-bottom: 0.5rem;
+    }
+
+    &__btn-group {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        border-bottom: solid 1px $color-content__body__bg;
 
-        .form-group {
-            margin-bottom: 0.5rem;
-        }
-
-        &__btn-group {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-
-            > button {
-                width: 6rem;
-                height: 2rem;
-                line-height: 1;
-            }
+        > button {
+            width: 6rem;
+            height: 2rem;
+            line-height: 1;
         }
     }
+}
+
+.comment-section {
+    padding-bottom: 0rem;
 
     .comment-item {
         display: flex;
@@ -68,15 +68,19 @@
 
                 > span {
                     margin-right: 2rem;
-                    color: #cc7a00;
+                    color: darken($color-primary__text, 5%);
 
                     &:hover {
                         color: $color-primary__text--onActive;
                     }
                 }
 
-                &__comment-reply {
+                &__reply {
                     padding-top: 0.5rem;
+
+                    .add-comment {
+                        border-bottom: none;
+                    }
                 }
             }
         }

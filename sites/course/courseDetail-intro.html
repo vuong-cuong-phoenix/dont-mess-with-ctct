@@ -7,16 +7,16 @@
 
         <!-- Framework CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-        <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
-        <!-- Page's Style-->
-        <link rel="stylesheet" href="../css/style-main.css" />
-        <!-- Custom CSS -->
-        <script src="../js/jquery-3.4.1.min.js"></script>
-        <script src="../js/scriptsEvent.js"></script>
+        <link rel="stylesheet" href="../../css/plugins/jquery.mCustomScrollbar.min.css" />
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="../../css/main/style-main.css" />
+        <!-- Custom Scripts -->
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/scriptsEvent.js"></script>
     </head>
-    <body id="BodyCourse">
+    <body id="body_course-intro">
         <!-- Back-to-top button -->
         <button type="button" class="btn btn-dark" onclick="toTopFunc()" id="btnToTop" title="Trở về đầu trang">
             <i class="fas fa-chevron-up"></i>
@@ -27,19 +27,19 @@
             <!-- Sidebar -->
             <nav class="bg-dark sidebar-custom">
                 <div class="sidebar-custom__header">
-                    <img src="../img/logo.png" class="img-fluid" alt="CTCT_Logo" />
+                    <img src="../../img/logo.png" class="img-fluid" alt="CTCT_Logo" />
                 </div>
 
                 <ul class="list-unstyled sidebar-custom__components">
                     <li>
-                        <a href="../index.html">
+                        <a href="../../index.html">
                             <i class="fas fa-home"></i>
                             Trang chủ
                         </a>
                     </li>
 
                     <li class="active">
-                        <a href="#">
+                        <a href="./courseList.html">
                             <i class="fas fa-book-open"></i>
                             Khóa học
                         </a>
@@ -65,14 +65,14 @@
                     </li>
 
                     <li>
-                        <a href="../sites/info.html">
+                        <a href="../etc/info.html">
                             <i class="fas fa-info-circle fa"></i>
                             Giới thiệu
                         </a>
                     </li>
 
                     <li>
-                        <a href="../sites/contact.html">
+                        <a href="../etc/contact.html">
                             <i class="fas fa-envelope-open"></i>
                             Liên hệ
                         </a>
@@ -85,36 +85,36 @@
                 <!-- Content Header -->
                 <nav class="navbar navbar-expand navbar-dark">
                     <div class="container-fluid">
-                        <!-- Sidebar Toggler -->
+                        <!-- sidebar-custom Toggler -->
                         <button
                             type="button"
-                            id="btnSidebarCollapse"
-                            class="btn btn-outline-dark btn__border--lightWhite text-white-90p"
+                            id="sidebar-custom_collapse"
+                            class="btn btn-outline-dark btn-custom--outline-dark text-white-90p"
                         >
                             <i class="fas fa-align-left"></i>
                         </button>
-                        <!-- END Sidebar Toggler -->
+                        <!-- END sidebar-custom Toggler -->
                         <!-- Navigation Links -->
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item mr-4 my-auto">
+                            <!-- <li class="nav-item mr-4 my-auto">
                                 <a class="" href="#"><i class="fas fa-search"></i></a>
-                            </li>
+                            </li> -->
                             <li class="nav-item dropdown">
                                 <button
                                     type="button"
-                                    class="btn btn-outline-dark dropdown-toggle text-white-90p btn__border--lightWhite"
+                                    class="btn btn-outline-dark btn-custom--outline-dark dropdown-toggle text-white-90p"
                                     data-toggle="dropdown"
                                     aria-haspopup="true"
                                     aria-expanded="false"
                                 >
-                                    <i class="fas fa-user mr-2"></i> Tài khoản
+                                    <i class="fas fa-user mr-2"></i>Tài khoản
                                 </button>
                                 <div class="dropdown-menu w-100 dropdown-menu-right bg-dark">
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#"
-                                        ><i class="fas fa-user-check mr-2"></i> Đăng nhập</a
+                                    <a class="dropdown-item" href="../account/sign-in.html"
+                                        ><i class="fas fa-user-check mr-2"></i>Đăng nhập</a
                                     >
 
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#"
+                                    <a class="dropdown-item" href="../account/sign-up.html"
                                         ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
                                     >
                                 </div>
@@ -126,20 +126,20 @@
                 <!-- END Content Header -->
                 <!-- Content Title-->
                 <div
-                    style="background-image: url(../img/computer-bg.png); background-position: center"
+                    style="background-image: url(../../img/computer-bg.png); background-position: center"
                     class="content-main__title"
                 >
-                    <div class="bg-op">
+                    <div class="background-black-op">
                         <div class="container-fluid title-container content-w">
                             <div class="py-5">
-                                <h1 class="text-white">
+                                <h1 class="text-white font-weight-600">
                                     Đại số tuyến tính
                                 </h1>
-                                <h2 class="h5 font-w400 text-white-80p mb-4">
+                                <h2 class="h5 font-weight-400 text-white-80p mb-4">
                                     Tấu hài cùng Youtuber!
                                 </h2>
                                 <div id="rating" class="d-block text-white-80p mb-2">
-                                    <div class="text-orange d-inline" role="group">
+                                    <div class="text--primary d-inline" role="group">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
@@ -186,7 +186,7 @@
                 <!-- Content Body-->
                 <div class="content-main__body">
                     <!-- Breadcrumb -->
-                    <div class="content-w content-w--top-mp">
+                    <div class="content-w content-w--top">
                         <nav class="breadcrumb bg-white">
                             <a class="breadcrumb-item first-item" href="#"><i class="fas fa-home"></i> </a>
                             <a class="breadcrumb-item" href="#">
@@ -206,7 +206,7 @@
                                 <div class="col-xl-8">
                                     <div class="block--rounded lecture-deck__video">
                                         <div class="frame-hack">
-                                            <img src="../img/backgrounds/1.jpg" class="img-fluid w-100" />
+                                            <img src="../../../img/backgrounds/1.jpg" class="img-fluid w-100" />
                                         </div>
                                     </div>
                                 </div>
@@ -528,7 +528,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Relate Courses -->
+                            <!-- END Lecture Description-->
+                            <!-- Related Courses -->
                             <div class="col-xl-4 related-courses">
                                 <div class="block--rounded">
                                     <div class="block__header text-center">
@@ -541,7 +542,7 @@
                                         >
                                             <div class="d-flex w-100">
                                                 <div class="related-courses__img-container">
-                                                    <img src="../img/backgrounds/2.jpg" class="d-inline-block" />
+                                                    <img src="../../img/backgrounds/2.jpg" class="d-inline-block" />
                                                 </div>
                                                 <h5 class="d-inline-block my-auto ml-3">Khóa học 2</h5>
                                             </div>
@@ -553,7 +554,7 @@
                                         >
                                             <div class="d-flex w-100">
                                                 <div class="related-courses__img-container">
-                                                    <img src="../img/backgrounds/3.jpg" class="d-inline-block" />
+                                                    <img src="../../img/backgrounds/3.jpg" class="d-inline-block" />
                                                 </div>
                                                 <h5 class="d-inline-block my-auto ml-3">Khóa học 3</h5>
                                             </div>
@@ -565,7 +566,7 @@
                                         >
                                             <div class="d-flex w-100">
                                                 <div class="related-courses__img-container">
-                                                    <img src="../img/backgrounds/4.jpg" class="d-inline-block" />
+                                                    <img src="../../img/backgrounds/4.jpg" class="d-inline-block" />
                                                 </div>
                                                 <h5 class="d-inline-block my-auto ml-3">Khóa học 4</h5>
                                             </div>
@@ -577,7 +578,7 @@
                                         >
                                             <div class="d-flex w-100">
                                                 <div class="related-courses__img-container">
-                                                    <img src="../img/backgrounds/5.jpg" class="d-inline-block" />
+                                                    <img src="../../img/backgrounds/5.jpg" class="d-inline-block" />
                                                 </div>
                                                 <h5 class="d-inline-block my-auto ml-3">Khóa học 5</h5>
                                             </div>
@@ -589,7 +590,7 @@
                                         >
                                             <div class="d-flex w-100">
                                                 <div class="related-courses__img-container">
-                                                    <img src="../img/backgrounds/6.jpg" class="d-inline-block" />
+                                                    <img src="../../img/backgrounds/6.jpg" class="d-inline-block" />
                                                 </div>
                                                 <h5 class="d-inline-block my-auto ml-3">Khóa học 6</h5>
                                             </div>
@@ -602,6 +603,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- END Related Courses-->
                         </div>
                         <div class="row">
                             <!-- Lecture's Instructor -->
@@ -614,7 +616,7 @@
                                         <div class="lecture-content__instructor__body__img-and-stats">
                                             <a class="lecture-content__instructor__body__img">
                                                 <img
-                                                    src="../img/avatar/DaiYoutube.png"
+                                                    src="../../../img/avatar/DaiYoutube.png"
                                                     class="avatar--md avatar--md--fx-shadow"
                                                 />
                                             </a>
@@ -695,8 +697,8 @@
                                         <div class="rating-stats-container">
                                             <a href="#" id="rating-5" class="rating-stats">
                                                 <div class="progress-flex">
-                                                    <div class="progess-flex-bg">
-                                                        <span class="progess-flex-fill" style="width: 75%"></span>
+                                                    <div class="progess-flex__bg">
+                                                        <span class="progess-flex__fill" style="width: 75%"></span>
                                                     </div>
                                                 </div>
                                                 <div class="rating-stats__stars d-inline-block" role="group">
@@ -704,7 +706,7 @@
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                                                    <i class="fas fa-star"></i>
                                                 </div>
                                                 <div class="rating-stats__rate">
                                                     <span>75%</span>
@@ -713,8 +715,8 @@
 
                                             <a href="#" id="rating-4" class="rating-stats">
                                                 <div class="progress-flex">
-                                                    <div class="progess-flex-bg">
-                                                        <span class="progess-flex-fill" style="width: 55%"></span>
+                                                    <div class="progess-flex__bg">
+                                                        <span class="progess-flex__fill" style="width: 55%"></span>
                                                     </div>
                                                 </div>
                                                 <div class="rating-stats__stars d-inline-block" role="group">
@@ -731,8 +733,8 @@
 
                                             <a href="#" id="rating-3" class="rating-stats">
                                                 <div class="progress-flex">
-                                                    <div class="progess-flex-bg">
-                                                        <span class="progess-flex-fill" style="width: 37%"></span>
+                                                    <div class="progess-flex__bg">
+                                                        <span class="progess-flex__fill" style="width: 37%"></span>
                                                     </div>
                                                 </div>
                                                 <div class="rating-stats__stars d-inline-block" role="group">
@@ -749,8 +751,8 @@
 
                                             <a href="#" id="rating-2" class="rating-stats">
                                                 <div class="progress-flex">
-                                                    <div class="progess-flex-bg">
-                                                        <span class="progess-flex-fill" style="width: 9%"></span>
+                                                    <div class="progess-flex__bg">
+                                                        <span class="progess-flex__fill" style="width: 9%"></span>
                                                     </div>
                                                 </div>
                                                 <div class="rating-stats__stars d-inline-block" role="group">
@@ -767,8 +769,8 @@
 
                                             <a href="#" id="rating-1" class="rating-stats">
                                                 <div class="progress-flex">
-                                                    <div class="progess-flex-bg">
-                                                        <span class="progess-flex-fill" style="width: 4%"></span>
+                                                    <div class="progess-flex__bg">
+                                                        <span class="progess-flex__fill" style="width: 4%"></span>
                                                     </div>
                                                 </div>
                                                 <div class="rating-stats__stars d-inline-block" role="group">
@@ -789,312 +791,294 @@
                                         <div class="block__body__title">
                                             <span class="h4 m-0 mx-auto d-block">Nhận xét</span>
                                         </div>
-                                        <div class="review-list-container">
+                                        <div class="review-list-container comment-section">
                                             <div class="comment-item" id="review-1">
-                                                <div class="comment-item__content">
-                                                    <div class="comment-item__content__avatar mr-4">
-                                                        <img
-                                                            src="../img/avatar/avatar1.jpg"
-                                                            class="avatar--sm avatar--sm--fx-shadow"
-                                                        />
+                                                <div class="comment-item__avatar mr-4">
+                                                    <img
+                                                        src="../../img/avatar/avatar1.jpg"
+                                                        class="avatar--sm avatar--sm--fx-shadow"
+                                                    />
+                                                </div>
+
+                                                <div class="comment-item__body w-100">
+                                                    <div class="comment-info">
+                                                        <div class="comment-info__name-and-time">
+                                                            <a href="#" class="user-name">
+                                                                Ngô Lê Gia Thuấn
+                                                            </a>
+                                                            <div class="comment-info__time">
+                                                                1 ngày trước
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-info__rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment-item__content__body w-100">
-                                                        <div class="comment-item__content__body__info">
-                                                            <div
-                                                                class="comment-item__content__body__info__name-and-time"
-                                                            >
-                                                                <a href="#" class="user-name">
-                                                                    Ngô Lê Gia Thuấn
-                                                                </a>
-                                                                <div class="comment-time">
-                                                                    1 ngày trước
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-item__content__body__info__user-rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="comment-item__content__body__comment-detail">
-                                                            <p>Khóa học rất bổ ích và em đã hết ngáo giá ạ</p>
-                                                        </div>
+                                                    <div class="comment-detail">
+                                                        <p>Khóa học rất bổ ích và em đã hết ngáo giá ạ</p>
+                                                    </div>
 
-                                                        <div class="comment-item__content__body__comment-meta">
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-up"></i>
-                                                                </a>
-                                                                <span>6</span>
-                                                            </span>
+                                                    <div class="comment-meta">
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                            </a>
+                                                            <span>6</span>
+                                                        </span>
 
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-down"></i>
-                                                                </a>
-                                                                <span>1</span>
-                                                            </span>
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-down"></i>
+                                                            </a>
+                                                            <span>1</span>
+                                                        </span>
 
-                                                            <span class="float-right mr-0">
-                                                                <a href="#">
-                                                                    <i class="far fa-flag"></i>
-                                                                    <span>Báo cáo</span>
-                                                                </a>
-                                                            </span>
-                                                        </div>
+                                                        <span class="float-right mr-0">
+                                                            <a href="#">
+                                                                <i class="far fa-flag"></i>
+                                                                <span>Báo cáo</span>
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="comment-item" id="review-2">
-                                                <div class="comment-item__content">
-                                                    <div class="comment-item__content__avatar mr-4">
-                                                        <img
-                                                            src="../img/avatar/avatar1.jpg"
-                                                            class="avatar--sm avatar--sm--fx-shadow"
-                                                        />
+                                                <div class="comment-item__avatar mr-4">
+                                                    <img
+                                                        src="../../img/avatar/avatar1.jpg"
+                                                        class="avatar--sm avatar--sm--fx-shadow"
+                                                    />
+                                                </div>
+
+                                                <div class="comment-item__body w-100">
+                                                    <div class="comment-info">
+                                                        <div class="comment-info__name-and-time">
+                                                            <a href="#" class="user-name">
+                                                                Bùi Ngọc Thanh Sơn
+                                                            </a>
+                                                            <div class="comment-info__time">
+                                                                5 giờ trước
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-info__rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment-item__content__body w-100">
-                                                        <div class="comment-item__content__body__info">
-                                                            <div
-                                                                class="comment-item__content__body__info__name-and-time"
-                                                            >
-                                                                <a href="#" class="user-name">
-                                                                    Bùi Ngọc Thanh Sơn
-                                                                </a>
-                                                                <div class="comment-time">
-                                                                    5 giờ trước
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-item__content__body__info__user-rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="comment-item__content__body__comment-detail">
-                                                            <p>
-                                                                Khóa học rất bổ ích. Nhân tiện a Đại "Youtube" có muốn
-                                                                làm startup về Youtube với em không ạ?
-                                                            </p>
-                                                        </div>
+                                                    <div class="comment-detail">
+                                                        <p>
+                                                            Khóa học rất bổ ích. Nhân tiện a Đại "Youtube" có muốn làm
+                                                            startup về Youtube với em không ạ?
+                                                        </p>
+                                                    </div>
 
-                                                        <div class="comment-item__content__body__comment-meta">
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-up"></i>
-                                                                </a>
-                                                                <span>6</span>
-                                                            </span>
+                                                    <div class="comment-meta">
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                            </a>
+                                                            <span>6</span>
+                                                        </span>
 
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-down"></i>
-                                                                </a>
-                                                                <span>1</span>
-                                                            </span>
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-down"></i>
+                                                            </a>
+                                                            <span>1</span>
+                                                        </span>
 
-                                                            <span class="float-right mr-0">
-                                                                <a href="#">
-                                                                    <i class="far fa-flag"></i>
-                                                                    <span>Báo cáo</span>
-                                                                </a>
-                                                            </span>
-                                                        </div>
+                                                        <span class="float-right mr-0">
+                                                            <a href="#">
+                                                                <i class="far fa-flag"></i>
+                                                                <span>Báo cáo</span>
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="comment-item" id="review-3">
-                                                <div class="comment-item__content">
-                                                    <div class="comment-item__content__avatar mr-4">
-                                                        <img
-                                                            src="../img/avatar/avatar1.jpg"
-                                                            class="avatar--sm avatar--sm--fx-shadow"
-                                                        />
+                                                <div class="comment-item__avatar mr-4">
+                                                    <img
+                                                        src="../../img/avatar/avatar1.jpg"
+                                                        class="avatar--sm avatar--sm--fx-shadow"
+                                                    />
+                                                </div>
+
+                                                <div class="comment-item__body w-100">
+                                                    <div class="comment-info">
+                                                        <div class="comment-info__name-and-time">
+                                                            <a href="#" class="user-name">
+                                                                ABC
+                                                            </a>
+                                                            <div class="comment-info__time">
+                                                                1 giờ trước
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-info__rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment-item__content__body w-100">
-                                                        <div class="comment-item__content__body__info">
-                                                            <div
-                                                                class="comment-item__content__body__info__name-and-time"
-                                                            >
-                                                                <a href="#" class="user-name">
-                                                                    ABC
-                                                                </a>
-                                                                <div class="comment-time">
-                                                                    1 giờ trước
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-item__content__body__info__user-rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="comment-item__content__body__comment-detail">
-                                                            <p>Khóa học như ***. Có thằng giảng viên ngáo thì có?</p>
-                                                        </div>
+                                                    <div class="comment-detail">
+                                                        <p>Khóa học như ***. Có thằng giảng viên ngáo thì có?</p>
+                                                    </div>
 
-                                                        <div class="comment-item__content__body__comment-meta">
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-up"></i>
-                                                                </a>
-                                                                <span>6</span>
-                                                            </span>
+                                                    <div class="comment-meta">
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                            </a>
+                                                            <span>6</span>
+                                                        </span>
 
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-down"></i>
-                                                                </a>
-                                                                <span>1</span>
-                                                            </span>
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-down"></i>
+                                                            </a>
+                                                            <span>1</span>
+                                                        </span>
 
-                                                            <span class="float-right mr-0">
-                                                                <a href="#">
-                                                                    <i class="far fa-flag"></i>
-                                                                    <span>Báo cáo</span>
-                                                                </a>
-                                                            </span>
-                                                        </div>
+                                                        <span class="float-right mr-0">
+                                                            <a href="#">
+                                                                <i class="far fa-flag"></i>
+                                                                <span>Báo cáo</span>
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="comment-item" id="review-4">
-                                                <div class="comment-item__content">
-                                                    <div class="comment-item__content__avatar mr-4">
-                                                        <img
-                                                            src="../img/avatar/avatar1.jpg"
-                                                            class="avatar--sm avatar--sm--fx-shadow"
-                                                        />
+                                                <div class="comment-item__avatar mr-4">
+                                                    <img
+                                                        src="../../img/avatar/avatar1.jpg"
+                                                        class="avatar--sm avatar--sm--fx-shadow"
+                                                    />
+                                                </div>
+
+                                                <div class="comment-item__body w-100">
+                                                    <div class="comment-info">
+                                                        <div class="comment-info__name-and-time">
+                                                            <a href="#" class="user-name">
+                                                                Hùng Loli
+                                                            </a>
+                                                            <div class="comment-info__time">
+                                                                4 phút trước
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-info__rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment-item__content__body w-100">
-                                                        <div class="comment-item__content__body__info">
-                                                            <div
-                                                                class="comment-item__content__body__info__name-and-time"
-                                                            >
-                                                                <a href="#" class="user-name">
-                                                                    Hùng Loli
-                                                                </a>
-                                                                <div class="comment-time">
-                                                                    4 phút trước
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-item__content__body__info__user-rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="comment-item__content__body__comment-detail">
-                                                            <p>Ngáo giá có làm cho em có được 1 Loli ko ạ? :adore:</p>
-                                                        </div>
+                                                    <div class="comment-detail">
+                                                        <p>Ngáo giá có làm cho em có được 1 Loli ko ạ? :adore:</p>
+                                                    </div>
 
-                                                        <div class="comment-item__content__body__comment-meta">
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-up"></i>
-                                                                </a>
-                                                                <span>6</span>
-                                                            </span>
+                                                    <div class="comment-meta">
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                            </a>
+                                                            <span>6</span>
+                                                        </span>
 
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-down"></i>
-                                                                </a>
-                                                                <span>1</span>
-                                                            </span>
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-down"></i>
+                                                            </a>
+                                                            <span>1</span>
+                                                        </span>
 
-                                                            <span class="float-right mr-0">
-                                                                <a href="#">
-                                                                    <i class="far fa-flag"></i>
-                                                                    <span>Báo cáo</span>
-                                                                </a>
-                                                            </span>
-                                                        </div>
+                                                        <span class="float-right mr-0">
+                                                            <a href="#">
+                                                                <i class="far fa-flag"></i>
+                                                                <span>Báo cáo</span>
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="comment-item" id="review-5">
-                                                <div class="comment-item__content">
-                                                    <div class="comment-item__content__avatar mr-4">
-                                                        <img
-                                                            src="../img/avatar/avatar1.jpg"
-                                                            class="avatar--sm avatar--sm--fx-shadow"
-                                                        />
+                                                <div class="comment-item__avatar mr-4">
+                                                    <img
+                                                        src="../../img/avatar/avatar1.jpg"
+                                                        class="avatar--sm avatar--sm--fx-shadow"
+                                                    />
+                                                </div>
+
+                                                <div class="comment-item__body w-100">
+                                                    <div class="comment-info">
+                                                        <div class="comment-info__name-and-time">
+                                                            <a href="#" class="user-name">
+                                                                Lê Hoài Nam
+                                                            </a>
+                                                            <div class="comment-info__time">
+                                                                9 phút trước
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-info__rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                            <i class="far fa-star"></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment-item__content__body w-100">
-                                                        <div class="comment-item__content__body__info">
-                                                            <div
-                                                                class="comment-item__content__body__info__name-and-time"
-                                                            >
-                                                                <a href="#" class="user-name">
-                                                                    Lê Hoài Nam
-                                                                </a>
-                                                                <div class="comment-time">
-                                                                    9 phút trước
-                                                                </div>
-                                                            </div>
-                                                            <div class="comment-item__content__body__info__user-rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                                <i class="far fa-star"></i>
-                                                            </div>
-                                                        </div>
 
-                                                        <div class="comment-item__content__body__comment-detail">
-                                                            <p>
-                                                                Ngáo giá hay không đối với tôi thì vẫn cần 5 năm để kiểm
-                                                                chứng!
-                                                            </p>
-                                                        </div>
+                                                    <div class="comment-detail">
+                                                        <p>
+                                                            Ngáo giá hay không đối với tôi thì vẫn cần 5 năm để kiểm
+                                                            chứng!
+                                                        </p>
+                                                    </div>
 
-                                                        <div class="comment-item__content__body__comment-meta">
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-up"></i>
-                                                                </a>
-                                                                <span>6</span>
-                                                            </span>
+                                                    <div class="comment-meta">
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-up"></i>
+                                                            </a>
+                                                            <span>6</span>
+                                                        </span>
 
-                                                            <span>
-                                                                <a href="#">
-                                                                    <i class="far fa-thumbs-down"></i>
-                                                                </a>
-                                                                <span>1</span>
-                                                            </span>
+                                                        <span>
+                                                            <a href="#">
+                                                                <i class="far fa-thumbs-down"></i>
+                                                            </a>
+                                                            <span>1</span>
+                                                        </span>
 
-                                                            <span class="float-right mr-0">
-                                                                <a href="#">
-                                                                    <i class="far fa-flag"></i>
-                                                                    <span>Báo cáo</span>
-                                                                </a>
-                                                            </span>
-                                                        </div>
+                                                        <span class="float-right mr-0">
+                                                            <a href="#">
+                                                                <i class="far fa-flag"></i>
+                                                                <span>Báo cáo</span>
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <a
-                                                href="#"
-                                                class="text-center d-block lecture-content__review__user-review__more-comment"
-                                            >
+                                            <a href="#" class="text-center d-block comment-section__more-comment">
                                                 <i class="fas fa-chevron-down"></i>
                                                 <span>Xem thêm</span>
                                             </a>
@@ -1131,7 +1115,7 @@
                             <div class="col-xl-4">
                                 <h4 class="content-main__footer__title">Tin tức mới nhất</h4>
                                 <div class="content-main__footer__divider"></div>
-                                <div class="content-main__footer__body news-body">
+                                <div class="content-main__footer__body news__body">
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="#"
@@ -1184,7 +1168,7 @@
                         </div>
                         <div class="divider--100"></div>
                         <div class="row certificate">
-                            <img src="../img/logo.png" class="img-fluid d-inline-block" style="max-height: 35px" />
+                            <img src="../../img/logo.png" class="img-fluid d-inline-block" style="max-height: 35px" />
                             <p class="d-inline-block my-auto">
                                 Chúng ta cùng tiến &copy 2019
                             </p>
@@ -1198,15 +1182,15 @@
 
         <!-- END Main -->
         <!-- Javascript -->
-        <script src="../js/popper.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="../js/jquery.slimscroll.min.js"></script>
-        <script src="../js/smooth-scrollbar/smooth-scrollbar.js"></script>
-        <script src="../js/smooth-scrollbar/plugins/overscroll.js"></script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../../js/jquery.slimscroll.min.js"></script>
+        <script src="../../js/smooth-scrollbar/smooth-scrollbar.js"></script>
+        <script src="../../js/smooth-scrollbar/plugins/overscroll.js"></script>
         <!-- Custom Script -->
-        <script src="../js/scripts.js"></script>
-        <script src="../js/scriptsMain.js"></script>
+        <script src="../../js/scripts.js"></script>
+        <script src="../../js/scriptsMain.js"></script>
         <!-- Instant Script -->
         <script>
             /*** Smooth-scrollbar ***/

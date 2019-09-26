@@ -1,12 +1,27 @@
 /*=============================================
         STYLES FOR ONLY COURSEs PAGE
 =============================================*/
+/*					Filter for Course List					*/
+.course-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 1.5em;
+    }
+}
+
+.course-list {
+    .card:hover {
+        box-shadow: 5px 5px 20px 5px #888888;
+    }
+}
 /***            Lecture's Tabs           ***/
 .lecture-deck__tabs {
     &__meta {
-        > li:not(:last-child) {
-            border-right: solid 1px #e6e6e6;
-        }
+        border-top-left-radius: $meas-border-radius--regular;
+        border-top-right-radius: $meas-border-radius--regular;
 
         > li:first-child a:hover,
         > li:first-child .active {
@@ -16,6 +31,10 @@
         > li:last-child a:hover,
         > li:last-child .active {
             border-top-right-radius: $meas-border-radius--regular;
+        }
+
+        > li:not(:last-child) {
+            border-right: solid 1px #e6e6e6;
         }
 
         li {
@@ -188,7 +207,7 @@
                         margin-bottom: 0;
                     }
 
-                    &:hover .progess-flex-fill {
+                    &:hover .progess-flex__fill {
                         background: $color-primary__text !important;
                     }
 

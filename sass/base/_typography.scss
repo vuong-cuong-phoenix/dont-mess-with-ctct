@@ -1,6 +1,32 @@
 /*=============================================
                 TYPOGRAPHYS
 =============================================*/
+@each $h in $headings {
+    #{$h},
+    .#{$h} {
+        @if ($font-family-name == "Open Sans") {
+            font-weight: 600;
+        }
+    }
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// .h1,
+// .h2,
+// .h3,
+// .h4,
+// .h5,
+// .h6 {
+//     @if ($font-family-name == "Open Sans") {
+//         font-weight: 600;
+//     }
+// }
+
 .text-overflow--2-line {
     overflow: hidden;
     text-overflow: ellipsis;
