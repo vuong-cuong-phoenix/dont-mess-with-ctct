@@ -1507,5 +1507,23 @@ a:focus {
 #body_contact .content-main__body .content-w {
   width: 60%;
 }
+#body_contact .content-main__body .content-w .block__header {
+  color: #ff8c1a;
+}
+@media (max-width: 1200px) {
+  #body_contact .content-main__body .content-w {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  #body_contact .content-main__body .content-w {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  #body_contact .content-main__body .content-w {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style-main.css.map */

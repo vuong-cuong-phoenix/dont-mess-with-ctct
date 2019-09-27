@@ -472,8 +472,8 @@ button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus {
 #body_sign-up .main-area {
   background: #f6f6f6;
   width: 900px;
-  min-height: calc(100% - 2.5rem);
-  margin: calc(2.5rem / 2) auto;
+  min-height: calc(100% - 1rem);
+  margin: calc(1rem / 2) auto;
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
