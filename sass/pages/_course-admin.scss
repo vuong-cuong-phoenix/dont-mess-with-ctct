@@ -1,0 +1,132 @@
+.signed--admin {
+    .navbar {
+        .dropdown {
+            .dropdown-toggle::after {
+                clear: both;
+                content: "" !important;
+                display: block;
+            }
+        }
+    }
+
+    .content-main {
+        &__body {
+            .lecture-deck__tabs__content {
+                .tab__config {
+                    border-bottom: 1px solid $color-content__body__bg;
+
+                    &__btn-group {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-content: center;
+                        padding: 0.5rem 1.5rem;
+
+                        a {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 0.25rem;
+                        }
+                    }
+
+                    &__box {
+                        padding: 0.5rem 1.5rem 1rem;
+
+                        .form-group {
+                            label {
+                                font-weight: bold;
+                                font-style: italic;
+                            }
+                        }
+
+                        &__btn-group {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            button {
+                                width: 75px;
+                            }
+                        }
+                    }
+                }
+
+                .smooth-scroll {
+                    width: auto;
+                    height: calc(100% - (40px + 1rem + 1rem));
+                    overflow: hidden;
+                }
+                .inside-content {
+                    .list-group {
+                        overflow: hidden;
+
+                        .list-group-item {
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+
+                            .edit-and-remove {
+                                background: #f8f9fa;
+                                opacity: 1;
+                                overflow: visible;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                transform: translateX(calc(100%));
+                                transition: all 0.35s ease-in-out;
+
+                                &__btn {
+                                    width: 40px;
+                                    height: 40px;
+                                    text-align: center;
+                                    padding: 0;
+                                    border: none;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-left: 0.25rem;
+                                    margin-right: 0.25rem;
+                                }
+                            }
+
+                            &:hover {
+                                transform: translateX(calc(0px - (40px + 40px + 0.25rem * 4)));
+                                @include transition-short(all, 0.5s, ease);
+                            }
+                        }
+                    }
+
+                    .edit-box {
+                        border-left: 2px solid $color-primary;
+                        padding: 1rem 1rem;
+                        margin-left: 1.75rem;
+
+                        .form-group > label {
+                            font-weight: bold;
+                            font-style: italic;
+                        }
+
+                        &__btn-group {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            button {
+                                width: 75px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

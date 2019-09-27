@@ -141,6 +141,13 @@ h6,
   font-weight: 600;
 }
 
+.text-overflow--1-line {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .text-overflow--2-line {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -149,11 +156,28 @@ h6,
   -webkit-line-clamp: 2;
 }
 
-.text-overflow--1-line {
-  display: block;
-  white-space: nowrap;
+.text-overflow--3-line {
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.text-overflow--4-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.text-overflow--5-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .highlight-num {
@@ -181,7 +205,6 @@ h6,
 .content-w.active {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  max-width: 97.5%;
 }
 @media (max-width: 1200px) {
   .content-w {
@@ -196,9 +219,33 @@ h6,
 }
 @media (max-width: 768px) {
   .content-w {
-    max-width: 100%;
+    max-width: 98%;
   }
 }
+.min-w--75 {
+  min-width: 75px !important;
+}
+
+.max-w--75 {
+  max-width: 75px !important;
+}
+
+.min-w--100 {
+  min-width: 100px !important;
+}
+
+.max-w--100 {
+  max-width: 100px !important;
+}
+
+.min-w--150 {
+  min-width: 150px !important;
+}
+
+.max-w--150 {
+  max-width: 150px !important;
+}
+
 .min-w--200 {
   min-width: 200px !important;
 }
@@ -419,6 +466,10 @@ h6,
   border-radius: 3.125rem !important;
 }
 
+.btn--no-border {
+  border: none !important;
+}
+
 .btn--grd {
   display: block;
   width: 50%;
@@ -483,7 +534,6 @@ iframe.width-changed {
 =============================================*/
 .progress-flex {
   flex: auto;
-  width: 100%;
   margin-right: 1rem;
 }
 .progress-flex .progess-flex__bg {
@@ -626,6 +676,14 @@ STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
   font-size: 2rem;
 }
 
+.dropdown-user__menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #e6e6e6;
+}
+
 /***			LAYOUT STYLES			***/
 /*=============================================
                 SIDEBAR LAYOUT
@@ -639,7 +697,40 @@ STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
   left: 0;
   z-index: 999;
   color: #d9d9d9;
-  transition: all 0.3s;
+  -moz-transition: all;
+  -o-transition: all;
+  -webkit-transition: all;
+  transition: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.sidebar-custom a {
+  -moz-transition: all;
+  -o-transition: all;
+  -webkit-transition: all;
+  transition: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
 .sidebar-custom .sidebar-custom__header {
   padding: 40px;
@@ -647,8 +738,6 @@ STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
 .sidebar-custom .sidebar-custom__components {
   margin: 30px 0;
   padding: 30px 0;
-  border-bottom: solid 2.5px #2d3238;
-  border-top: solid 2.5px #2d3238;
 }
 .sidebar-custom .sidebar-custom__components li {
   padding-bottom: 10px;
@@ -700,42 +789,43 @@ STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
 }
 
 /***                    Active (collapsed)               ***/
-.active.sidebar-custom {
+.sidebar-custom.active {
   width: 6.25rem;
   text-align: center;
 }
-.active.sidebar-custom .sidebar-custom__header {
+.sidebar-custom.active .sidebar-custom__header {
   padding: 10px;
   border-bottom: none;
+  margin-bottom: 4rem;
 }
-.active.sidebar-custom .sidebar-custom__components {
+.sidebar-custom.active .sidebar-custom__components {
   margin: 0;
   padding: 20px 0;
   border: none;
 }
-.active.sidebar-custom .sidebar-custom__components li {
+.sidebar-custom.active .sidebar-custom__components li {
   padding-bottom: 0px;
 }
-.active.sidebar-custom .sidebar-custom__components li a {
+.sidebar-custom.active .sidebar-custom__components li a {
   padding: 20px 10px;
   text-align: center;
   font-size: 0.85em;
 }
-.active.sidebar-custom .sidebar-custom__components li a i {
+.sidebar-custom.active .sidebar-custom__components li a i {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 5px;
   display: block;
   font-size: 1.8em;
 }
-.active.sidebar-custom .sidebar-custom__components ul a {
+.sidebar-custom.active .sidebar-custom__components ul a {
   font-size: 0.75em;
   padding: 10px 0 !important;
 }
-.active.sidebar-custom .sidebar-custom__components ul a .fa-file-signature {
+.sidebar-custom.active .sidebar-custom__components ul a .fa-file-signature {
   padding-left: 7.5px !important;
 }
-.active.sidebar-custom .dropdown-toggle::after {
+.sidebar-custom.active .dropdown-toggle::after {
   font: normal normal normal 15px/1 "Font Awesome 5 Free";
   font-weight: 900;
   vertical-align: 0;
@@ -806,6 +896,14 @@ a:focus {
 }
 .content-main__title .title-container {
   padding-top: calc(4rem + 10px);
+}
+.content-main__title .title-container h1,
+.content-main__title .title-container h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .navbar {
@@ -1097,7 +1195,9 @@ a:focus {
   border-bottom: solid 1px #e9ebee;
 }
 .lecture-content__review__rating .rating-summary-container {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .lecture-content__review__rating .rating-summary-container > div:last-child {
@@ -1146,8 +1246,135 @@ a:focus {
   color: #ff8000;
   white-space: nowrap;
 }
+@media (max-width: 576px) {
+  .lecture-content__review__rating {
+    flex-direction: column;
+  }
+  .lecture-content__review__rating .rating-summary-container {
+    margin-bottom: 2rem;
+  }
+  .lecture-content__review__rating .rating-stats-container {
+    width: 100%;
+  }
+}
 .lecture-content__review__user-review {
   padding-bottom: 0rem;
+}
+
+.signed--admin .navbar .dropdown .dropdown-toggle::after {
+  clear: both;
+  content: "" !important;
+  display: block;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config {
+  border-bottom: 1px solid #e9ebee;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config__btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 0.5rem 1.5rem;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config__btn-group a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.25rem;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config__box {
+  padding: 0.5rem 1.5rem 1rem;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config__box .form-group label {
+  font-weight: bold;
+  font-style: italic;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config__box__btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .tab__config__box__btn-group button {
+  width: 75px;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .smooth-scroll {
+  width: auto;
+  height: calc(100% - (40px + 1rem + 1rem));
+  overflow: hidden;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .list-group {
+  overflow: hidden;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .list-group .list-group-item {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .list-group .list-group-item .edit-and-remove {
+  background: #f8f9fa;
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateX(calc(100%));
+  transition: all 0.35s ease-in-out;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .list-group .list-group-item .edit-and-remove__btn {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .list-group .list-group-item:hover {
+  transform: translateX(calc(0px - (40px + 40px + 0.25rem * 4)));
+  -moz-transition: all;
+  -o-transition: all;
+  -webkit-transition: all;
+  transition: all;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .edit-box {
+  border-left: 2px solid #ffcc99;
+  padding: 1rem 1rem;
+  margin-left: 1.75rem;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .edit-box .form-group > label {
+  font-weight: bold;
+  font-style: italic;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .edit-box__btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.signed--admin .content-main__body .lecture-deck__tabs__content .inside-content .edit-box__btn-group button {
+  width: 75px;
 }
 
 /*=============================================

@@ -49,8 +49,6 @@ $(document).ready(function() {
         // );
     });
 
-    $(".cCard-header").photoZoom();
-
     // /*--- Equal-height Column ---*/
     // $(window).resize(function() {
     //     var lectureVideo_height = $("#lecture-video").height();

@@ -140,6 +140,13 @@ h6,
   font-weight: 600;
 }
 
+.text-overflow--1-line {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .text-overflow--2-line {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -148,11 +155,28 @@ h6,
   -webkit-line-clamp: 2;
 }
 
-.text-overflow--1-line {
-  display: block;
-  white-space: nowrap;
+.text-overflow--3-line {
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.text-overflow--4-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.text-overflow--5-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .highlight-num {
@@ -213,6 +237,10 @@ h6,
 
 .btn--rounded {
   border-radius: 3.125rem !important;
+}
+
+.btn--no-border {
+  border: none !important;
 }
 
 .btn--grd {

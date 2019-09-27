@@ -12,6 +12,11 @@
 
     .title-container {
         padding-top: calc(#{$meas-navbar__height} + 10px);
+
+        h1,
+        h2 {
+            @include text-overflow--n-line(2);
+        }
     }
 }
 

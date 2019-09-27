@@ -17,6 +17,7 @@
 @import "./components/progress-flex";
 @import "./components/comment-section";
 @import "./components/card-custom--grd";
+@import "./components/dropdown-user";
 /***			LAYOUT STYLES			***/
 @import "./layout/sidebar";
 @import "./layout/main";
@@ -24,6 +25,7 @@
 @import "./layout/main-body";
 @import "./layout/main-footer";
 /***			PAGES STYLES			***/
-@import "./pages/course.scss";
+@import "./pages/course";
+@import "./pages/course-admin";
 @import "./pages/info";
 @import "./pages/contact";

@@ -18,7 +18,6 @@
     &.active {
         padding-left: $meas-spacing--small;
         padding-right: $meas-spacing--small;
-        max-width: 97.5%;
     }
 
     @media (max-width: 1200px) {
@@ -31,14 +30,14 @@
     }
 
     @media (max-width: 768px) {
-        max-width: 100%;
+        max-width: 98%;
     }
 
     @media (max-width: 576px) {
     }
 }
 
-$width-variants: 200, 250, 300, 350, 400, 450, 500;
+$width-variants: 75, 100, 150, 200, 250, 300, 350, 400, 450, 500;
 
 @each $w in $width-variants {
     .min-w--#{$w} {

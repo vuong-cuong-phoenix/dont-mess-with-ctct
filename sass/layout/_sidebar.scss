@@ -12,7 +12,11 @@ $meas-sidebar__width--onActive: 6.25rem;
     left: 0;
     z-index: 999;
     color: $color-sidebar__text;
-    transition: all 0.3s;
+    @include transition-short(all, 0.3s, ease);
+
+    a {
+        @include transition-short(all, 0.3s, ease);
+    }
 
     .sidebar-custom__header {
         padding: 40px;
@@ -21,8 +25,8 @@ $meas-sidebar__width--onActive: 6.25rem;
     .sidebar-custom__components {
         margin: 30px 0;
         padding: 30px 0;
-        border-bottom: solid 2.5px $color-sidebar__bg;
-        border-top: solid 2.5px $color-sidebar__bg;
+        // border-bottom: solid 2.5px $color-sidebar__bg;
+        // border-top: solid 2.5px $color-sidebar__bg;
 
         li {
             padding-bottom: 10px;
@@ -89,13 +93,14 @@ $meas-sidebar__width--onActive: 6.25rem;
 }
 
 /***                    Active (collapsed)               ***/
-.active.sidebar-custom {
+.sidebar-custom.active {
     width: $meas-sidebar__width--onActive;
     text-align: center;
 
     .sidebar-custom__header {
         padding: 10px;
         border-bottom: none;
+        margin-bottom: 4rem;
     }
 
     .sidebar-custom__components {

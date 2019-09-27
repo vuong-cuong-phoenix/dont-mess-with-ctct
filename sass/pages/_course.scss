@@ -196,7 +196,9 @@
             border-bottom: solid 1px $color-content__body__bg;
 
             .rating-summary-container {
+                display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
 
                 > div:last-child {
@@ -252,6 +254,27 @@
                         color: $color-primary__text;
                         white-space: nowrap;
                     }
+                }
+            }
+
+            @media (max-width: 1200px) {
+            }
+
+            @media (max-width: 992px) {
+            }
+
+            @media (max-width: 768px) {
+            }
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+
+                .rating-summary-container {
+                    margin-bottom: 2rem;
+                }
+
+                .rating-stats-container {
+                    width: 100%;
                 }
             }
         }

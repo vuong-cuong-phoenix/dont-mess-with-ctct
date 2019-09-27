@@ -27,19 +27,14 @@
 //     }
 // }
 
-.text-overflow--2-line {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+.text-overflow--1-line {
+    @include text-overflow--1-line;
 }
 
-.text-overflow--1-line {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@for $i from 2 to 6 {
+    .text-overflow--#{$i}-line {
+        @include text-overflow--n-line($i);
+    }
 }
 
 .highlight-num {
