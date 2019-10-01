@@ -1,6 +1,7 @@
 /*=============================================
             STYLES FOR INDEX PAGE
 =============================================*/
+
 ///				Variables				///
 $color-text--normal: darken(#ffffff, 10%);
 $color-text--onHover: lighten($color-text--normal, 10%);
@@ -25,69 +26,103 @@ body {
 
 .navbar {
     background: transparent;
+
+    .navbar-brand img {
+        max-height: 4rem;
+        width: auto;
+    }
+
+    .navbar-nav {
+        li {
+            padding-left: 1.25rem;
+
+            a {
+                color: $color-text--normal;
+                font-size: 1.2rem;
+
+                .fa-search {
+                    color: $color-text--normal;
+                    font-size: 1.2rem;
+                }
+
+                &:hover {
+                    color: $color-text--onHover;
+                }
+            }
+
+            .dropdown-toggle {
+                &::after {
+                    border: none !important;
+                    font: normal normal normal 20px/1 "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f107";
+                    vertical-align: -7.5%;
+                }
+            }
+
+            .dropdown-menu {
+                max-width: 10rem;
+
+                .dropdown-item {
+                    padding: 0.5rem 1.25rem;
+                    font-size: 1rem;
+
+                    &:hover {
+                        background-color: #1a1a1a;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.navbar-brand img {
-    max-height: 4rem;
-    width: auto;
+// @import url("https://fonts.googleapis.com/css?family=Merienda&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Mali&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Itim&display=swap");
+.brand--ultra {
+    font-family: "Itim", cursive;
+    color: darken(#ffffff, 5%);
+    font-size: 5rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2.5rem;
+    }
 }
 
-.navbar-nav li {
-    padding-left: 1.25rem;
-}
+.two-col-section {
+    width: 80%;
 
-.navbar-nav li a {
-    color: $color-text--normal;
-}
+    @include media-breakpoint-down(xl) {
+        width: 87.5%;
+    }
 
-.navbar-nav li a:hover {
-    color: $color-text--onHover;
-}
+    @include media-breakpoint-down(lg) {
+        width: 92.5%;
+    }
 
-.nav-link,
-.navbar-nav li a .fa-search {
-    font-size: 1.2rem;
+    @include media-breakpoint-down(md) {
+        width: 95%;
+    }
 }
-
-.navbar .dropdown-toggle::after {
-    border: none !important;
-    font: normal normal normal 20px/1 "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f107" !important;
-    vertical-align: -7.5%;
-}
-
 // .two-col-section {
 //     min-height: 100%;
 // }
 
 .fa-star {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .course {
     font-size: 0.95rem;
-}
 
-.course:hover {
-    color: $color-primary__text--onActive !important;
-    text-decoration: none;
-}
-
-.dropdown-item {
-    padding: 0.5rem 1.25rem;
-}
-
-.dropdown-item:hover {
-    background-color: #1a1a1a;
-}
-
-.dropdown-divider {
-    border-color: #666666;
-}
-
-.dropdown-menu {
-    max-width: 10rem;
+    &:hover {
+        color: $color-primary__text--onActive !important;
+        text-decoration: none;
+    }
 }
 
 .lecture-num {
@@ -98,13 +133,56 @@ body {
     font-size: 1.5rem;
 }
 
-.carousel .card:hover {
-    transform: scale(0.965);
+#carousel_course-card {
 }
 
-.carousel-inner .active .card {
-    border: solid 1.1px $color-primary--onActive;
-}
+// .carousel {
+//     .carousel-inner {
+//         // .card {
+//         //     &:hover {
+//         //         transform: scale(0.975);
+//         //         .card-body {
+//         //             .card-title {
+//         //                 left: -100%;
+//         //                 width: 200%;
+//         //             }
+//         //         }
+//         //     }
+//         .carousel-item {
+//             max-width: 100%;
+//             overflow: hidden;
+
+//             .card {
+//                 max-width: 100%;
+//                 overflow: hidden;
+
+//                 .card-body {
+//                     overflow: hidden;
+
+//                     .card-title {
+//                         white-space: nowrap;
+//                         overflow: hidden;
+//                         text-overflow: ellipsis;
+//                         // position: relative;
+//                         // left: 0;
+//                         // width: 100%;
+
+//                         // -webkit-transition: left 3s, width 3s linear;
+//                         // -moz-transition: left 3s, width 3s linear;
+//                         // transition: left 3s, width 3s linear;
+//                     }
+//                 }
+//             }
+//         }
+//         // }
+
+//         .carousel-item.active {
+//             .card {
+//                 border: solid 2.5px $color-primary--onActive;
+//             }
+//         }
+//     }
+// }
 
 @media (max-width: 1200px) {
     html,

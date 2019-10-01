@@ -149,9 +149,6 @@ $meas-sidebar__width--onActive: 6.25rem;
 }
 
 @media (max-width: 1200px) {
-}
-
-@media (max-width: 992px) {
     .sidebar-custom {
         margin-left: calc(0rem - #{$meas-sidebar__width}) !important;
     }
@@ -159,6 +156,9 @@ $meas-sidebar__width--onActive: 6.25rem;
     .sidebar-custom.active {
         margin-left: 0 !important;
     }
+}
+
+@media (max-width: 992px) {
 }
 
 @media (max-width: 768px) {

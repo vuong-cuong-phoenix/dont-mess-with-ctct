@@ -1,4 +1,10 @@
 .dropdown-user {
+    &__btn {
+        &::after {
+            @include clearfix-important;
+        }
+    }
+
     &__menu {
         &__header {
             display: flex;
@@ -6,6 +12,29 @@
             justify-content: flex-start;
             align-items: center;
             color: $color-light;
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0.5rem 1rem;
+
+            &:hover {
+                background-color: lighten(#000000, 10%);
+            }
+
+            .icon-container {
+                min-width: 2rem;
+                text-align: center;
+                margin-right: 1rem;
+            }
+        }
+
+        .dropdown-divider {
+            border-color: #666666;
         }
     }
 }

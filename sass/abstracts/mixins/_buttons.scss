@@ -1,0 +1,27 @@
+@mixin button-solid-border($color: transparent) {
+    border-color: $color;
+
+    &:hover {
+        border-color: darken($color, 10%);
+    }
+
+    &:active {
+        border-color: darken($color, 12.5%);
+    }
+
+    &:focus {
+        border-color: darken($color, 12.5%);
+    }
+}
+
+@mixin button-no-border {
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}

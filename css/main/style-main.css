@@ -676,12 +676,36 @@ STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
   font-size: 2rem;
 }
 
+.dropdown-user__btn::after {
+  clear: both;
+  content: "" !important;
+  display: block;
+}
 .dropdown-user__menu__header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   color: #e6e6e6;
+  padding: 0.5rem 1rem;
+}
+.dropdown-user__menu .dropdown-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.dropdown-user__menu .dropdown-item:hover {
+  background-color: #1a1a1a;
+}
+.dropdown-user__menu .dropdown-item .icon-container {
+  min-width: 2rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+.dropdown-user__menu .dropdown-divider {
+  border-color: #666666;
 }
 
 /***			LAYOUT STYLES			***/
@@ -836,7 +860,7 @@ STYLES FOR CUSTOM CARD WITH GRADIENT EFFECT
   transform: translateX(50%);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .sidebar-custom {
     margin-left: calc(0rem - 14.25rem) !important;
   }
@@ -877,7 +901,7 @@ a:focus {
 .content-main .user-name:hover {
   color: #ffb366;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .content-main {
     width: 100%;
   }
@@ -927,30 +951,6 @@ a:focus {
 .navbar .navbar-nav li a .fa-search {
   font-size: 1.2em;
 }
-.navbar .dropdown .dropdown-header {
-  padding: 0.5rem 1rem;
-}
-.navbar .dropdown .dropdown-header__user-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  color: #d9d9d9;
-}
-.navbar .dropdown .dropdown-item {
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.navbar .dropdown .dropdown-item:hover {
-  background-color: #1a1a1a;
-}
-.navbar .dropdown .dropdown-item .icon-container {
-  min-width: 2rem;
-  text-align: center;
-  margin-right: 1rem;
-}
 .navbar .dropdown .dropdown-toggle::after {
   border: none !important;
   font: normal normal normal 20px/1 "Font Awesome 5 Free";
@@ -958,10 +958,13 @@ a:focus {
   content: "" !important;
   vertical-align: -7.5%;
 }
-.navbar .dropdown .dropdown-divider {
-  border-color: #666666;
+.navbar .dropdown .dropdown-item {
+  padding: 0.5rem 1rem;
 }
-@media (max-width: 992px) {
+.navbar .dropdown .dropdown-item:hover {
+  background-color: #1a1a1a;
+}
+@media (max-width: 1200px) {
   .navbar {
     width: 100%;
   }
@@ -1078,8 +1081,19 @@ a:focus {
   }
 }
 
+.course-list #add-course {
+  display: none;
+}
+.course-list #add-course .card {
+  border: 0.1rem solid #ff8000;
+  color: #ff8000;
+}
 .course-list .card:hover {
   box-shadow: 5px 5px 20px 5px #888888;
+}
+
+#body_course-list.signed--admin .course-list #add-course {
+  display: block;
 }
 
 /***            Lecture's Tabs           ***/

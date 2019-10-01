@@ -9,7 +9,10 @@
 @import "./base/base";
 @import "./base/typography";
 /***			COMPONENETS STYLES			***/
+@import "./components/avatar";
+@import "./components/dropdown-user";
 @import "./components/carousel-multi-item";
+@import "./components/owl-carousel-custom";
 @import "./components/buttons";
 @import "./components/containers";
 @import "./components/navbar";

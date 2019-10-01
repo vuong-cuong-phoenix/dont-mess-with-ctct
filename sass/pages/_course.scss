@@ -42,8 +42,24 @@
 }
 
 .course-list {
+    #add-course {
+        display: none;
+        .card {
+            border: 0.1rem solid $color-primary__text;
+            color: $color-primary__text;
+        }
+    }
+
     .card:hover {
         box-shadow: 5px 5px 20px 5px #888888;
+    }
+}
+
+#body_course-list.signed--admin {
+    .course-list {
+        #add-course {
+            display: block;
+        }
     }
 }
 /***            Lecture's Tabs           ***/

@@ -1,0 +1,63 @@
+/* ====================================================
+            STYLES FOR CUSTOM OWL-CAROUSEL
+==================================================== */
+
+#carousel_course-card {
+    position: relative;
+
+    .owl-nav {
+        $link-height: 2rem;
+        position: absolute;
+        top: calc(50% - 2.5rem);
+        left: 0;
+        right: 0;
+
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            height: $link-height;
+            color: inherit;
+            background: none;
+            @include button-no-border;
+            z-index: 100;
+
+            i {
+                @include button-no-border;
+                font-size: $link-height;
+                color: darken(#ffffff, 10%);
+
+                &:before {
+                    @include button-no-border;
+                }
+
+                &:hover {
+                    color: darken(#ffffff, 20%);
+                }
+            }
+        }
+
+        .owl-prev {
+            left: calc(0rem - #{$link-height} * 2.5 / 3);
+
+            // @include media-breakpoint-down(xl) {
+            //     left: 0.5rem;
+            // }
+        }
+
+        .owl-next {
+            right: calc(0rem - #{$link-height} * 2.5 / 3);
+
+            // @include media-breakpoint-down(xl) {
+            //     right: 0.5rem;
+            // }
+        }
+    }
+
+    .card {
+        .card-body {
+            .card-title {
+                @include text-overflow--1-line;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@
 /* stylelint-disable order/properties-alphabetical-order */
 /* stylelint-enable */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Itim&display=swap");
 /***			THEMES FOR USE			***/
 /*=============================================
                 ALL THEMES
@@ -186,6 +187,74 @@ h6,
 
 /***			COMPONENETS STYLES			***/
 /*=============================================
+                AVATAR STYLES
+=============================================*/
+/*  Medium variant  */
+.avatar--md {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.avatar--md--fx-shadow {
+  box-shadow: 0 0 0 3px #ffcc99;
+}
+
+/*  Small variant   */
+.avatar--sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.avatar--sm--fx-shadow {
+  box-shadow: 0 0 0 2px #ffcc99;
+}
+
+/*  Extra Small variant */
+.avatar--xs {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar--xs--fx-shadow {
+  box-shadow: 0 0 0 1.5px #ffcc99;
+}
+
+.dropdown-user__btn::after {
+  clear: both;
+  content: "" !important;
+  display: block;
+}
+.dropdown-user__menu__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #e6e6e6;
+  padding: 0.5rem 1rem;
+}
+.dropdown-user__menu .dropdown-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.dropdown-user__menu .dropdown-item:hover {
+  background-color: #1a1a1a;
+}
+.dropdown-user__menu .dropdown-item .icon-container {
+  min-width: 2rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+.dropdown-user__menu .dropdown-divider {
+  border-color: #666666;
+}
+
+/*=============================================
         STYLES FOR MULTI-ITEM CAROUSEL
 =============================================*/
 .carousel-item {
@@ -318,6 +387,78 @@ h6,
   }
 }
 /* LG */
+/* ====================================================
+            STYLES FOR CUSTOM OWL-CAROUSEL
+==================================================== */
+#carousel_course-card {
+  position: relative;
+}
+#carousel_course-card .owl-nav {
+  position: absolute;
+  top: calc(50% - 2.5rem);
+  left: 0;
+  right: 0;
+}
+#carousel_course-card .owl-nav .owl-prev,
+#carousel_course-card .owl-nav .owl-next {
+  position: absolute;
+  height: 2rem;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  z-index: 100;
+}
+#carousel_course-card .owl-nav .owl-prev:hover, #carousel_course-card .owl-nav .owl-prev:active, #carousel_course-card .owl-nav .owl-prev:focus,
+#carousel_course-card .owl-nav .owl-next:hover,
+#carousel_course-card .owl-nav .owl-next:active,
+#carousel_course-card .owl-nav .owl-next:focus {
+  border: none;
+  outline: none;
+}
+#carousel_course-card .owl-nav .owl-prev i,
+#carousel_course-card .owl-nav .owl-next i {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: #e6e6e6;
+}
+#carousel_course-card .owl-nav .owl-prev i:hover, #carousel_course-card .owl-nav .owl-prev i:active, #carousel_course-card .owl-nav .owl-prev i:focus,
+#carousel_course-card .owl-nav .owl-next i:hover,
+#carousel_course-card .owl-nav .owl-next i:active,
+#carousel_course-card .owl-nav .owl-next i:focus {
+  border: none;
+  outline: none;
+}
+#carousel_course-card .owl-nav .owl-prev i:before,
+#carousel_course-card .owl-nav .owl-next i:before {
+  border: none;
+  outline: none;
+}
+#carousel_course-card .owl-nav .owl-prev i:before:hover, #carousel_course-card .owl-nav .owl-prev i:before:active, #carousel_course-card .owl-nav .owl-prev i:before:focus,
+#carousel_course-card .owl-nav .owl-next i:before:hover,
+#carousel_course-card .owl-nav .owl-next i:before:active,
+#carousel_course-card .owl-nav .owl-next i:before:focus {
+  border: none;
+  outline: none;
+}
+#carousel_course-card .owl-nav .owl-prev i:hover,
+#carousel_course-card .owl-nav .owl-next i:hover {
+  color: #cccccc;
+}
+#carousel_course-card .owl-nav .owl-prev {
+  left: calc(0rem - 2rem * 2.5 / 3);
+}
+#carousel_course-card .owl-nav .owl-next {
+  right: calc(0rem - 2rem * 2.5 / 3);
+}
+#carousel_course-card .card .card-body .card-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*=============================================
                 BUTTON STYLES
 =============================================*/
@@ -624,64 +765,87 @@ body {
 .navbar {
   background: transparent;
 }
-
-.navbar-brand img {
+.navbar .navbar-brand img {
   max-height: 4rem;
   width: auto;
 }
-
-.navbar-nav li {
+.navbar .navbar-nav li {
   padding-left: 1.25rem;
 }
-
-.navbar-nav li a {
+.navbar .navbar-nav li a {
   color: #e6e6e6;
-}
-
-.navbar-nav li a:hover {
-  color: white;
-}
-
-.nav-link,
-.navbar-nav li a .fa-search {
   font-size: 1.2rem;
 }
-
-.navbar .dropdown-toggle::after {
+.navbar .navbar-nav li a .fa-search {
+  color: #e6e6e6;
+  font-size: 1.2rem;
+}
+.navbar .navbar-nav li a:hover {
+  color: white;
+}
+.navbar .navbar-nav li .dropdown-toggle::after {
   border: none !important;
   font: normal normal normal 20px/1 "Font Awesome 5 Free";
   font-weight: 900;
-  content: "" !important;
+  content: "";
   vertical-align: -7.5%;
+}
+.navbar .navbar-nav li .dropdown-menu {
+  max-width: 10rem;
+}
+.navbar .navbar-nav li .dropdown-menu .dropdown-item {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+.navbar .navbar-nav li .dropdown-menu .dropdown-item:hover {
+  background-color: #1a1a1a;
+}
+
+.brand--ultra {
+  font-family: "Itim", cursive;
+  color: #f2f2f2;
+  font-size: 5rem;
+}
+@media (max-width: 767.98px) {
+  .brand--ultra {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .brand--ultra {
+    font-size: 2.5rem;
+  }
+}
+
+.two-col-section {
+  width: 80%;
+}
+@media (max-width: 1199.98px) {
+  .two-col-section {
+    width: 87.5%;
+  }
+}
+@media (max-width: 991.98px) {
+  .two-col-section {
+    width: 92.5%;
+  }
+}
+@media (max-width: 767.98px) {
+  .two-col-section {
+    width: 95%;
+  }
 }
 
 .fa-star {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .course {
   font-size: 0.95rem;
 }
-
 .course:hover {
   color: #ffb366 !important;
   text-decoration: none;
-}
-
-.dropdown-item {
-  padding: 0.5rem 1.25rem;
-}
-
-.dropdown-item:hover {
-  background-color: #1a1a1a;
-}
-
-.dropdown-divider {
-  border-color: #666666;
-}
-
-.dropdown-menu {
-  max-width: 10rem;
 }
 
 .lecture-num {
@@ -690,14 +854,6 @@ body {
 
 .lecture-title {
   font-size: 1.5rem;
-}
-
-.carousel .card:hover {
-  transform: scale(0.965);
-}
-
-.carousel-inner .active .card {
-  border: solid 1.1px #ffb366;
 }
 
 @media (max-width: 1200px) {
