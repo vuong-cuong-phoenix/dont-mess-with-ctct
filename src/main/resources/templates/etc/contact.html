@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Liên hệ - Góp ý</title>
+
+        <!-- Framework CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+        <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.min.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../../css/main/style-main.css" />
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/scriptsEvent.js"></script>
+    </head>
+    <body id="body_contact">
+        <!-- Back-to-top button -->
+        <button type="button" class="btn btn-dark" onclick="toTopFunc()" id="btnToTop" title="Trở về đầu trang">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <!-- END Back-to-top button -->
+        <!-- Main -->
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <nav class="bg-dark sidebar-custom">
+                <div class="sidebar-custom__header">
+                    <a href="../../index.html">
+                        <img src="../../img/logo.png" class="img-fluid" alt="CTCT_Logo" />
+                    </a>
+                </div>
+
+                <ul class="list-unstyled sidebar-custom__components">
+                    <li class="">
+                        <a href="../course/courseList.html">
+                            <i class="fas fa-book-open"></i>
+                            Khóa học
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#classSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-school"></i>
+                            Lớp học
+                        </a>
+                        <ul class="collapse list-unstyled" id="classSubMenu">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-info-circle"></i>
+                                    Thông tin
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-file-signature"></i>
+                                    Đăng ký lớp học
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../etc/info.html">
+                            <i class="fas fa-info-circle fa"></i>
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="../etc/contact.html">
+                            <i class="fas fa-envelope-open"></i>
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END Sidebar-->
+            <!-- Page Content -->
+            <div class="content-main">
+                <!-- Content Header -->
+                <nav class="navbar navbar-expand navbar-dark">
+                    <div class="container-fluid">
+                        <!-- sidebar-custom Toggler -->
+                        <button
+                            type="button"
+                            id="sidebar-custom_collapse"
+                            class="btn btn-outline-dark btn-custom--outline-dark text-white-90p"
+                        >
+                            <i class="fas fa-align-left"></i>
+                            <!-- <i class="fas fa-angle-double-left fa-lg"></i> -->
+                        </button>
+                        <!-- END sidebar-custom Toggler -->
+                        <!-- Navigation Links -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- <li class="nav-item mr-4 my-auto">
+                                    <a class="" href="#"><i class="fas fa-search"></i></a>
+                                </li> -->
+                            <li class="nav-item dropdown">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark btn-custom--outline-dark dropdown-toggle text-white-90p"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <i class="fas fa-user mr-2"></i>Tài khoản
+                                </button>
+                                <div class="dropdown-menu w-100 dropdown-menu-right bg-dark">
+                                    <a class="dropdown-item" href="../account/sign-in.html"
+                                        ><i class="fas fa-user-check mr-2"></i>Đăng nhập</a
+                                    >
+
+                                    <a class="dropdown-item" href="../account/sign-up.html"
+                                        ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- END Navigation Links-->
+                    </div>
+                </nav>
+                <!-- END Content Header -->
+                <!-- Content Title-->
+                <div
+                    class="content-main__title"
+                    style="background-image: url(../../img/computer-bg.png); background-position: 50% 30%"
+                >
+                    <div class="background-black-op">
+                        <div class="content-w">
+                            <div class="container-fluid title-container">
+                                <div class="py-5">
+                                    <span class="text-center">
+                                        <h1 class="text-white font-weight-600 mb-3">
+                                            Liên hệ - Góp ý
+                                        </h1>
+                                        <h2 class="h5 font-weight-500 text-white-80p">
+                                            Góp ý hoặc liên hệ với Chúng ta cùng tiến!
+                                        </h2>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Content Title-->
+                <!-- Content Body-->
+                <div class="content-main__body">
+                    <div class="content-w content-w--top">
+                        <div class="block--rounded block--fx-shadow bg-white">
+                            <div class="block__header bg-secondary-custom text-center">
+                                <span class="h3">Góp ý - Phản hồi</span>
+                            </div>
+                            <div class="block__body">
+                                <div class="mb-4">
+                                    <p>
+                                        Nhập thông tin của bạn để chúng tôi có thể phản hồi chính xác hơn.
+                                    </p>
+                                </div>
+                                <div>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="contact_inputName">Họ và tên</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text" id="contact_inputNamePrepend">
+                                                        <i class="fas fa-user"></i>
+                                                    </div>
+                                                </div>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="contact_inputName"
+                                                    placeholder="Nhập..."
+                                                    aria-describedby="contact_inputNamePrepend"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-lg-6">
+                                                <label for="contact_inputEmail">Email</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">
+                                                            <i class="fas fa-envelope"></i>
+                                                        </div>
+                                                    </div>
+                                                    <input
+                                                        type="email"
+                                                        class="form-control"
+                                                        id="contact_inputEmail"
+                                                        placeholder="Nhập Email..."
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col-lg-6">
+                                                <label for="contact_inputPhone">Số điện thoại</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">
+                                                            <i class="fas fa-phone"></i>
+                                                        </div>
+                                                    </div>
+                                                    <input
+                                                        type="tel"
+                                                        class="form-control"
+                                                        id="contact_inputPhone"
+                                                        placeholder="Nhập Số điện thoại của bạn..."
+                                                        pattern="[0-9]{10}"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact_inputContentTitle">Tiêu đề</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="contact_inputContentTitle"
+                                                placeholder="Nhập Tiêu đề..."
+                                            />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="contact_inputContentBody">Nội dung</label>
+                                            <textarea
+                                                class="form-control"
+                                                id="contact_inputContentBody"
+                                                rows="5"
+                                                placeholder="Nhập phản hồi hoặc góp ý..."
+                                            ></textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-block">
+                                            <i class="fas fa-paper-plane"></i>
+                                            <span>Gửi</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Footer -->
+                <div class="content-main__footer">
+                    <div class="container-fluid content-w">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <h4 class="content-main__footer__title">
+                                    Về Chúng Ta Cùng Tiến
+                                </h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body" id="footer-about-body">
+                                    <p>
+                                        Tự hào là câu lạc bộ cà khịa mạnh nhất ĐH.Bách Khoa TP.HCM, chúng tôi mang đến
+                                        cho bạn những trải nghiệm cà khịa/bị cà khịa một cách vui/đau nhất có thể. Không
+                                        chỉ dừng ở đó chúng tôi còn phát người yêu miễn phí mỗi kỳ GSAX hè, và đã được
+                                        rất nhiều bạn trẻ nhiệt tình tham gia và hưởng ứng nồng nhiệt. Hãy đến cùng
+                                        chúng tôi, đảm bảo bạn sẽ không thất vọng!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4">
+                                <h4 class="content-main__footer__title">Tin tức mới nhất</h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body news__body">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#"
+                                                >Hành trình làm Youtube của người mà chúng ta luôn kính trọng...</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#">Sơn sắp làm đám cưới!</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Người anh quốc dân kể về kế hoạch 5 năm tiếp theo của mình.</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                >Khóa học mới: "Làm sao để hút cần đúng cách?" by GS Quân Bùi.</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#">GS Cường vừa ra khóa học mới!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4">
+                                <h4 class="content-main__footer__title">Liên hệ</h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body" id="footer-contact-body">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Phòng 102, Nhà thi đấu trường Đại học Bách Khoa, ĐHQG, Đông Hòa, Dĩ An, Bình
+                                            Dương
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-phone"></i>
+                                            098 184 56 59
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-clock"></i>
+                                            Giờ mở cửa: 08:00 - 18:00
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-envelope"></i>
+                                            cuong.vuong.bk@hcmut.edu.vn
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider--100"></div>
+                        <div class="row certificate">
+                            <img src="../../img/logo.png" class="img-fluid d-inline-block" style="max-height: 35px" />
+                            <p class="d-inline-block my-auto">
+                                Chúng ta cùng tiến &copy 2019
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Content Footer-->
+            </div>
+            <!-- END Page Content -->
+        </div>
+        <!-- END Main-->
+        <!-- Javascript -->
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- Custom Script -->
+        <script src="../../js/scripts.js"></script>
+        <script src="../../js/scriptsMain.js"></script>
+        <!-- Instant Script -->
+        <script></script>
+    </body>
+</html>

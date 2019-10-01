@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Xác nhận tài khoản</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet" />
+        <!-- Framework CSS -->
+        <link rel="stylesheet" href="../static/css/plugins/normalize.css" th:href="@{/css/plugins/normalize.css}" />
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+        <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+        <link rel="stylesheet" href="../static/css/plugins/jquery.mCustomScrollbar.min.css"
+        th:href="@{/css/plugins/jquery.mCustomScrollbar.min.css}" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../static/css/main/style-account.css" th:href="@{/css/main/style-account.css}" />
+    </head>
+    <body id="body_verify">
+        <div class="background background-grd-KyeMeh">
+            <div class="main-area">
+                <div class="main-area__header">
+                    <h2>Xác nhận tài khoản</h2>
+                </div>
+
+                <form class="main-area__body form">
+                    <div id="verifyCode-container" class="input--grd-running">
+                        <input id="verifyCode_input" type="text" class="form-control shadow-none" required />
+                        <span data-placeholder="Mã xác nhận"></span>
+                    </div>
+
+                    <div class="code-resending">
+                        <span>Chưa nhận được mã xác nhận? <a href="#">Gửi lại!</a></span>
+                    </div>
+
+                    <div class="bypass-validation__message pb-2" style="visibility: visible;">
+                        <span>Mã xác nhận không chính xác!</span>
+                    </div>
+
+                    <div class="custom-btn-group">
+                        <button type="submit" class="btn--grd" role="button" onclick="validateVerify()">
+                            Xác nhận
+                        </button>
+                    </div>
+                </form>
+
+                <div class="main-area__footer">
+                    <div class="nav-line text-center">
+                        <span class="h6">
+                            <a href="../../index.html">Trang chủ</a> | <a href="./sign-in.html">Đăng nhập</a> |
+                            <a href="../etc/contact.html">Liên hệ</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- Custom Script -->
+        <script src="../../js/scripts.js"></script>
+        <script src="../../js/scriptSign.js"></script>
+        <script src="../../js/scriptSign-signIn.js"></script>
+        <!-- Instant Scripts -->
+        <script type="text/javascript"></script>
+    </body>
+</html>

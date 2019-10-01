@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chúng ta cùng tiến</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+    <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/main/style-index.css" th:href="@{/css/main/style-index.css}" />
+</head>
+
+<body>
+    <div class="bg-img">
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../static/img/logo.png" th:src="@{/img/logo.png}"
+                        class="img-fluid" alt="CTCT_Logo" /> </a>
+                <button class="navbar-toggler navbar-toggler--dark" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerIndex">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerIndex">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./sites/etc/info.html">Giới thiệu</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./sites/course/courseList.html">Khóa học</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Lớp học</a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./sites/etc/contact.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <!-- <li class="nav-item mr-4 my-auto">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </li> -->
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-outline-dark btn-custom--outline-dark dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user mr-2"></i> <span th:text="${#authorization.expression('isAuthenticated()')} ? ${#authenication.name} : 'Tài Khoản'" >Tài khoản</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right bg-dark">
+                                    <a class="dropdown-item" href="#" sec:authorize="isAnonymous()" th:href="@{/login}"
+                                        ><i class="fas fa-user-check mr-2"></i> Đăng nhập</a
+                                    >
+                                    <a sec:authorize="isAuthenticated()" class="dropdown-item" href="#" th:href="@{/logout}"
+                                    ><i class="fas fa-user-check mr-2"></i> Đăng xuất</a
+                                    >
+                                    <a class="dropdown-item" href="./sites/account/sign-up.html" th:href="@{/sign-up}"
+                                        ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- 2 Column Section for Maps & Card -->
+            <div class="container-fluid p-4 two-col-section">
+                <div class="row h-100">
+                    <!-- Section 1-->
+                    <div class="col-xl-6 p-4"></div>
+                    <!-- Section 2-->
+                    <div class="col-xl-6 p-4 my-auto">
+                        <div
+                            class="d-flex justify-content-start align-items-center text-white font-weight-bold text--fx-shadow"
+                            style="height: 4.5rem"
+                        >
+                            <span class="text-nowrap lecture-num mr-4">Bài 1</span>
+                            <span class="lecture-title text-overflow--2-line">
+                                Học làm gì tầm này? Game là trên hết!
+                            </span>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center text--fx-shadow">
+                            <span class="text-nowrap text--primary mr-5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <a class="font-weight-500 text--primary text-overflow--1-line" href="#">
+                                Cách Học Ở Bách Khoa - 1
+                            </a>
+                        </div>
+
+                        <div class="mt-4 ml-auto">
+                            <button type="button" class="btn btn-lg btn-primary rounded-0 mr-3 mb-3">
+                                Học ngay
+                            </button>
+                            <button type="button" class="btn btn-outline-primary btn-lg rounded-0 mr-3 mb-3">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div id="carouselMulti" class="carousel slide ml-0" data-ride="carousel">
+                                <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                                    <div class="carousel-item col-12 col-sm-6 col-md-4 active">
+                                        <div class="card bg-dark text-white-85p">
+                                            <img th:src="@{/img/backgrounds/1.jpg}" class="card-img-top" alt="card1" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    Khóa học 1
+                                                </h5>
+                                                <p class="card-text">
+                                                    Mô tả về Khóa học
+                                                </p>
+                                                <i class="fas fa-user"></i>
+                                                Vương Chí Cường
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselMulti" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselMulti" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--- Footer -->
+
+        <!-- Javascript -->
+        <script src="../static/js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+        <script src="../static/js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+        <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+        <script src="../static/js/scripts.js" th:src="@{/js/scripts.js}"></script>
+    </body>
+    <!-- Login Modal-->
+    <!-- <div
+        class="modal fade"
+        id="LoginModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="LoginModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseModal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <br />
+                        <img class="mx-auto d-block" src="img/logo.png" width="auto" height="45px" alt="CTCT_Logo" />
+                        <h5 class="mx-auto d-block mt-2">Đăng nhập</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="InputAccount">Email hoặc Tên tài khoản</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="InputAccountPrepend">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="InputAccount"
+                                    placeholder="Nhập Email hoặc Tên tài khoản của bạn"
+                                    aria-describedby="InputAccountPrepend"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPassword">Mật khẩu</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="InputPasswordPrepend">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="InputPassword"
+                                    placeholder="Nhập Mật khẩu của bạn"
+                                    aria-describedby="InputPasswordPrepend"
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Quay lại
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        Đăng nhập
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Sign-up Modal-->
+    <!-- <div
+        class="modal fade"
+        id="SignUpModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="SignUpModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container-fluid text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="CloseModal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <br />
+                        <img class="mx-auto d-block" src="img/logo.png" width="auto" height="45px" alt="CTCT_Logo" />
+                        <h5 class="mx-auto d-block mt-2">Đăng ký tài khoản</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="SignUpEmail">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="SignUpEmailPrepend">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="SignUpEmail"
+                                    placeholder="Nhập Email hoặc Tên tài khoản"
+                                    aria-describedby="SignUpEmailPrepend"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="SignUpUsername">Tên tài khoản</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="SignUpUsernamePrepend">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="SignUpUsername"
+                                    placeholder="Nhập Tên tài khoản từ 8-32 ký tự"
+                                    aria-describedby="SignUpUsernamePrepend"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="SignUpPassword">Mật khẩu</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="SignUpPasswordPrepend">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="SignUpPassword"
+                                    placeholder="Nhập Mật khẩu"
+                                    aria-describedby="SignUpPasswordPrepend"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="SignUpRetypePass">Nhập lại mật khẩu</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" id="SignUpRetypePassPrepend">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="SignUpRetypePass"
+                                    placeholder="Nhập lại Mật khẩu"
+                                    aria-describedby="SignUpRetypePassPrepend"
+                                    required
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Quay lại
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        Đăng ký
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</html>

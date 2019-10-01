@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bài 1: Ngáo giá</title>
+
+        <!-- Framework CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+        <link rel="stylesheet" href="../../css/jquery.mCustomScrollbar.min.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../../css/main/style-main.css" />
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/scriptsEvent.js"></script>
+    </head>
+    <body id="body_course-lecture">
+        <!-- Back-to-top button -->
+        <button type="button" class="btn btn-dark" onclick="toTopFunc()" id="btnToTop" title="Trở về đầu trang">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <!-- END Back-to-top button -->
+        <!-- Main -->
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <nav class="bg-dark sidebar-custom">
+                <div class="sidebar-custom__header">
+                    <a href="../../index.html">
+                        <img src="../../img/logo.png" class="img-fluid" alt="CTCT_Logo" />
+                    </a>
+                </div>
+
+                <ul class="list-unstyled sidebar-custom__components">
+                    <li class="active">
+                        <a href="./courseList.html">
+                            <i class="fas fa-book-open"></i>
+                            Khóa học
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#classSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-school"></i>
+                            Lớp học
+                        </a>
+                        <ul class="collapse list-unstyled" id="classSubMenu">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-info-circle"></i>
+                                    Thông tin
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-file-signature"></i>
+                                    Đăng ký lớp học
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="../etc/info.html">
+                            <i class="fas fa-info-circle fa"></i>
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../etc/contact.html">
+                            <i class="fas fa-envelope-open"></i>
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END Sidebar-->
+            <!-- Page Content -->
+            <div class="content-main">
+                <!-- Content Header -->
+                <nav class="navbar navbar-expand navbar-dark">
+                    <div class="container-fluid">
+                        <!-- sidebar-custom Toggler -->
+                        <button
+                            type="button"
+                            id="sidebar-custom_collapse"
+                            class="btn btn-outline-dark btn-custom--outline-dark text-white-90p"
+                        >
+                            <i class="fas fa-align-left"></i>
+                        </button>
+                        <!-- END sidebar-custom Toggler -->
+                        <!-- Navigation Links -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- <li class="nav-item mr-4 my-auto">
+                                <a class="" href="#"><i class="fas fa-search"></i></a>
+                            </li> -->
+                            <li class="nav-item dropdown">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-dark btn-custom--outline-dark dropdown-toggle text-white-90p"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <i class="fas fa-user mr-2"></i>Tài khoản
+                                </button>
+                                <div class="dropdown-menu w-100 dropdown-menu-right bg-dark">
+                                    <a class="dropdown-item" href="../account/sign-in.html"
+                                        ><i class="fas fa-user-check mr-2"></i>Đăng nhập</a
+                                    >
+
+                                    <a class="dropdown-item" href="../account/sign-up.html"
+                                        ><i class="fas fa-user-plus mr-2"></i>Đăng ký</a
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- END Navigation Links-->
+                    </div>
+                </nav>
+                <!-- END Content Header -->
+                <!-- Content Title-->
+                <div
+                    class="content-main__title"
+                    style="background-image: url(../../img/computer-bg.png); background-position: center"
+                >
+                    <div class="background-black-op">
+                        <div class="container-fluid title-container content-w">
+                            <div class="py-5">
+                                <h1 class="text-white">
+                                    Bài 1: Ngáo giá
+                                </h1>
+                                <h2 class="h5 font-weight-400 text-white-80p mb-4">
+                                    Đại số tuyến tính
+                                </h2>
+                                <div id="rating" class="d-block text-white-80p mb-2">
+                                    <div class="text--primary d-inline" role="group">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="d-inline h5 text-white">4.0</span>
+                                    <span class="d-inline">(<strong class="text-white">35&nbsp</strong>đánh giá)</span>
+                                </div>
+                                <div class="more-info text-white-80p mb-3">
+                                    <span class="mr-3"
+                                        >Tạo bởi:
+                                        <a class="link-effect font-weight-bold text-white" href="#">
+                                            Vương Cường
+                                        </a>
+                                    </span>
+                                    <span class="mr-3 mt-1 d-block d-md-inline"
+                                        >Cập nhật lần cuối:
+                                        <span class="font-weight-bold text-white">20/08/2019</span>
+                                    </span>
+                                    <span class="mr-3 mt-1 d-block d-md-inline">
+                                        <i class="fas fa-eye"></i>
+                                        <span class="font-weight-bold text-white">1234</span>
+                                        <span>lượt xem</span>
+                                    </span>
+                                    <span class="mr-3 mt-1 d-block d-md-inline">
+                                        <i class="fas fa-comments"></i>
+                                        <span class="font-weight-bold text-white">10</span>
+                                        <span>bình luận</span>
+                                    </span>
+                                </div>
+                                <button type="button" class="btn btn-primary">
+                                    <span class="mr-1">Bắt đầu học</span>
+                                    <i class="fas fa-hand-point-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Content Title -->
+                <!-- Content Body-->
+                <div class="content-main__body">
+                    <!-- Breadcrumb -->
+                    <div class="content-w content-w--top">
+                        <nav class="breadcrumb bg-white">
+                            <a class="breadcrumb-item first-item" href="#">
+                                <i class="fas fa-home"></i>
+                            </a>
+                            <a class="breadcrumb-item" href="#">
+                                Khóa học
+                            </a>
+                            <a class="breadcrumb-item" href="../sites/courseDetail-intro.html">
+                                Đại số tuyến tính
+                            </a>
+                            <a class="breadcrumb-item active" aria-current="page">
+                                Bài 1: Ngáo giá
+                            </a>
+                        </nav>
+                    </div>
+                    <!-- END Breadcrumb -->
+                    <!-- Lecture Deck -->
+                    <div class="content-w">
+                        <div class="lecture-deck">
+                            <div class="row">
+                                <!-- Lecture Video -->
+                                <div class="col-xl-8">
+                                    <div class="block--rounded lecture-deck__video">
+                                        <div class="frame-hack">
+                                            <iframe
+                                                id="video-player"
+                                                src="https://www.youtube.com/embed/9TGnJCnrBXw"
+                                                frameborder="0"
+                                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen
+                                            >
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Course Video -->
+                                <!-- Lecture Tabs -->
+                                <div class="col-xl-4">
+                                    <div class="block--rounded lecture-deck__tabs">
+                                        <!-- Lecture Tabs Meta-->
+                                        <ul class="nav nav-justified bg-white lecture-deck__tabs__meta" role="tablist">
+                                            <li class="nav-item">
+                                                <a
+                                                    class="nav-link active"
+                                                    id="listLectures-meta"
+                                                    href="#listLectures-content"
+                                                    data-toggle="tab"
+                                                    role="tab"
+                                                    aria-controls="listLectures-meta"
+                                                    aria-selected="true"
+                                                >
+                                                    <i class="fas fa-list-ul fa-lg"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a
+                                                    class="nav-link"
+                                                    id="listRefs-meta"
+                                                    href="#listRefs-content"
+                                                    data-toggle="tab"
+                                                    role="tab"
+                                                    aria-controls="listRefs-meta"
+                                                    aria-selected="false"
+                                                >
+                                                    <i class="fas fa-download fa-lg"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a
+                                                    class="nav-link"
+                                                    id="lectureNote-meta"
+                                                    href="#lectureNote-content"
+                                                    data-toggle="tab"
+                                                    role="tab"
+                                                    aria-controls="lectureNote-meta"
+                                                    aria-selected="false"
+                                                >
+                                                    <i class="fas fa-sticky-note fa-lg"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- END Lecture Tabs-->
+                                        <!-- Tabs Content-->
+                                        <div class="tab-content bg-white lecture-deck__tabs__content">
+                                            <!-- Lecture List Tab-->
+                                            <div
+                                                class="tab-pane fade show active"
+                                                id="listLectures-content"
+                                                role="tabpanel"
+                                                aria-labelledby="listLectures-meta"
+                                                data-scrollbar
+                                            >
+                                                <div class="inside-content p-3">
+                                                    <div class="list-group">
+                                                        <a
+                                                            href="../sites/courseDetail-learn.html"
+                                                            id="lecture-1"
+                                                            class="list-group-item list-group-item-action active"
+                                                        >
+                                                            <span class="font-weight-bold">01.</span>
+                                                            <span>Ngáo giá</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-2"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">02.</span>
+                                                            <span>Em phải tỉnh ra!</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-3"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">03.</span>
+                                                            <span>Đừng ngáo, đừng ngáo, oke?!</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-4"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">04.</span>
+                                                            <span>Em phải YOUTUBE ra!</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-5"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">05.</span>
+                                                            <span>Tập cách lắng nghe, oke?!</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-6"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">06.</span>
+                                                            <span>Cộng đồng các bác sĩ thu nhập thấp?</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-7"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">07.</span>
+                                                            <span>Đi đến kết luận: Ngáo giá hay ngáo đá?!</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-8"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">08.</span>
+                                                            <span>Trước khi kết thúc</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-9"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">09.</span>
+                                                            <span>Kết thúc môn học</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="lecture-10"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold">10.</span>
+                                                            <span>Lời cảnh tình!</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END Lecture List Tab-->
+                                            <!-- Lecture References Tab-->
+                                            <div
+                                                class="tab-pane fade"
+                                                id="listRefs-content"
+                                                role="tabpanel"
+                                                aria-labelledby="listRefs-meta"
+                                                data-scrollbar
+                                            >
+                                                <div class="inside-content p-3">
+                                                    <div class="list-group">
+                                                        <a
+                                                            href="#"
+                                                            id="refs-1"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold"
+                                                                ><i class="fas fa-file-pdf"></i
+                                                            ></span>
+                                                            <span>Nền tảng chia sẻ y tế DrExpedia.com</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="refs-2"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold"
+                                                                ><i class="fas fa-file-pdf"></i
+                                                            ></span>
+                                                            <span>Phần cứng DrLink AIoT và Robot TeleMedicin </span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="refs-3"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold"
+                                                                ><i class="fas fa-file-pdf"></i
+                                                            ></span>
+                                                            <span>Tài liệu về DrExpedia Cloud</span>
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="refs-4"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold"
+                                                                ><i class="fas fa-file-pdf"></i
+                                                            ></span>
+                                                            <span
+                                                                >DrExpedia App - sử dụng công nghệ Trí tuệ nhân tạo, AI,
+                                                                Deep Learning, Computer Vision!</span
+                                                            >
+                                                        </a>
+
+                                                        <a
+                                                            href="#"
+                                                            id="refs-5"
+                                                            class="list-group-item list-group-item-action"
+                                                        >
+                                                            <span class="font-weight-bold"
+                                                                ><i class="fas fa-file-pdf"></i
+                                                            ></span>
+                                                            <span>Tài liệu thống kê ngáo giá và ngáo kiến thức</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END Lecture References Tab-->
+                                            <!-- Note for Lecture Tab -->
+                                            <div
+                                                class="tab-pane fade"
+                                                id="lectureNote-content"
+                                                role="tabpanel"
+                                                aria-labelledby="lectureNote-meta"
+                                                data-scrollbar
+                                            >
+                                                <div class="inside-content p-3">
+                                                    <span>Anh nghĩ là em phải tỉnh ra!</span>
+                                                    <br />
+                                                    <span>Đừng ngáo giá!...</span>
+                                                    <br />
+                                                    <span>Đừng ngáo giá... OKE ?!</span>
+                                                </div>
+                                            </div>
+                                            <!-- END Lecture Note Tab -->
+                                        </div>
+                                        <!-- Script for Tabs Content-->
+                                        <script>
+                                            $(".lecture-deck__tabs__content").css({
+                                                height:
+                                                    $(".lecture-deck__video").height() -
+                                                    $(".lecture-deck__tabs__meta").height()
+                                            });
+                                            $(".lecture-deck__video").on("widthChanged", function() {
+                                                var lectureVideo_height = $(this).height();
+                                                $(".lecture-deck__tabs__content").css({
+                                                    height:
+                                                        lectureVideo_height - $(".lecture-deck__tabs__meta").height()
+                                                });
+                                            });
+                                        </script>
+                                        <!-- END Tabs Content -->
+                                    </div>
+                                </div>
+                                <!-- END lecture tabs-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Lecture Deck -->
+                    <!-- Lecture Detail-->
+                    <div class="content-w lecture-content">
+                        <!-- Lecture Description -->
+                        <div class="row">
+                            <div class="col-xl-12 lecture-content__description">
+                                <div class="block--rounded bg-white">
+                                    <div class="block__header text-center">
+                                        <h2>Bài 1: Ngáo giá</h2>
+                                    </div>
+                                    <div class="block__body">
+                                        <h3>Mở đầu</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                        </p>
+
+                                        <h3>Phần 1</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                        </p>
+
+                                        <h3>Phần 2</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                        </p>
+
+                                        <h3>Kết thúc</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END Lecture Description-->
+                        <div class="row">
+                            <!-- Lecture's Instructor -->
+                            <div class="col-xl-4 lecture-content__instructor">
+                                <div class="block--rounded bg-white">
+                                    <div class="block__header text-center">
+                                        <h3 class="m-0">Người hướng dẫn</h3>
+                                    </div>
+                                    <div class="block__body lecture-content__instructor__body">
+                                        <div class="lecture-content__instructor__body__img-and-stats">
+                                            <a class="lecture-content__instructor__body__img">
+                                                <img
+                                                    src="../../img/avatar/DaiYoutube.png"
+                                                    class="avatar--md avatar--md--fx-shadow"
+                                                />
+                                            </a>
+
+                                            <div class="lecture-content__instructor__body__stats">
+                                                <div>
+                                                    <i class="fas fa-star"></i>
+                                                    <span>
+                                                        <span class="font-weight-bold mr-1">4.0</span>
+                                                        <span>Xếp hạng</span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-comments"></i>
+                                                    <span>
+                                                        <span class="font-weight-bold mr-1">12,345</span>
+                                                        <span>Đánh giá</span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-users"></i>
+                                                    <span>
+                                                        <span class="font-weight-bold mr-1">3,000</span>
+                                                        <span>Người học</span>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-video"></i>
+                                                    <span>
+                                                        <span class="font-weight-bold mr-1">8</span>
+                                                        <span>Khóa học</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lecture-content__instructor__body__title mt-3 mb-3">
+                                            <a href="#" class="text-center">
+                                                <h5>Nguyễn Trọng "Youtube" Đại</h5>
+                                            </a>
+                                        </div>
+                                        <div class="lecture-content__instructor__body__description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                mollit anim id est laborum
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Lecture's Instructor-->
+                            <!-- Lecture's Review -->
+                            <div class="col-xl-8 lecture-content__review">
+                                <div class="block--rounded bg-white">
+                                    <div class="block__header text-center">
+                                        <h3>Hỏi đáp về bài học</h3>
+                                    </div>
+                                    <div class="block__body add-comment">
+                                        <div class="mr-4">
+                                            <img
+                                                src="../../img/avatar/avatar1.jpg"
+                                                class="avatar--sm avatar--sm--fx-shadow"
+                                            />
+                                        </div>
+                                        <div class="w-100">
+                                            <div class="form-group">
+                                                <textarea
+                                                    class="form-control"
+                                                    id="userCommentText"
+                                                    rows="3"
+                                                    placeholder="Nhập câu hỏi của bạn vào đây..."
+                                                ></textarea>
+                                            </div>
+                                            <div class="add-comment__btn-group">
+                                                <button type="submit" class="btn btn-primary">Gửi</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block__body lecture-content__review__user-review">
+                                        <div class="block__body__title">
+                                            <i class="fas fa-comments fa-2x mr-2"></i>
+                                            <span class="h4 m-0">Hỏi đáp</span>
+                                        </div>
+                                        <div class="comment-section comment-section--nested">
+                                            <ul class="nested-comment nested-comment--level-1">
+                                                <li id="comment-1">
+                                                    <div class="comment-item">
+                                                        <div class="comment-item__avatar mr-4">
+                                                            <img
+                                                                src="../../img/avatar/avatar1.jpg"
+                                                                class="avatar--sm avatar--sm--fx-shadow"
+                                                            />
+                                                        </div>
+                                                        <div class="comment-item__body w-100">
+                                                            <div class="comment-info">
+                                                                <a href="#" class="user-name">
+                                                                    Người hỏi 1
+                                                                </a>
+                                                                <div class="comment-info__time">
+                                                                    1 ngày trước
+                                                                </div>
+                                                            </div>
+                                                            <div class="comment-detail">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Etiam hendrerit ligula nec nisi pulvinar gravida. Mauris
+                                                                non erat sem. Nam ultricies ut risus porta feugiat.
+                                                                Praesent varius auctor scelerisque. Proin cursus laoreet
+                                                                mi, at pretium elit egestas sit amet. Sed feugiat nulla
+                                                                nulla, sit amet feugiat eros semper non. Cras id semper
+                                                                eros. Maecenas nisi ipsum, suscipit et consequat et,
+                                                                euismod ut justo. Duis commodo, elit vel dictum
+                                                                pellentesque, risus neque mattis lacus, et ultricies
+                                                                augue massa a nisl. Curabitur feugiat finibus arcu et
+                                                                varius.
+                                                            </div>
+                                                            <div class="comment-meta">
+                                                                <span>
+                                                                    <a href="#">
+                                                                        <i class="far fa-thumbs-up"></i>
+                                                                    </a>
+                                                                    <span>6</span>
+                                                                </span>
+
+                                                                <span>
+                                                                    <a href="#">
+                                                                        <i class="far fa-thumbs-down"></i>
+                                                                    </a>
+                                                                    <span>1</span>
+                                                                </span>
+
+                                                                <span>
+                                                                    <a
+                                                                        role="button"
+                                                                        data-toggle="collapse"
+                                                                        href="#reply_comment_1"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseCommentReply"
+                                                                    >
+                                                                        <i class="fas fa-reply"></i>
+                                                                        <span>Trả lời</span>
+                                                                    </a>
+                                                                </span>
+
+                                                                <span class="float-right mr-0">
+                                                                    <a href="#">
+                                                                        <i class="far fa-flag"></i>
+                                                                        <span>Báo cáo</span>
+                                                                    </a>
+                                                                </span>
+
+                                                                <div
+                                                                    class="collapse comment-meta__reply"
+                                                                    id="reply_comment_1"
+                                                                >
+                                                                    <div class="add-comment">
+                                                                        <div class="mr-4">
+                                                                            <img
+                                                                                src="../../img/avatar/avatar1.jpg"
+                                                                                class="avatar--sm avatar--sm--fx-shadow"
+                                                                            />
+                                                                        </div>
+                                                                        <div class="w-100">
+                                                                            <div class="form-group">
+                                                                                <textarea
+                                                                                    class="form-control"
+                                                                                    id="userCommentText"
+                                                                                    rows="3"
+                                                                                    placeholder="Nhập câu trả lời..."
+                                                                                ></textarea>
+                                                                            </div>
+                                                                            <div class="add-comment__btn-group">
+                                                                                <button
+                                                                                    type="submit"
+                                                                                    class="btn btn-primary"
+                                                                                >
+                                                                                    Gửi
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <ul class="nested-comment nested-comment--level-2">
+                                                        <li class="comment-item" id="comment-1-reply-1">
+                                                            <div class="comment-item__avatar mr-4">
+                                                                <img
+                                                                    src="../../img/avatar/avatar1.jpg"
+                                                                    class="avatar--sm avatar--sm--fx-shadow"
+                                                                />
+                                                            </div>
+                                                            <div class="comment-item__body w-100">
+                                                                <div class="comment-info">
+                                                                    <a href="#" class="user-name">
+                                                                        Người trả lời 1 của Câu hỏi 1
+                                                                    </a>
+                                                                    <div class="comment-info__time">
+                                                                        10 giờ trước
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="comment-detail">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                                    elit. Etiam hendrerit ligula nec nisi pulvinar
+                                                                    gravida. Mauris non erat sem. Nam ultricies ut risus
+                                                                    porta feugiat. Praesent varius auctor scelerisque.
+                                                                    Proin cursus laoreet mi, at pretium elit egestas sit
+                                                                    amet. Sed feugiat nulla nulla, sit amet feugiat eros
+                                                                    semper non. Cras id semper eros. Maecenas nisi
+                                                                    ipsum, suscipit et consequat et, euismod ut justo.
+                                                                    Duis commodo, elit vel dictum pellentesque, risus
+                                                                    neque mattis lacus, et ultricies augue massa a nisl.
+                                                                    Curabitur feugiat finibus arcu et varius.
+                                                                </div>
+
+                                                                <div class="comment-meta">
+                                                                    <span>
+                                                                        <a href="#">
+                                                                            <i class="far fa-thumbs-up"></i>
+                                                                        </a>
+                                                                        <span>6</span>
+                                                                    </span>
+
+                                                                    <span>
+                                                                        <a href="#">
+                                                                            <i class="far fa-thumbs-down"></i>
+                                                                        </a>
+                                                                        <span>1</span>
+                                                                    </span>
+
+                                                                    <span class="float-right mr-0">
+                                                                        <a href="#">
+                                                                            <i class="far fa-flag"></i>
+                                                                            <span>Báo cáo</span>
+                                                                        </a>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+
+                                            <a href="#" class="text-center d-block comment-section__more-comment">
+                                                <i class="fas fa-chevron-down"></i>
+                                                <span>Xem thêm</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Lecture's Review -->
+                        </div>
+                    </div>
+                    <!-- END Lecture Detail-->
+                </div>
+                <!-- END Content Body-->
+                <!-- Content Footer -->
+                <div class="content-main__footer">
+                    <div class="container-fluid content-w">
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <h4 class="content-main__footer__title">
+                                    Về Chúng Ta Cùng Tiến
+                                </h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body" id="footer-about-body">
+                                    <p>
+                                        Tự hào là câu lạc bộ cà khịa mạnh nhất ĐH.Bách Khoa TP.HCM, chúng tôi mang đến
+                                        cho bạn những trải nghiệm cà khịa/bị cà khịa một cách vui/đau nhất có thể. Không
+                                        chỉ dừng ở đó chúng tôi còn phát người yêu miễn phí mỗi kỳ GSAX hè, và đã được
+                                        rất nhiều bạn trẻ nhiệt tình tham gia và hưởng ứng nồng nhiệt. Hãy đến cùng
+                                        chúng tôi, đảm bảo bạn sẽ không thất vọng!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4">
+                                <h4 class="content-main__footer__title">Tin tức mới nhất</h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body news__body">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="#"
+                                                >Hành trình làm Youtube của người mà chúng ta luôn kính trọng...</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#">Sơn sắp làm đám cưới!</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Người anh quốc dân kể về kế hoạch 5 năm tiếp theo của mình.</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                >Khóa học mới: "Làm sao để hút cần đúng cách?" by GS Quân Bùi.</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#">GS Cường vừa ra khóa học mới!</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4">
+                                <h4 class=" content-main__footer__title">Liên hệ</h4>
+                                <div class="content-main__footer__divider"></div>
+                                <div class="content-main__footer__body" id="footer-contact-body">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Phòng 102, Nhà thi đấu trường Đại học Bách Khoa, ĐHQG, Đông Hòa, Dĩ An, Bình
+                                            Dương
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-phone"></i>
+                                            098 184 56 59
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-clock"></i>
+                                            Giờ mở cửa: 08:00 - 18:00
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-envelope"></i>
+                                            cuong.vuong.bk@hcmut.edu.vn
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider--100"></div>
+                        <div class="row certificate">
+                            <img src="../../img/logo.png" class="img-fluid d-inline-block" style="max-height: 35px" />
+                            <p class="d-inline-block my-auto">
+                                Chúng ta cùng tiến &copy 2019
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Content Footer-->
+            </div>
+            <!-- END Page Content -->
+        </div>
+        <!-- END Main -->
+        <!-- Javascript -->
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../../js/jquery.slimscroll.min.js"></script>
+        <script src="../../js/smooth-scrollbar/smooth-scrollbar.js"></script>
+        <script src="../../js/smooth-scrollbar/plugins/overscroll.js"></script>
+        <!-- Custom Script -->
+        <script src="../../js/scripts.js"></script>
+        <script src="../../js/scriptsMain.js"></script>
+        <!-- Instant Script -->
+        <script>
+            /*** Smooth-scrollbar ***/
+            var Scrollbar = window.Scrollbar;
+            var OverscrollPlugin = window.OverscrollPlugin;
+            Scrollbar.use(OverscrollPlugin);
+
+            const options = {
+                damping: 0.1,
+                thumbMinSize: 20,
+                renderByPixels: !("ontouchstart" in document),
+                alwaysShowTracks: false,
+                continuousScrolling: true
+            };
+
+            const overscrollOptions = {
+                enable: true,
+                effect: "bounce",
+                damping: 0.15,
+                maxOverscroll: 75,
+                glowColor: "#222a2d"
+            };
+
+            const scrollbar_lectureList = Scrollbar.initAll({
+                ...options,
+                plugins: {
+                    overscroll: { ...overscrollOptions }
+                }
+            });
+        </script>
+    </body>
+</html>

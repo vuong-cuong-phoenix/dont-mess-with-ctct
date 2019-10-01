@@ -1,0 +1,13 @@
+@import url("../abstract/variables.css");
+
+/***
+
+***/
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    transition: all 0.3s;
+}

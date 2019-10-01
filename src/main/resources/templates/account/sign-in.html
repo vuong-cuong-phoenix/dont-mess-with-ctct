@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Đăng nhập</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet" />
+        <!-- Framework CSS -->
+        <link rel="stylesheet" href="../../css/plugins/normalize.css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../../css/main/style-account.css" />
+    </head>
+    <body id="body_sign-in">
+        <div class="background background-grd-KyeMeh">
+            <div class="main-area">
+                <div class="main-area__header">
+                    <h2>Đăng nhập</h2>
+                </div>
+
+                <form class="main-area__body form">
+                    <div id="emailFormContainer" class="input--grd-running">
+                        <input id="emailForm" type="email" class="form-control shadow-none" required />
+                        <span data-placeholder="Email"></span>
+                    </div>
+
+                    <div id="passwdFormContainer" class="input--grd-running">
+                        <input id="passwdForm" type="password" class="form-control shadow-none" required />
+                        <span data-placeholder="Mật khẩu"></span>
+                    </div>
+
+                    <div class="bypass-validation__message pb-2" style="visibility: visible;">
+                        <span>Email không chính xác!</span>
+                    </div>
+
+                    <div class="custom-btn-group">
+                        <button type="submit" class="btn--grd" role="button" onclick="validateSignIn()">
+                            Đăng nhập
+                        </button>
+                    </div>
+                </form>
+
+                <div class="main-area__footer">
+                    <div class="text-center">
+                        <h5>Chưa có tài khoản? <a href="./sign-up.html">Đăng ký ngay!</a></h5>
+                    </div>
+
+                    <div class="nav-line text-center">
+                        <span class="h6">
+                            <a href="../../index.html">Trang chủ</a> | <a href="../etc/contact.html">Liên hệ</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../../js/jquery-3.4.1.min.js"></script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <!-- Custom Script -->
+        <script src="../../js/scripts.js"></script>
+        <script src="../../js/scriptSign.js"></script>
+        <script src="../../js/scriptSign-signIn.js"></script>
+        <!-- Instant Scripts -->
+        <script type="text/javascript"></script>
+    </body>
+</html>

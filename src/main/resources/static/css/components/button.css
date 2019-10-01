@@ -1,0 +1,39 @@
+@import url("../abstract/variables.css");
+
+/***
+
+***/
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--btn-primary-text);
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-circle {
+    border-radius: 50% !important;
+}
+
+.btn-rounded {
+    border-radius: 3.125rem !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-active);
+    border-color: var(--primary-color-active);
+    color: var(--btn-primary-text-active);
+}
+
+.btn-border-lightWhite {
+    border-color: var(--white-85p);
+}
+
+.btn-border-lightWhite:hover {
+    border-color: #fff !important;
+}

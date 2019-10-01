@@ -1,0 +1,630 @@
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500,700&display=swap");
+/***			THEMES FOR USE			***/
+/*=============================================
+                ALL THEMES
+=============================================*/
+/*				Text's Themes				*/
+.text-white-90p {
+  color: #e6e6e6 !important;
+}
+
+.text-white-85p {
+  color: #d9d9d9 !important;
+}
+
+.text-white-80p {
+  color: #cccccc !important;
+}
+
+.text--primary {
+  color: #ffcc99 !important;
+}
+
+.text--primary:hover {
+  color: #ffb366 !important;
+}
+
+.text--fx-shadow {
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.font-weight-400 {
+  font-weight: 400 !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+/*				Gradient Ultily for Font Awesome's Icon				*/
+.icon-grd {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-grd::before {
+  display: initial;
+}
+
+/*				Background's Themes				*/
+.background-transparent {
+  background: transparent;
+}
+
+.background-dark {
+  background-color: #343a40;
+}
+
+.background-black-op {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.background-secondary-custom {
+  background-color: #ffe6cc;
+}
+
+/*				Gradient Background				*/
+.background-grd-jShine {
+  background: -webkit-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -moz-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -ms-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: -o-linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+}
+
+.background-grd-KyeMeh {
+  background: -webkit-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -moz-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -ms-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: -o-linear-gradient(135deg, #8360c3, #2ebf91);
+  background: linear-gradient(135deg, #8360c3, #2ebf91);
+}
+
+/***			BASE STYLES			***/
+/*=============================================
+                BASE INITIATION
+=============================================*/
+html,
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/*=============================================
+                TYPOGRAPHYS
+=============================================*/
+h1,
+.h1 {
+  font-weight: 600;
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+}
+
+h3,
+.h3 {
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-weight: 600;
+}
+
+h6,
+.h6 {
+  font-weight: 600;
+}
+
+.text-overflow--1-line {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-overflow--2-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.text-overflow--3-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.text-overflow--4-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.text-overflow--5-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.highlight-num {
+  margin-right: 0.25rem;
+}
+
+/***			COMPONENETS STYLES			***/
+/*=============================================
+                BUTTON STYLES
+=============================================*/
+/*  Primary Button's variant    */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #ffcc99;
+  border-color: #ffcc99;
+  color: #404040;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #ffb366;
+  border-color: #ffb366;
+  color: #4d4d4d;
+}
+
+.btn-outline-primary {
+  border: 1px solid #ffcc99;
+  color: #ffcc99;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffb366;
+  border: 1px solid #ffb366;
+  color: #4d4d4d;
+}
+
+/*					CUSTOM BUTTONS					*/
+.btn-custom--outline-dark {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.btn-border--lightWhite {
+  border-color: #d9d9d9;
+}
+.btn-border--lightWhite:hover {
+  border-color: #ffffff !important;
+}
+
+.btn--circle {
+  border-radius: 50% !important;
+}
+
+.btn--rounded {
+  border-radius: 3.125rem !important;
+}
+
+.btn--no-border {
+  border: none !important;
+}
+
+.btn--grd {
+  display: block;
+  width: 50%;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  color: #e9e9e9;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #12c2e9);
+  background-size: 200%;
+  transition: all 0.5s;
+}
+.btn--grd:hover {
+  background-position: right;
+}
+
+/*=============================================
+    CUSTOM FORM INPUT WITH GRADIENT RUNNING INDICATOR
+=============================================*/
+.input--grd-running {
+  position: relative;
+  border-bottom: solid 0.125rem rgba(0, 0, 0, 0.35);
+  margin-bottom: 3.5rem;
+}
+.input--grd-running input {
+  width: 100%;
+  height: 2.25rem;
+  padding: 0 1rem;
+  outline: none !important;
+  background: none !important;
+  border: none !important;
+}
+.input--grd-running span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 1.25rem;
+  transition: all 0.5s;
+}
+.input--grd-running span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  transition: all 0.5s;
+}
+.input--grd-running input.focused + span::before {
+  top: -0.65rem;
+  color: #404040;
+}
+.input--grd-running input.focused + span::after {
+  width: 100%;
+}
+
+.running-indicator {
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  transition: all 0.5s;
+}
+
+.focused .running-indicator {
+  width: 100%;
+}
+
+/*=============================================
+                Bypass Validation
+=============================================*/
+.bypass-validation__message {
+  text-align: center;
+  color: #ff6666;
+  font-size: 1.15rem;
+}
+
+/*=============================================
+            Navigation in a line
+=============================================*/
+.nav-line {
+  padding: 0.5rem 0.5rem 0;
+}
+.nav-line a {
+  color: #737373;
+  padding: 0 0.25rem;
+}
+.nav-line a:hover {
+  color: #404040;
+}
+
+/***			LAYOUT STYLES			***/
+/*=============================================
+            SIGN'S PAGES LAYOUT
+=============================================*/
+html,
+body {
+  color: #404040;
+  height: 100%;
+  font-size: 16px;
+}
+@media (max-width: 1200px) {
+  html,
+body {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  html,
+body {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html,
+body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  html,
+body {
+    font-size: 13px;
+  }
+}
+
+button:focus, [type=button]:focus, [type=reset]:focus, [type=submit]:focus {
+  box-shadow: none !important;
+}
+
+.no-outline {
+  outline: none !important;
+}
+
+.background {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 15px;
+}
+
+.main-area__body__btn-group {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/***			PAGES STYLES			***/
+/*=============================================
+        STYLES ONLY FOR SIGN-IN PAGE
+=============================================*/
+#body_sign-in .main-area {
+  background: #f6f6f6;
+  width: 475px;
+  min-height: calc(100% - 3rem);
+  margin: calc(3rem / 2) auto;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translate(0);
+  /* For z-index */
+  padding: 3rem 2.25rem 1rem;
+}
+@media (max-width: 1200px) {
+  #body_sign-in .main-area {
+    width: 45%;
+  }
+}
+@media (max-width: 992px) {
+  #body_sign-in .main-area {
+    width: calc(100% - (100% - 45%) / 2);
+  }
+}
+@media (max-width: 768px) {
+  #body_sign-in .main-area {
+    width: calc(100% - (100% - 45%) / 3);
+  }
+}
+@media (max-width: 576px) {
+  #body_sign-in .main-area {
+    width: 100%;
+  }
+}
+#body_sign-in .main-area__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#body_sign-in .main-area__header > * {
+  font-size: 3rem;
+}
+#body_sign-in .main-area__footer {
+  margin-top: 3.5rem;
+  font-size: 1.25rem;
+}
+#body_sign-in .main-area .btn--grd {
+  width: 100%;
+}
+
+/*=============================================
+        STYLES FOR ONLY SIGN-UP PAGE
+=============================================*/
+#body_sign-up .main-area {
+  background: #f6f6f6;
+  width: 900px;
+  min-height: calc(100% - 1rem);
+  margin: calc(1rem / 2) auto;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translate(0);
+  /* For z-index */
+  padding: 2.5rem 3rem 1rem;
+}
+@media (max-width: 1200px) {
+  #body_sign-up .main-area {
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  #body_sign-up .main-area {
+    width: calc(100% - (100% - 70%) / 2);
+  }
+}
+@media (max-width: 768px) {
+  #body_sign-up .main-area {
+    width: calc(100% - (100% - 70%) / 3);
+  }
+}
+@media (max-width: 576px) {
+  #body_sign-up .main-area {
+    width: 100%;
+  }
+}
+#body_sign-up .main-area__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#body_sign-up .main-area__header > * {
+  font-size: 2.5rem;
+}
+#body_sign-up .main-area__body .selectpicker-area {
+  position: relative;
+}
+#body_sign-up .main-area__body .selectpicker-container {
+  font-size: 1.25rem;
+  color: #a6a6a6;
+  margin-bottom: 1rem;
+}
+#body_sign-up .main-area__body .selectpicker-container .dropdown-toggle {
+  background: #f6f6f6;
+  transition: 0.5s;
+}
+#body_sign-up .main-area__body .selectpicker-container .dropdown-toggle:hover {
+  background: #dae0e5;
+}
+#body_sign-up .main-area__body .selectpicker-container .dropdown-toggle:focus {
+  outline: none !important;
+}
+#body_sign-up .main-area__body .selectpicker-container .running-indicator {
+  bottom: 1rem;
+}
+#body_sign-up .main-area__body .form-swap-area {
+  position: relative;
+}
+#body_sign-up .main-area__body .form-swap-area .form-swap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#body_sign-up .main-area__body .form-swap-area .form-swap--form-1 {
+  display: block;
+}
+#body_sign-up .main-area__body .form-swap-area .form-swap--form-2 {
+  display: none;
+}
+#body_sign-up .main-area__body #addSchool-container,
+#body_sign-up .main-area__body #schoolYear-container {
+  margin-top: calc(2rem - 2.5px);
+}
+#body_sign-up .main-area__body #emailFormPre {
+  padding-right: 0;
+}
+#body_sign-up .main-area__body #emailFormPost_Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#body_sign-up .main-area__body #emailFormPost_Container #domainSymbol {
+  position: absolute;
+  left: calc(0px - 1rem * 2 + 0.4rem);
+}
+#body_sign-up .main-area__body .btn--grd {
+  width: 60%;
+  height: 3rem;
+}
+#body_sign-up .main-area__footer {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+/*=============================================
+            STYLES FOR ONLY VERIFY PAGE
+=============================================*/
+#body_verify .main-area {
+  background: #f6f6f6;
+  width: 550px;
+  min-height: calc(100% - 7.5rem);
+  margin: calc(7.5rem / 2) auto;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translate(0);
+  /* For z-index */
+  padding: 4.5rem 2.25rem 1rem;
+}
+@media (max-width: 1200px) {
+  #body_verify .main-area {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  #body_verify .main-area {
+    width: calc(100% - (100% - 50%) / 2);
+  }
+}
+@media (max-width: 768px) {
+  #body_verify .main-area {
+    width: calc(100% - (100% - 50%) / 3);
+  }
+}
+@media (max-width: 576px) {
+  #body_verify .main-area {
+    width: 100%;
+  }
+}
+#body_verify .main-area__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#body_verify .main-area__header > * {
+  font-size: 2.75rem;
+}
+#body_verify .main-area__body .code-resending {
+  margin-bottom: 2.5rem;
+}
+#body_verify .main-area__footer {
+  margin-top: 3.5rem;
+  font-size: 1.25rem;
+}
+#body_verify .main-area .btn--grd {
+  width: 100%;
+}
+#body_verify .main-area .input--grd-running {
+  margin-bottom: 1.25rem;
+}
+
+/*# sourceMappingURL=style-account.css.map */
