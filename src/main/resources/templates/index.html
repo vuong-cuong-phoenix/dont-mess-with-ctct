@@ -53,7 +53,7 @@
                         <li class="nav-item dropdown">
                             <button type="button" class="btn btn-outline-dark btn-custom--outline-dark dropdown-toggle"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user mr-2"></i> <span th:text="${#authorization.expression('isAuthenticated()')} ? ${#authenication.name} : 'Tài Khoản'" >Tài khoản</span>
+                                <i class="fas fa-user mr-2"></i> <span th:text="${#authorization.expression('isAuthenticated()')} ? ${#authentication.name} : 'Tài Khoản'" >Tài khoản</span>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right bg-dark">
                                     <a class="dropdown-item" href="#" sec:authorize="isAnonymous()" th:href="@{/login}"

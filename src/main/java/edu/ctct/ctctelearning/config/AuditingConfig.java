@@ -6,9 +6,10 @@ import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import edu.ctct.ctctelearning.model.User;
+import edu.ctct.ctctelearning.service.AuditorAwareImpl;
 
 @Configuration
-@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
+@EnableJpaAuditing(auditorAwareRef = "auditorAwareImpl")
 public class AuditingConfig {
     @Bean
     public AuditorAware<User> auditoProvider() {

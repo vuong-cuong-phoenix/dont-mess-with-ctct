@@ -36,7 +36,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .anyRequest().authenticated()
             .and()
             .formLogin()
-            .loginPage("/login")
+            .loginPage("/sign-in")
+            .defaultSuccessUrl("/", true)
+            .usernameParameter("email")
+            .passwordParameter("password")
             .permitAll()
             .and()
             .logout()
@@ -49,7 +52,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
  
     }
-
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

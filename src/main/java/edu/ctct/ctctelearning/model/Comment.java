@@ -18,7 +18,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class Comment extends BaseEntity {
     
     private String content;
-    @Column(name = "created_by")
     @CreatedBy
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn

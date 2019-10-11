@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" />
         <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet" />
         <!-- Framework CSS -->
-        <link rel="stylesheet" href="../../css/plugins/normalize.css" />
-        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../static/css/plugins/normalize.css" th:href="@{/css/plugins/normalize.css}" />
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
         <!-- <link rel="stylesheet" href="css/FontAwesome/all.min.css" /> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="../../css/main/style-account.css" />
+        <link rel="stylesheet" href="../static/css/main/style-account.css" th:href="@{/css/main/style-account.css}" />
     </head>
     <body id="body_sign-in">
         <div class="background background-grd-KyeMeh">
@@ -23,18 +23,18 @@
                     <h2>Đăng nhập</h2>
                 </div>
 
-                <form class="main-area__body form">
+                <form class="main-area__body form" th:action="@{/sign-in}" method="POST">
                     <div id="emailFormContainer" class="input--grd-running">
-                        <input id="emailForm" type="email" class="form-control shadow-none" required />
+                        <input id="emailForm" type="email" name="email" class="form-control shadow-none" required />
                         <span data-placeholder="Email"></span>
                     </div>
 
                     <div id="passwdFormContainer" class="input--grd-running">
-                        <input id="passwdForm" type="password" class="form-control shadow-none" required />
+                        <input id="passwdForm" type="password" name="password" class="form-control shadow-none" required />
                         <span data-placeholder="Mật khẩu"></span>
                     </div>
 
-                    <div class="bypass-validation__message pb-2" style="visibility: visible;">
+                    <div class="bypass-validation__message pb-2" style="visibility: hidden;">
                         <span>Email không chính xác!</span>
                     </div>
 

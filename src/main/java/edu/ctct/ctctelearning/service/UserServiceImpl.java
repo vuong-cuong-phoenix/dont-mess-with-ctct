@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
         // user.setFaculty(registration.getFaculty());
         // user.setSchool(registration.getSchool());
         // user.setPhoneNumber(registration.getPhoneNumber());
-        // user.setRoles(Arrays.asList(new Role("ROLE_USER")));
+        user.setRoles(Arrays.asList(new Role("ROLE_USER")));
         return userRepository.save(user);
     }
 
