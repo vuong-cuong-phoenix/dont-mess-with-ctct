@@ -1,30 +1,17 @@
 package edu.ctct.ctctelearning.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Lecture {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class Lecture extends BaseEntity{
     private String name;
     private String description;
     private int index;
     @ManyToOne(optional = false)
     @JoinColumn(name="COURSE_ID")
     private Course course;
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

@@ -5,10 +5,7 @@ import java.util.Collection;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class User extends BaseEntity{
 
     private String firstName;
     private String lastName;
@@ -18,7 +15,6 @@ public class User {
     private String faculty;
     private int year;
     private String phoneNumber;
-    
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
         name = "users_roles",
@@ -27,6 +23,8 @@ public class User {
         inverseJoinColumns = @JoinColumn(
             name = "role_id", referencedColumnName = "id"))
     private Collection < Role > roles;
+    @OneToMany(mappedBy = "createdBy", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Collection<Comment> comments;
 
     public User() {}
 
@@ -45,13 +43,6 @@ public class User {
         this.roles = roles;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -129,8 +120,16 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [email=" + email + ", faculty=" + faculty + ", firstName=" + firstName + ", id=" + id
+        return "User [email=" + email + ", faculty=" + faculty + ", firstName=" + firstName + ", id=" + getId()
                 + ", lastName=" + lastName + ", password=" + password + ", phoneNumber=" + phoneNumber + ", roles="
                 + roles + ", school=" + school + ", year=" + year + "]";
+    }
+
+    public Collection<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Collection<Comment> comments) {
+        this.comments = comments;
     }
 }

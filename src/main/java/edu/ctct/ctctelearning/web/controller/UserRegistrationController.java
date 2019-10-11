@@ -37,7 +37,6 @@ public class UserRegistrationController {
             BindingResult result) {
         String email = userDto.getEmail() + "@" + userDto.getEmailDomain();
         User existing = userService.findByEmail(email);
-        System.out.println(userDto.getEmail());
         if (existing != null) {
             result.rejectValue("email", null, "There is already an account registered with that email");
         }
